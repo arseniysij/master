@@ -21,10 +21,21 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: 'Roboto', sans-serif
+	font-family: "Proxima Nova", sans-serif
 	font-weight: 400
 	overflow-x: hidden
-	color: $text
+	color: $white
+
+a
+	color: $white
+	&:hover
+		color: $white
+		text-decoration: none
+	&:visited
+		color: $white
+
+p
+	margin: 0
 
 *
 	box-sizing: border-box
@@ -51,7 +62,7 @@ input[type="radio"].visually-hidden
   overflow: hidden;
 
 .container
-	max-width: 1920px
+	max-width: vw(1520)
 	padding:
 		right: 
 		left: 
@@ -77,3 +88,138 @@ ul
 
 .parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
 	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
+.main-header
+	margin-bottom: vw(28)
+	padding-top: vw(37)
+	display: flex
+	justify-content: space-between
+
+.hero-bg
+	min-height: vw(1279)
+	background-image: url(../img/@2x/hero-bg.png)
+
+.logo
+	display: flex
+	align-items: flex-end
+
+.logo img
+	margin-right: vw(44)	
+
+.logo-text
+	padding-bottom: vw(4)
+	font-family: "Proxima Nova"
+	font-size: vw(14)
+	font-weight: 300
+	line-height: vw(19)
+	opacity: 0.5
+	color: $whitish
+	letter-spacing: vw(0.7)
+
+.phones
+	display: flex
+	margin-bottom: vw(24)
+
+.phone-numb
+	font-family: "Proxima Nova"
+	color: $whitish
+	font-size: vw(16)
+	font-weight: 700
+	line-height: vw(19)
+	letter-spacing: vw(0.8)
+
+.phones-item img
+	margin-right: vw(11)
+
+.phones-item:first-child
+	margin-right: vw(30)	
+
+.socials
+	text-align: right
+
+.socials img
+	margin-right: vw(9)	
+
+.socials__btn
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	margin-left: auto
+	padding: vw(14) vw(24)
+	// width: vw(186)
+	// height: vw(46)
+	background-image: linear-gradient(to top, #171719 0%, #27272b 98%, #27272b 100%)
+	transform: skew(-10deg)
+	align-items: center
+	border-radius: vw(10)
+	cursor: pointer
+	&:hover
+		box-shadow: vw(5) vw(5) vw(15) $accent
+		transition: all .3s
+		a
+			border-bottom: none
+
+.social__text
+	font-family: "Proxima Nova"
+	color: $white
+	font-size: vw(12)
+	font-weight: 400
+	line-height: vw(16.26)
+	text-transform: uppercase
+	letter-spacing: vw(1)
+	border-bottom: vw(1) dashed #0078a5
+	transform: skew(10deg)
+	
+.hero
+	text-align: center
+
+.hero-title
+	margin-bottom: vw(23)
+	display: inline-block
+	padding: vw(15) vw(45)
+	background-color: $accent
+	transform: skew(-10deg)
+	letter-spacing: vw(1.1)
+	span
+		color: $white
+		font-size: 22px
+		font-weight: 900
+		
+		text-transform: uppercase
+
+.hero__date
+	margin-right: vw(25)
+	display: flex
+	justify-content: center
+	align-items: center
+
+.hero__date img
+	margin-right: vw(16)
+
+.date__bold
+	margin-right: vw(10)
+	color: $accent	
+	font-family: "Bebas Neue Bold"
+	font-size: vw(48)
+	font-weight: 400
+	line-height: vw(48)
+
+.date__month
+	margin-right: vw(11)
+	font-family: "Bebas Neue"
+	color: $white	
+	font-size: 42px
+	font-weight: 300
+	text-transform: uppercase
+	letter-spacing: vw(0.89)
+
+.date__time
+	display: block
+	font-family: "Muller"
+	color: #fffffe
+	opacity: .54
+	font-size: 12px
+	font-weight: 400
+	text-transform: uppercase
+	letter-spacing: vw(1.79)
+
