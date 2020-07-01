@@ -1,7 +1,7 @@
 @import vars
 @import fonts
 @import libs
-@import "_nice-select.scss"
+@import "_nice-select"
 
 ::placeholder
 	color: #666
@@ -392,7 +392,7 @@ ul
 	font-size: vw(12)
 	letter-spacing: vw(0.13)
 
-.signup-form input, .select-occupation
+.signup-form input,
 	display: inline-block
 	padding: vw(13) vw(25)	
 	width: vw(289)
@@ -409,10 +409,35 @@ ul
 		line-height: vw(40)
 		letter-spacing: vw(0.7)
 
-.select-occupation option
-	padding: vw(10) vw(10)
-	
+.select-occupation-wrap
+	display: flex
+	justify-content: center
 
+.select-occupation
+	display: inline-block
+	margin-bottom: vw(15)
+	padding: vw(13) vw(25)	
+	width: vw(289)
+	color: #fff
+	line-height: 1
+	background-color: #1c1c1d
+	border: 1px solid #292929
+	border-radius: vw(5)
+
+.select-occupation .option
+	// display: block
+	width: vw(289)
+	padding: vw(10) vw(30)
+	background-color: #1c1c1d
+	
+.nice-select .option.focus, .nice-select .option.selected.focus, .nice-select .option:hover
+	background-color: $accent
+
+.nice-select .option.focus, .nice-select .option.selected.focus, .nice-select .option:hover
+	background-color: $accent
+
+.nice-select .list
+	background-color: #1c1c1d	
 
 .input-sbmt-btn
 	position: relative

@@ -89,11 +89,14 @@
 						из-за которых сайт не продает"</p>
 					<form class="signup-form" action="" id="signup-form">
 						<label for="input-occupation">К кому вы себя больше относите?</label>
-						<select class="select-occupation" name="select-occupation" id="select-occupation" required>
+						<div class="select-occupation-wrap">
+							<select class="select-occupation" name="select-occupation" id="select-occupation">
 							<option value="Предприниматель">Предприниматель</option>
-							<option value="Предприниматель">Фрилансер</option>
-							<option value="Предприниматель">Дизайнер</option>
+							<option value="Фрилансер">Фрилансер</option>
+							<option value="Дизайнер">Дизайнер</option>
 						</select>
+						</div>
+						
 						<label for="input-email">На него вышлем бонус</label>
 						<input class="input-email" type="text" id="input-email" placeholder="* Ваш E-mail" required>
 						<label for="input-phone">На него вышлем Вам напоминание о мастер-классе</label>
