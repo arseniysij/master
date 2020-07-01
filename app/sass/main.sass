@@ -20,7 +20,7 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
+	line-height: 1.2
 	font-family: "Proxima Nova", sans-serif
 	font-weight: 400
 	overflow-x: hidden
@@ -36,6 +36,9 @@ a
 
 p
 	margin: 0
+
+button
+	all: unset
 
 *
 	box-sizing: border-box
@@ -90,24 +93,30 @@ ul
 	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
 
 .main-header
-	margin-bottom: vw(28)
+	margin-bottom: vw(30)
 	padding-top: vw(37)
 	display: flex
 	justify-content: space-between
+	
 
 .hero-bg
+	// width: vw(1920)
 	min-height: vw(1279)
 	background-image: url(../img/@2x/hero-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: bottom center
 
 .logo
 	display: flex
 	align-items: flex-end
+	align-self: flex-start
 
 .logo img
 	margin-right: vw(44)	
 
 .logo-text
-	padding-bottom: vw(4)
+	padding-bottom: vw(2)
 	font-family: "Proxima Nova"
 	font-size: vw(14)
 	font-weight: 300
@@ -127,6 +136,8 @@ ul
 	font-weight: 700
 	line-height: vw(19)
 	letter-spacing: vw(0.8)
+	&:hover
+		color: $accent
 
 .phones-item img
 	margin-right: vw(11)
@@ -174,21 +185,26 @@ ul
 	text-align: center
 
 .hero-title
-	margin-bottom: vw(23)
+	font-size: vw(22)
+	margin-bottom: vw(30)
 	display: inline-block
-	padding: vw(15) vw(45)
+	padding: vw(10) vw(45) vw(6) vw(45)
 	background-color: $accent
 	transform: skew(-10deg)
 	letter-spacing: vw(1.1)
+	border-radius: vw(5)
+	text-transform: uppercase
+	p
+		transform: skew(10deg)
 	span
 		color: $white
-		font-size: 22px
-		font-weight: 900
 		
-		text-transform: uppercase
+		font-weight: 800
+		
+		
 
 .hero__date
-	margin-right: vw(25)
+	margin-bottom: vw(15)
 	display: flex
 	justify-content: center
 	align-items: center
@@ -208,7 +224,8 @@ ul
 	margin-right: vw(11)
 	font-family: "Bebas Neue"
 	color: $white	
-	font-size: 42px
+	font-size: vw(42)
+	line-height: vw(42)
 	font-weight: 300
 	text-transform: uppercase
 	letter-spacing: vw(0.89)
@@ -218,8 +235,234 @@ ul
 	font-family: "Muller"
 	color: #fffffe
 	opacity: .54
-	font-size: 12px
+	font-size: vw(12)
 	font-weight: 400
 	text-transform: uppercase
 	letter-spacing: vw(1.79)
 
+.hero-h1
+	margin-bottom: vw(60)
+	font-family: "Bebas Neue"
+	font-weight: 400
+	color: $white
+	font-size: vw(68)
+	line-height: 1
+	letter-spacing: vw(2.4)
+	text-shadow: 0 0 103px rgba(0, 52, 255, 0.25)
+	span
+		font-family: "MyriadPro"
+		font-weight: 600
+		font-size: vw(72)
+		letter-spacing: vw(1.1)
+
+.hero__form
+	position: relative
+
+.form__author
+	position: absolute	
+	top: vw(340)
+	left: vw(230)
+
+
+.author__icon
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	width: vw(65)
+	height: vw(65)
+	background-color: $accent
+	box-shadow: 0 0 vw(49) rgba(0, 52, 255, 0.3)
+	border-radius: vw(15)
+	transform: skew(-4deg)
+	cursor: pointer
+	z-index: 2
+	img
+		transform: skew(4deg)
+	
+
+.author__mockup
+	position: absolute
+	top: vw(110)
+	left: vw(574)
+	width: vw(409)	
+
+
+.author__decs
+	position: absolute
+	bottom: 50%
+	left: 50%
+	padding: vw(40) vw(32) vw(23) vw(40)
+	width: vw(285)
+	text-align: left
+	background-image: linear-gradient(to top, #171719 0%, #202020 98%, #202020 100%)
+	border-radius: vw(5)
+	clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%)
+	z-index: 1
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		top: vw(7)
+		left: vw(10)
+		width: vw(33)
+		height: vw(55)
+		background: url(../img/@2x/lightning-blue.png) no-repeat
+		z-index: 3
+
+
+.author__decs__header
+	margin-bottom: vw(11)
+	font-family: "Bebas Neue"
+	font-weight: 700
+	font-size: vw(23)
+	line-height: vw(12)
+	letter-spacing: vw(1.35)
+
+.author__decs__item
+	margin-bottom: vw(5)
+	font-weight: 300
+	line-height: vw(13)
+	font-size: vw(10)
+	letter-spacing: vw(0.6)
+	span
+		font-weight: 800
+
+.author__decs__item--accent
+	color: 	$accent
+
+.hero__signup
+	margin-left: auto
+	margin-right: vw(140)
+	padding: vw(56) vw(65) vw(48) vw(65)
+	width: vw(483)
+	min-height: vw(600)
+	text-align: center
+	background: url(../img/@2x/signup.png) no-repeat 
+	background-origin: border-box
+	background-size: contain
+
+.hero__signup .date__bold
+	font-size: vw(37)
+	line-height: vw(37)
+	margin-right: vw(7)
+
+.hero__signup .date__time
+	font-size: vw(9)	
+
+.hero__signup .hero__date img
+	width: vw(39)	
+	margin-right: vw(11)
+
+.hero__signup .date__month
+	font-size: vw(32)	
+	margin-right: vw(8)
+
+.hero__signup-header
+	margin-bottom: vw(15)
+	font-size: vw(13)
+	letter-spacing: vw(0.7)
+
+.hero__signup .hero__date
+	margin-bottom: vw(16)
+
+.signup__getpdf
+	margin-bottom: vw(10)
+	font-size: 13px
+	color: #969494
+	letter-spacing: vw(0.7)
+
+.signup__title
+	margin-bottom: vw(24)
+	font-family: "Bebas Neue"
+	font-weight: 700
+	font-size: vw(24)
+	line-height: vw(34.3)
+	letter-spacing: vw(1.25)
+
+.signup-form
+	margin-bottom: vw(22)
+
+.signup-form label
+	display: block
+	font-size: vw(12)
+	letter-spacing: vw(0.13)
+
+.signup-form input	
+	margin-bottom: vw(15)
+
+.input-sbmt-btn
+	position: relative
+	display: inline-flex
+	align-items: center
+	padding: vw(21) vw(50) vw(18) vw(60)
+	width: vw(289)
+	box-sizing: border-box
+	// text-align: left
+	color: #fffefe
+	font-size: vw(11)
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: vw(0.9)
+	text-shadow: vw(1) vw(1) vw(10) rgba(0, 0, 0, 0.4)
+	background-image: linear-gradient(to top, #0034ff 0%, #4f71f8 100%)
+	border-radius: vw(10)
+	transition: box-shadow .2s ease-in
+	overflow: hidden
+	&:hover
+		box-shadow: vw(0) vw(0) vw(30) vw(5) $accent
+		transition: box-shadow .2s ease-in
+	&:after
+		content: ""
+		display: block
+		width: 30px
+		height: 300px
+		margin-left: 60px
+		background: #fff
+		position: absolute
+		left: -40px
+		top: -150px
+		z-index: 1
+		-webkit-transform: rotate(45deg)
+		transform: rotate(45deg)
+		-webkit-transition: all 0.1s
+		transition: all 0.1s
+		-webkit-animation-name: slideme
+		animation-name: slideme
+		-webkit-animation-duration: 3s
+		animation-duration: 3s
+		-webkit-animation-delay: 0.05s
+		animation-delay: 0.05s
+		-webkit-animation-timing-function: ease-in-out
+		animation-timing-function: ease-in-out
+		-webkit-animation-iteration-count: infinite
+		animation-iteration-count: infinite
+
+	span
+		margin-right: vw(16)
+
+@keyframes slideme  
+	0% 
+		left: -30px
+		margin-left: 0px
+	30% 
+		left: 110%
+		margin-left: 80px
+	100% 
+		left: 110% 
+		margin-left: 80px
+
+.input-sbmt-btn--icon
+	width: vw(24)
+	height: vw(28)
+
+.form-safety
+	vertical-align: bottom
+	img
+		margin-right: vw(6)
+		width: vw(17)	
+		height: vw(22)
+	span
+		color: #969494
+		font-size: vw(11)	
+		letter-spacing: vw(0.6)
