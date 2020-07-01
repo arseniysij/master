@@ -249,7 +249,7 @@ ul
 	font-size: vw(68)
 	line-height: 1
 	letter-spacing: vw(2.4)
-	text-shadow: 0 0 103px rgba(0, 52, 255, 0.25)
+	text-shadow: 0 0 vw(103) rgba(0, 52, 255, 0.25)
 	span
 		font-family: "MyriadPro"
 		font-weight: 600
@@ -338,7 +338,7 @@ ul
 	top: vw(-10)
 	margin-left: auto
 	margin-right: vw(70)
-	padding: vw(130) vw(65) vw(48) vw(65)
+	padding: vw(100) vw(65) vw(48) vw(65)
 	width: vw(593)
 	min-height: vw(763)
 	text-align: center
@@ -372,7 +372,7 @@ ul
 
 .signup__getpdf
 	margin-bottom: vw(10)
-	font-size: 13px
+	font-size: vw(13)
 	color: #969494
 	letter-spacing: vw(0.7)
 
@@ -400,7 +400,7 @@ ul
 	color: #fff
 	line-height: 1
 	background-color: #1c1c1d
-	border: 1px solid #292929
+	border: vw(1) solid #292929
 	border-radius: vw(5)
 	&:placeholder
 		color: #969494
@@ -421,8 +421,11 @@ ul
 	color: #fff
 	line-height: 1
 	background-color: #1c1c1d
-	border: 1px solid #292929
+	border: vw(1) solid #292929
 	border-radius: vw(5)
+
+.select-occupation .current	
+	color: #969494
 
 .select-occupation .option
 	// display: block
@@ -463,13 +466,13 @@ ul
 	&:after
 		content: ""
 		display: block
-		width: 30px
-		height: 300px
-		margin-left: 60px
+		width: vw(30)
+		height: vw(300)
+		margin-left: vw(60)
 		background: #fff
 		position: absolute
-		left: -40px
-		top: -150px
+		left: vw(-40)
+		top: vw(-150)
 		z-index: 1
 		-webkit-transform: rotate(45deg)
 		transform: rotate(45deg)
@@ -491,14 +494,14 @@ ul
 
 @keyframes slideme  
 	0% 
-		left: -30px
+		left: vw(-30)
 		margin-left: 0px
 	30% 
 		left: 110%
-		margin-left: 80px
+		margin-left: vw(80)
 	100% 
 		left: 110% 
-		margin-left: 80px
+		margin-left: vw(80)
 
 .input-sbmt-btn--icon
 	width: vw(24)
