@@ -22,6 +22,7 @@
 		"gulp-rsync": "0.0.8",
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify-es": "^2.0.0",
-		"gulp-webp": "^4.0.1"
+		"gulp-webp": "^4.0.1",
+		"jquery": "^3.5.1"
 	}
 }

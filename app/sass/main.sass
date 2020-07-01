@@ -1,6 +1,7 @@
 @import vars
 @import fonts
 @import libs
+@import "_nice-select.scss"
 
 ::placeholder
 	color: #666
@@ -241,7 +242,7 @@ ul
 	letter-spacing: vw(1.79)
 
 .hero-h1
-	margin-bottom: vw(60)
+	margin-bottom: vw(0)
 	font-family: "Bebas Neue"
 	font-weight: 400
 	color: $white
@@ -260,8 +261,8 @@ ul
 
 .form__author
 	position: absolute	
-	top: vw(340)
-	left: vw(230)
+	top: vw(400)
+	left: vw(220)
 
 
 .author__icon
@@ -286,7 +287,7 @@ ul
 	top: vw(110)
 	left: vw(574)
 	width: vw(409)	
-
+	z-index: 5
 
 .author__decs
 	position: absolute
@@ -330,19 +331,20 @@ ul
 
 .author__decs__item--accent
 	color: 	$accent
-
-.hero__signup-wrap
+	
 
 .hero__signup
+	position: relative
+	top: vw(-10)
 	margin-left: auto
-	margin-right: vw(140)
-	padding: vw(56) vw(65) vw(48) vw(65)
+	margin-right: vw(70)
+	padding: vw(130) vw(65) vw(48) vw(65)
 	width: vw(593)
 	min-height: vw(763)
 	text-align: center
 	background: url(../img/@2x/signup.png) no-repeat
 	background-origin: border-box
-	background-size: cover
+	background-size: contain
 
 .hero__signup .date__bold
 	font-size: vw(37)
@@ -390,8 +392,27 @@ ul
 	font-size: vw(12)
 	letter-spacing: vw(0.13)
 
-.signup-form input	
+.signup-form input, .select-occupation
+	display: inline-block
+	padding: vw(13) vw(25)	
+	width: vw(289)
 	margin-bottom: vw(15)
+	color: #fff
+	line-height: 1
+	background-color: #1c1c1d
+	border: 1px solid #292929
+	border-radius: vw(5)
+	&:placeholder
+		color: #969494
+		font-size: vw(13)
+		font-weight: 300
+		line-height: vw(40)
+		letter-spacing: vw(0.7)
+
+.select-occupation option
+	padding: vw(10) vw(10)
+	
+
 
 .input-sbmt-btn
 	position: relative
@@ -468,3 +489,11 @@ ul
 		color: #969494
 		font-size: vw(11)	
 		letter-spacing: vw(0.6)
+
+.mouse
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	bottom: vw(54)
+	width: vw(23)		
+	height: vw(74)
