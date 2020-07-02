@@ -442,27 +442,31 @@ ul
 .nice-select .list
 	background-color: #1c1c1d	
 
-.input-sbmt-btn
-	position: relative
+.btn
+	background-image: linear-gradient(to top, #0034ff 0%, #4f71f8 100%)
+	border-radius: vw(15)
+	text-transform: uppercase
 	display: inline-flex
 	align-items: center
-	padding: vw(21) vw(50) vw(18) vw(60)
-	width: vw(289)
-	box-sizing: border-box
-	// text-align: left
 	color: #fffefe
-	font-size: vw(11)
 	font-weight: 700
-	text-transform: uppercase
-	letter-spacing: vw(0.9)
-	text-shadow: vw(1) vw(1) vw(10) rgba(0, 0, 0, 0.4)
-	background-image: linear-gradient(to top, #0034ff 0%, #4f71f8 100%)
-	border-radius: vw(10)
+	letter-spacing: vw(1)
 	transition: box-shadow .2s ease-in
 	overflow: hidden
 	&:hover
 		box-shadow: vw(0) vw(0) vw(30) vw(5) $accent
 		transition: box-shadow .2s ease-in
+	
+
+.input-sbmt-btn
+	position: relative
+	padding: vw(21) vw(50) vw(18) vw(60)
+	width: vw(289)
+	box-sizing: border-box
+	font-size: vw(11)
+	span
+		margin-right: vw(16)
+		text-shadow: vw(1) vw(1) vw(10) rgba(0, 0, 0, 0.4)
 	&:after
 		content: ""
 		display: block
@@ -488,9 +492,6 @@ ul
 		animation-timing-function: ease-in-out
 		-webkit-animation-iteration-count: infinite
 		animation-iteration-count: infinite
-
-	span
-		margin-right: vw(16)
 
 @keyframes slideme  
 	0% 
@@ -527,7 +528,8 @@ ul
 	height: vw(74)
 
 .program
-	padding-top: vw(120)
+	padding-top: vw(80)
+	padding-bottom: vw(110)
 	min-height: vw(1000)
 	background: url('../img/@2x/program-bg.jpg') no-repeat top right
 
@@ -545,7 +547,7 @@ ul
 	// text-align: left
 
 .program .section-title	
-	margin-bottom: vw(47)
+	margin-bottom: vw(35)
 
 .program .date__month, .program .date__time	
 	color: $black	
@@ -559,7 +561,7 @@ ul
 	margin-bottom: vw(50)
 
 .program__will-learn
-	margin-bottom: vw(28)
+	margin-bottom: vw(24)
 	color: $black
 	font-size: 24px
 	font-weight: 600
@@ -572,11 +574,11 @@ ul
 	display: flex
 	align-items: center
 	&:not(:last-child)
-		margin-bottom: vw(28)
+		margin-bottom: vw(25)
 
 
 .learn-img
-	margin-right: vw(10)
+	margin-right: vw(35)
 	width: vw(65)
 
 .lear-text
@@ -591,3 +593,74 @@ ul
 .lear-text__desc
 	color: $black	
 	letter-spacing: vw(0.4)
+
+.learn__btn-wrap
+	position: relative
+	margin-left: vw(170)
+	img
+		position: absolute
+		top: vw(-25)
+		left: vw(-80)
+		width: vw(175)
+		height: vw(189)
+		z-index: 0
+
+.learn__btn
+	padding: vw(40) vw(31) vw(36) vw(86)
+	border-radius: vw(20)	
+	&:hover
+		box-shadow: vw(0) vw(0) vw(10) vw(3) $accent
+	span
+		font-size: vw(13)
+		text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4)
+
+.audience
+	position: relative
+	padding-top: vw(125)
+	padding-bottom: vw(140)
+	min-height: vw(1250)
+	background: url('../img/@2x/audience.jpg') no-repeat center
+	background-size: cover
+
+.audience__section-title
+	color:  $white
+	margin-bottom: vw(30)
+
+.section-tittle--accent
+	color: #093bfe
+
+.audience__list
+	margin-bottom: vw(60)
+	display: flex
+	flex-wrap: wrap
+	max-width: vw(935)
+
+.audience__item
+	margin-right: vw(46)
+	width: vw(265)
+
+.audience__img
+	max-height: vw(219)	
+
+.audience__item__header	
+	margin-bottom: vw(22)
+	font-size: vw(24)
+	font-weight: 600
+	line-height: 1
+	letter-spacing: vw(0.6)
+
+.audience__item__content	
+	font-size: vw(16)
+	line-height: vw(22)
+	letter-spacing: vw(0.8)
+	opacity: 0.5
+
+.audience__mockup
+	position: absolute
+	right: vw(-20)
+	bottom: vw(-30)
+	width: vw(923)
+	height: vw(912)
+
+.audience .btn
+	
