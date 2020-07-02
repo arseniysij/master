@@ -103,7 +103,7 @@ ul
 .hero-bg
 	// width: vw(1920)
 	min-height: vw(1279)
-	background-image: url(../img/@2x/hero-bg.png)
+	background-image: url(../img/@2x/hero-bg.jpg)
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: bottom center
@@ -518,10 +518,76 @@ ul
 		font-size: vw(11)	
 		letter-spacing: vw(0.6)
 
-.mouse
+.mouse 
 	position: absolute
 	left: 50%
 	transform: translateX(-50%)
 	bottom: vw(54)
 	width: vw(23)		
 	height: vw(74)
+
+.program
+	padding-top: vw(120)
+	min-height: vw(1000)
+	background: url('../img/@2x/program-bg.jpg') no-repeat top right
+
+.section-title
+	margin-bottom: vw(85)
+	color: $black		
+	font-family: "Bebas Neue"
+	font-size: vw(60)
+	font-weight: 300
+	letter-spacing: vw(2.13)
+	span
+		font-weight: 600
+
+.program .container
+	// text-align: left
+
+.program .section-title	
+	margin-bottom: vw(47)
+
+.program .date__month, .program .date__time	
+	color: $black	
+
+.program .date__time
+	opacity: 0.75
+
+.program .hero__date
+	display: flex
+	justify-content: flex-start
+	margin-bottom: vw(50)
+
+.program__will-learn
+	margin-bottom: vw(28)
+	color: $black
+	font-size: 24px
+	font-weight: 600
+	letter-spacing: 0.6px	 
+
+.learn-list
+	margin-bottom: vw(94)
+
+.learn-item
+	display: flex
+	align-items: center
+	&:not(:last-child)
+		margin-bottom: vw(28)
+
+
+.learn-img
+	margin-right: vw(10)
+	width: vw(65)
+
+.lear-text
+
+
+.lear-text__header
+	font-size: 18px
+	color: $black
+	font-weight: 800
+	letter-spacing: vw(0.45)
+
+.lear-text__desc
+	color: $black	
+	letter-spacing: vw(0.4)
