@@ -22,7 +22,7 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.2
-	font-family: "Proxima Nova", sans-serif
+	font-family: 'Proxima Nova', sans-serif
 	font-weight: 400
 	overflow-x: hidden
 	color: $white
@@ -66,7 +66,7 @@ input[type="radio"].visually-hidden
   overflow: hidden;
 
 .container
-	max-width: vw(1520)
+	max-width: vw(1530)
 	padding:
 		right: 
 		left: 
@@ -81,13 +81,11 @@ ul
 
 // Custom Sass / Remove before use
 
-	
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
-
 
 
 .parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
@@ -167,7 +165,7 @@ ul
 	cursor: pointer
 	&:hover
 		box-shadow: vw(5) vw(5) vw(15) $accent
-		transition: all .3s
+		transition: all .2s
 		a
 			border-bottom: none
 
@@ -216,9 +214,9 @@ ul
 .date__bold
 	margin-right: vw(10)
 	color: $accent	
-	font-family: "Bebas Neue Bold"
+	font-family: "Bebas Neue"
 	font-size: vw(48)
-	font-weight: 400
+	font-weight: 700
 	line-height: vw(48)
 
 .date__month
@@ -284,7 +282,7 @@ ul
 
 .author__mockup
 	position: absolute
-	top: vw(110)
+	top: vw(160)
 	left: vw(574)
 	width: vw(409)	
 	z-index: 5
@@ -345,6 +343,14 @@ ul
 	background: url(../img/@2x/signup.png) no-repeat
 	background-origin: border-box
 	background-size: contain
+	&:before
+		content: ""
+		position: absolute
+		top: vw(20)
+		left: vw(-240)
+		width: vw(263)
+		height: vw(143)
+		background: url('../img/@2x/hero-arrow.png')
 
 .hero__signup .date__bold
 	font-size: vw(37)
@@ -392,10 +398,11 @@ ul
 	font-size: vw(12)
 	letter-spacing: vw(0.13)
 
-.signup-form input,
+.signup-form input
 	display: inline-block
 	padding: vw(13) vw(25)	
 	width: vw(289)
+	height: vw(48)
 	margin-bottom: vw(15)
 	color: #fff
 	line-height: 1
@@ -416,8 +423,9 @@ ul
 .select-occupation
 	display: inline-block
 	margin-bottom: vw(15)
-	padding: vw(13) vw(25)	
+	padding: vw(15) vw(25)	
 	width: vw(289)
+	height: vw(48)
 	color: #fff
 	line-height: 1
 	background-color: #1c1c1d
@@ -556,9 +564,18 @@ ul
 	opacity: 0.75
 
 .program .hero__date
+	position: relative
 	display: flex
 	justify-content: flex-start
 	margin-bottom: vw(50)
+	&:after
+		content: ""
+		position: absolute
+		left: vw(350)
+		top: -50%
+		width: vw(187)
+		height: vw(65)
+		background: url('../img/@2x/program-arrow.png') no-repeat
 
 .program__will-learn
 	margin-bottom: vw(24)
@@ -826,3 +843,53 @@ ul
 	position: absolute
 	left: 50%
 	bottom: vw(160)		
+
+.speaker__invoke
+	position: absolute
+	left: vw(-150)
+	bottom: vw(30)
+	color: #0034ff
+	font-size: vw(12)
+	text-align: center
+	letter-spacing: vw(0.3)
+	&:before
+		content: ""
+		position: absolute
+		top: -250%
+		width: vw(87)
+		height: vw(60)
+		background: url(../img/@2x/speaker-arrow.png) no-repeat
+
+.booking
+	padding-top: vw(80)
+	min-height: vw(1306)
+	background: url('../img/@2x/booking-bg.png') no-repeat center / cover		
+
+.booking .container
+	text-align: center
+
+.booking__section-title
+	margin-bottom: vw(25)
+	font-family: "Bebas Neue"
+	color: $white
+	letter-spacing: vw(2.13)
+	span
+		font-weight: 600
+
+.booking .signup__getpdf
+	margin-bottom: vw(15)
+	font-size: vw(18)	
+
+.booking .signup__title
+	margin-bottom: vw(50)
+	line-height: vw(50)
+	font-size: vw(40)
+
+.booking .hero__date
+	margin-bottom: vw(15)	
+
+.booking .hero__signup
+	margin-left: auto
+	margin-right: auto
+	padding-top: vw(110)
+	background-image: url(../img/@2x/booking-signup.png)	
