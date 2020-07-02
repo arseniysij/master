@@ -670,6 +670,8 @@ ul
 	min-height: vw(1110)
 	background: url('../img/@2x/speaker-bg.jpg') no-repeat bottom right vw(-130)
 	
+.speaker .container	
+	position: relative
 
 .speaker__section-title
 	margin-bottom: vw(8)	
@@ -709,6 +711,7 @@ ul
 	padding-right: vw(20)
 	height: vw(108)
 	border: vw(1) dashed #ddd
+	background-color: #fff
 	border-radius: vw(5)
 	&:nth-child(1)
 		width: vw(595)
@@ -765,7 +768,7 @@ ul
 		font-weight: 800
 	
 .facts__list-title
-	margin-bottom: vw(27)
+	margin-bottom: vw(22)
 	font-family: "Bebas Neue"
 	color: $blackish
 	font-size: vw(36)	
@@ -808,5 +811,18 @@ ul
 	// flex-wrap: wrap
 	display: table
 
+.clients-row
+	display: table-row	
+	
+
 .client-item
 	// max-width: vw()
+	display: table-cell
+	padding-bottom: vw(9)
+	&:not(:last-child)
+		padding-right: vw(23)
+
+.play-btn
+	position: absolute
+	left: 50%
+	bottom: vw(160)		
