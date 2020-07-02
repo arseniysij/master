@@ -685,10 +685,11 @@ ul
 
 .speaker__facts
 	margin-bottom: vw(25)
-	color: #262626
+	color: $blackish
 	font-family: "Bebas Neue"
 	font-weight: 300
 	font-size: vw(36)
+	text-transform: uppercase
 	letter-spacing: vw(1.8)
 	span
 		font-weight: 700
@@ -696,6 +697,7 @@ ul
 .facts__list
 	display: flex
 	flex-wrap: wrap	
+	margin-bottom: vw(50)
 	max-width: vw(1040)	
 
 .facts__item
@@ -710,12 +712,13 @@ ul
 	border-radius: vw(5)
 	&:nth-child(1)
 		width: vw(595)
+		color: $blackish
 		& .facts__img
 			margin-right: vw(5)
 			width: vw(174)
 			align-self: flex-end
 		& .facts__text
-			width: vw(393)
+			width: vw(395)
 	&:nth-child(2)
 		width: vw(411)
 		& .facts__img
@@ -739,6 +742,7 @@ ul
 		width: vw(349)
 		& .facts__img
 			margin-left: vw(17)
+			margin-right: vw(11)
 			width: vw(136)
 		& .facts__text
 			width: vw(235)
@@ -752,7 +756,7 @@ ul
 
 .facts__text
 	flex-shrink: 0
-	color: #262626
+	color: $blackish
 	font-size: vw(16)	
 	line-height: vw(20)
 	font-weight: 300
@@ -760,4 +764,49 @@ ul
 	span
 		font-weight: 800
 	
-		
+.facts__list-title
+	margin-bottom: vw(27)
+	font-family: "Bebas Neue"
+	color: $blackish
+	font-size: vw(36)	
+	font-weight: 300
+	letter-spacing: vw(1.8)
+	text-transform: uppercase
+	span
+		font-weight: 700
+
+.facts__competences
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: vw(60)
+	width: vw(530)
+
+.competence__item
+	position: relative
+	padding-left: vw(22)
+	margin-bottom: vw(15)
+	width: vw(235)
+	color: $blackish
+	font-size: vw(16)
+	font-weight: 400
+	letter-spacing: vw(0.8)
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translateY(-50%)
+		display: block
+		width: vw(11)
+		height: vw(19)
+		background: url('../img/@2x/lightning-no-shadow.png') no-repeat
+		background-size: cover
+
+.facts__clients
+	// display: flex
+	// flex-wrap: wrap
+	display: table
+
+.client-item
+	// max-width: vw()
