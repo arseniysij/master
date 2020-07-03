@@ -962,6 +962,7 @@ ul
 		color: #2e58fb	
 
 .popup-backdrop
+	display: none
 	position: fixed
 	top: 0
 	left: 0
@@ -972,22 +973,34 @@ ul
 	opacity: .85
 	z-index: 5
 
-.popup
+.popup-wrap
+	display: none
 	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	overflow-y: auto
+	z-index: 10	
+
+.popup
+	position: relative
 	top: 0
 	left: 50%
 	transform: translateX(-50%)
 	padding:
-		top: vw(170)
+		top: vw(130)
 		left: vw(70)
 		right: vw(70)
 		bottom: vw(100)
 	width: vw(832)
 	height: vw(1053)
+
 	text-align: center
 	background: url('../img/@2x/popup.png') no-repeat center / contain
 	background-origin: border-box
-	z-index: 10		
+	z-index: 20
+		
 
 .popup__header
 	margin-bottom: vw(20)
@@ -1011,7 +1024,11 @@ ul
 	line-height: vw(46)
 	letter-spacing: vw(1.88)
 
+.popup .signup-form
+	margin-bottom: vw(22)
+
 .popup label
+	margin-bottom: vw(12)
 	font-size: vw(17)
 	letter-spacing: vw(0.13)
 	line-height: vw(17.89)
@@ -1050,6 +1067,9 @@ ul
 
 .popup .form-safety span
 	font-size: vw(15)
+
+.popup .select-occupation, .popup input
+	margin-bottom: vw(33)	
 
 .popup__bonus
 	position: absolute
