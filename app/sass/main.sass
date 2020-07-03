@@ -18,6 +18,7 @@ input, textarea
 		border-color: green
 
 body
+	position: relative
 	font-size: 16px
 	min-width: 320px
 	position: relative
@@ -580,9 +581,9 @@ ul
 .program__will-learn
 	margin-bottom: vw(24)
 	color: $black
-	font-size: 24px
+	font-size: vw(24)
 	font-weight: 600
-	letter-spacing: 0.6px	 
+	letter-spacing: vw(0.6) 
 
 .learn-list
 	margin-bottom: vw(94)
@@ -602,7 +603,7 @@ ul
 
 
 .lear-text__header
-	font-size: 18px
+	font-size: vw(18)
 	color: $black
 	font-weight: 800
 	letter-spacing: vw(0.45)
@@ -629,7 +630,7 @@ ul
 		box-shadow: vw(0) vw(0) vw(10) vw(3) $accent
 	span
 		font-size: vw(13)
-		text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4)
+		text-shadow: vw(1) vw(1) vw(10) rgba(0, 0, 0, 0.4)
 
 .audience
 	position: relative
@@ -906,7 +907,7 @@ ul
 .footer
 	padding-top: vw(80)
 	background-color: #18191b
-	border-top: 1px solid #142036
+	border-top: vw(1) solid #142036
 
 .footer .container
 	display: flex
@@ -959,3 +960,121 @@ ul
 	letter-spacing: vw(0.7)
 	&:visited
 		color: #2e58fb	
+
+.popup-backdrop
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	z-index: 10
+	background-color: #1d1d1d
+	opacity: .85
+	z-index: 5
+
+.popup
+	position: fixed
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	padding:
+		top: vw(170)
+		left: vw(70)
+		right: vw(70)
+		bottom: vw(100)
+	width: vw(832)
+	height: vw(1053)
+	text-align: center
+	background: url('../img/@2x/popup.png') no-repeat center / contain
+	background-origin: border-box
+	z-index: 10		
+
+.popup__header
+	margin-bottom: vw(20)
+	color: #2c56fb
+	font-family: "Bebas Neue"
+	font-weight: 700
+	font-size: vw(48)
+	letter-spacing: vw(1.88)
+
+.popup__this-popup
+	margin-bottom: vw(30)
+	font-size: vw(24)
+	line-height: vw(25)
+	letter-spacing: vw(0.47)
+
+.popup__get-bonus
+	margin-bottom: vw(30)
+	font-family: "Bebas Neue"
+	font-weight: 700
+	font-size: vw(48)
+	line-height: vw(46)
+	letter-spacing: vw(1.88)
+
+.popup label
+	font-size: vw(17)
+	letter-spacing: vw(0.13)
+	line-height: vw(17.89)
+
+.popup input, .popup .select-occupation
+	display: block
+	margin-left: auto
+	margin-right: auto
+	width: vw(388)
+	height: vw(65)
+	font-size: vw(18)
+
+.popup .select-occupation
+	padding-top: 0
+	span
+	line-height: vw(65)
+
+.popup .select-occupation .option
+	width: vw(388)
+	height: vw(65)
+
+.popup 	.input-sbmt-btn
+	padding: vw(28) vw(50)
+	width: vw(388)
+	height: vw(82)
+	vertical-align: middle
+	span
+		font-size: vw(15)
+		font-weight: 700
+		letter-spacing: vw(0.9)
+
+.popup .input-sbmt-btn--icon	
+	padding-bottom: vw(3)
+	width: vw(28)	
+	height: vw(26)
+
+.popup .form-safety span
+	font-size: vw(15)
+
+.popup__bonus
+	position: absolute
+	top: vw(230)
+	left: vw(-230)
+	width: vw(438)	
+	height: vw(419)
+
+.popup__close
+	position: absolute
+	top: vw(110)
+	right: vw(80)
+	width: vw(40)
+	height: vw(40)	
+	cursor: pointer
+	&:before, &:after
+		content: ""
+		position: absolute
+		top: vw(17)
+		left: vw(8)
+		width: vw(25)
+		height: vw(5)
+		background-color: #464647
+		border-radius: vw(10)
+	&:before
+		transform: rotate(45deg)
+	&:after
+		transform: rotate(-45deg)

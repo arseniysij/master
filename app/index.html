@@ -476,6 +476,44 @@
 		</div>
 	</div> <!-- /.container -->
 </section>
+<div class="popup-backdrop"></div>
+	<div class="popup">
+		<p class="popup__header">Подожди секу!</p>
+		<p class="popup__this-popup">Какой же я маркетолог, если дам тебе<br>
+			уйти с сайта. Это ПОПАП окно на выходе,<br>
+			которое тебя раздражает!</p>
+		<p class="popup__get-bonus">Но заполни форму<br>
+			и получи еще 1 бонус</p>
+		<form class="signup-form" action="" id="popup-form">
+			<label for="popup__input-occupation">Выбери какой бонус ты хочешь:</label>
+			<div class="select-occupation-wrap">
+				<select class="select-occupation" name="select-occupation" id="popup__select-occupation">
+					<option value="Предприниматель">Любой</option>
+					<option value="Фрилансер">Особенный</option>
+					<option value="Дизайнер">Сюрприз</option>
+				</select>
+			</div>
+
+			<label for="popup__input-email">На него вышлем бонус и ссылку на мастер-класс, вдруг передумаешь</label>
+			<input class="input-email" type="text" id="popup__input-email" placeholder="* Ваш E-mail" required>
+			<label for="popup__input-phone">Продублируем напоминание про мастер-класс, вдруг решишь участвовать</label>
+			<input class="input-phone" type="text" id="popup__input-phone" placeholder="* Ваш телефон" required>
+			<button class="input-sbmt-btn btn" form="popup-form" type="submit" value="submit"><span>Получить бонус на
+					почту</span>
+				<img class="input-sbmt-btn--icon" src="img/@2x/gift.png" alt="">
+			</button>
+		</form>
+		<div class="form-safety">
+			<img src="img/@2x/lock.png" alt="">
+			<span>Мы не передаем Ваши данные 3-м лицам</span>
+		</div>
+		<div class="popup__bonus">
+			<img src="img/@2x/bonus.png" alt="">
+		</div>
+		<div class="popup__close"></div>
+	</div>
+
+
 
 	<script src="js/scripts.min.js"></script>
 
