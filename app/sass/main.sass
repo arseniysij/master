@@ -33,7 +33,7 @@ a
 		color: $white
 		text-decoration: none
 	&:visited
-		color: $white
+		color: inherit
 
 p
 	margin: 0
@@ -862,7 +862,8 @@ ul
 
 .booking
 	padding-top: vw(80)
-	min-height: vw(1306)
+	padding-bottom: vw(80)
+	min-height: vw(1060)
 	background: url('../img/@2x/booking-bg.png') no-repeat center / cover		
 
 .booking .container
@@ -892,4 +893,69 @@ ul
 	margin-left: auto
 	margin-right: auto
 	padding-top: vw(110)
-	background-image: url(../img/@2x/booking-signup.png)	
+	padding-bottom: vw(0)
+	min-height: vw(550)
+	background: url(../img/@2x/booking-signup.png) no-repeat 
+	&:before
+		top: vw(-50)
+		left: vw(-280)
+		width: vw(440)
+		height: vw(479)
+		background: url(../img/@2x/mockup.png) no-repeat 
+
+.footer
+	padding-top: vw(80)
+	background-color: #18191b
+	border-top: 1px solid #142036
+
+.footer .container
+	display: flex
+	// justify-content: space-between
+
+.footer__credentials
+	margin-right: vw(68)
+	font-size: vw(12)
+	line-height: vw(24)
+
+.footer__documents 
+	margin-right: vw(70)
+	a
+		display: block
+		font-size: vw(12)
+		line-height: vw(24)
+		text-decoration: underline
+
+.footer .phones
+	display: block
+	margin-right: vw(32)
+	.phones-item
+		margin-bottom: vw(11)
+
+.footer__links
+	text-align: center
+
+.footer .socials	
+	margin-right: vw(49)
+	margin-bottom: vw(17)
+	vertical-align: middle
+
+.links__list
+	display: flex
+	justify-content: center
+	margin-bottom: vw(17)
+	.social__item:not(:last-child)
+		margin-right: vw(16)		
+
+.social-link
+	display: block	
+	width: vw(24)
+	height: vw(23)
+
+.website-link
+	color: #2e58fb	
+	font-size: vw(14)
+	line-height: vw(18)
+	text-decoration: underline
+	letter-spacing: vw(0.7)
+	&:visited
+		color: #2e58fb	
