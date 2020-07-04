@@ -17,6 +17,9 @@ input, textarea
 	&:required:valid
 		border-color: green
 
+html
+	font-size: 1px
+
 body
 	position: relative
 	font-size: 16px
@@ -97,6 +100,9 @@ ul
 	padding-top: vw(37)
 	display: flex
 	justify-content: space-between
+	+media-breakpoint-down(lg)
+		margin-bottom: 30rem
+		padding-top: 37rem
 	
 
 .hero-bg
@@ -106,14 +112,18 @@ ul
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: bottom center
-
+	+media-breakpoint-down(lg)
+		min-height: 1279rem
+		background-position: bottom left -250rem
 .logo
 	display: flex
 	align-items: flex-end
 	align-self: flex-start
 
 .logo img
-	margin-right: vw(44)	
+	margin-right: vw(44)
+	+media-breakpoint-down(lg)
+		margin-right: 44rem
 
 .logo-text
 	padding-bottom: vw(2)
@@ -124,10 +134,18 @@ ul
 	opacity: 0.5
 	color: $whitish
 	letter-spacing: vw(0.7)
+	+media-breakpoint-down(lg)
+		padding-bottom: 2rem
+		font-size: 14rem
+		line-height: 19rem
+		letter-spacing: 0.7rem
+
 
 .phones
 	display: flex
 	margin-bottom: vw(24)
+	+media-breakpoint-down(lg)
+		margin-bottom: 24rem
 
 .phone-numb
 	font-family: "Proxima Nova"
@@ -136,20 +154,30 @@ ul
 	font-weight: 700
 	line-height: vw(19)
 	letter-spacing: vw(0.8)
+	+media-breakpoint-down(lg)
+		font-size: 16rem
+		line-height: 19rem
+		letter-spacing: .8rem
 	&:hover
 		color: $accent
 
 .phones-item img
 	margin-right: vw(11)
+	+media-breakpoint-down(lg)
+		margin-right: 11rem
 
 .phones-item:first-child
-	margin-right: vw(30)	
+	margin-right: vw(30)
+	+media-breakpoint-down(lg)
+		margin-right: 30rem	
 
 .socials
 	text-align: right
 
 .socials img
 	margin-right: vw(9)	
+	+media-breakpoint-down(lg)
+		margin-right: 9rem
 
 .socials__btn
 	display: inline-flex
@@ -164,9 +192,14 @@ ul
 	align-items: center
 	border-radius: vw(10)
 	cursor: pointer
+	+media-breakpoint-down(lg)
+		padding: 14rem 24rem
+		border-radius: 10rem
 	&:hover
 		box-shadow: vw(5) vw(5) vw(15) $accent
 		transition: all .2s
+		+media-breakpoint-down(lg)
+			box-shadow: 5rem 5rem 15rem $accent
 		a
 			border-bottom: none
 
@@ -175,12 +208,17 @@ ul
 	color: $white
 	font-size: vw(12)
 	font-weight: 400
-	line-height: vw(16.26)
+	line-height: vw(16)
 	text-transform: uppercase
 	letter-spacing: vw(1)
 	border-bottom: vw(1) dashed #0078a5
 	transform: skew(10deg)
-	
+	+media-breakpoint-down(lg)
+		font-size: 12rem
+		line-height: 16rem
+		letter-spacing: 1rem
+		border-bottom: 1rem dashed #0078a5
+
 .hero
 	text-align: center
 
@@ -194,23 +232,30 @@ ul
 	letter-spacing: vw(1.1)
 	border-radius: vw(5)
 	text-transform: uppercase
+	+media-breakpoint-down(lg)
+		font-size: 22rem
+		margin-bottom: 30rem
+		padding: 10rem 45rem 6rem 45rem
+		letter-spacing: 1.1rem
+		border-radius: 5rem
 	p
 		transform: skew(10deg)
 	span
 		color: $white
-		
 		font-weight: 800
 		
-		
-
 .hero__date
 	margin-bottom: vw(15)
 	display: flex
 	justify-content: center
 	align-items: center
+	+media-breakpoint-down(lg)
+		margin-bottom: 15rem
 
 .hero__date img
 	margin-right: vw(16)
+	+media-breakpoint-down(lg)
+		margin-right: 16rem
 
 .date__bold
 	margin-right: vw(10)
@@ -219,6 +264,10 @@ ul
 	font-size: vw(48)
 	font-weight: 700
 	line-height: vw(48)
+	+media-breakpoint-down(lg)
+		margin-right: 10rem
+		font-size: 48rem
+		line-height: 48rem
 
 .date__month
 	margin-right: vw(11)
@@ -228,7 +277,12 @@ ul
 	line-height: vw(42)
 	font-weight: 300
 	text-transform: uppercase
-	letter-spacing: vw(0.89)
+	letter-spacing: vw(0.9)
+	+media-breakpoint-down(lg)
+		margin-right: 11rem
+		font-size: 42rem
+		line-height: 42rem
+		letter-spacing: .9rem
 
 .date__time
 	display: block
@@ -238,10 +292,13 @@ ul
 	font-size: vw(12)
 	font-weight: 400
 	text-transform: uppercase
-	letter-spacing: vw(1.79)
+	letter-spacing: vw(1.8)
+	+media-breakpoint-down(lg)
+		font-size: 12rem
+		letter-spacing: 1.8rem
 
 .hero-h1
-	margin-bottom: vw(0)
+	margin-bottom: 0
 	font-family: "Bebas Neue"
 	font-weight: 400
 	color: $white
@@ -249,11 +306,18 @@ ul
 	line-height: 1
 	letter-spacing: vw(2.4)
 	text-shadow: 0 0 vw(103) rgba(0, 52, 255, 0.25)
+	+media-breakpoint-down(lg)
+		font-size: 68rem
+		letter-spacing: 2.4rem
+		text-shadow: 0 0 103rem rgba(0, 52, 255, 0.25)
 	span
 		font-family: "MyriadPro"
 		font-weight: 600
 		font-size: vw(72)
 		letter-spacing: vw(1.1)
+		+media-breakpoint-down(lg)
+			font-size: 72rem
+			letter-spacing: 1.1rem
 
 .hero__form
 	position: relative
@@ -262,7 +326,9 @@ ul
 	position: absolute	
 	top: vw(400)
 	left: vw(220)
-
+	+media-breakpoint-down(lg)
+		top: 500rem
+		left: -80rem
 
 .author__icon
 	position: relative
@@ -277,6 +343,11 @@ ul
 	transform: skew(-4deg)
 	cursor: pointer
 	z-index: 2
+	+media-breakpoint-down(lg)
+		width: 65rem
+		height: 65rem
+		box-shadow: 0 0 49rem rgba(0, 52, 255, 0.3)
+		border-radius: 15rem
 	img
 		transform: skew(4deg)
 	
@@ -287,6 +358,11 @@ ul
 	left: vw(574)
 	width: vw(409)	
 	z-index: 5
+	+media-breakpoint-down(lg)
+		display: none
+		top: 160rem
+		left: 574rem
+		width: 409rem
 
 .author__decs
 	position: absolute
@@ -299,6 +375,10 @@ ul
 	border-radius: vw(5)
 	clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%)
 	z-index: 1
+	+media-breakpoint-down(lg)
+		padding: 40rem 32rem 23rem 40rem
+		width: 285rem
+		border-radius: 5rem
 	&:before
 		content: ""
 		display: block
@@ -309,7 +389,11 @@ ul
 		height: vw(55)
 		background: url(../img/@2x/lightning-blue.png) no-repeat
 		z-index: 3
-
+		+media-breakpoint-down(lg)
+			top: 7rem
+			left: 10rem
+			width: 33rem
+			height: 55rem
 
 .author__decs__header
 	margin-bottom: vw(11)
@@ -318,6 +402,10 @@ ul
 	font-size: vw(23)
 	line-height: vw(12)
 	letter-spacing: vw(1.35)
+	+media-breakpoint-down(lg)
+		font-size: 23rem
+		line-height: 1
+		letter-spacing: 1.35rem
 
 .author__decs__item
 	margin-bottom: vw(5)
@@ -325,13 +413,17 @@ ul
 	line-height: vw(13)
 	font-size: vw(10)
 	letter-spacing: vw(0.6)
+	+media-breakpoint-down(lg)
+		margin-bottom: 5rem
+		line-height: 13rem
+		font-size: 10rem
+		letter-spacing: .6rem
 	span
 		font-weight: 800
 
 .author__decs__item--accent
 	color: 	$accent
 	
-
 .hero__signup
 	position: relative
 	top: vw(-10)
@@ -344,6 +436,13 @@ ul
 	background: url(../img/@2x/signup.png) no-repeat
 	background-origin: border-box
 	background-size: contain
+	+media-breakpoint-down(lg)
+		top: -10rem
+		margin-left: auto
+		margin-right: -80rem
+		padding: 100rem 65rem 48rem 65rem
+		width: 593rem
+		min-height: 763rem
 	&:before
 		content: ""
 		position: absolute
@@ -352,52 +451,92 @@ ul
 		width: vw(263)
 		height: vw(143)
 		background: url('../img/@2x/hero-arrow.png')
+		+media-breakpoint-down(lg)
+			display: none
+			top: 20rem
+			left: -240rem
+			width: 263rem
+			height: 143rem
 
 .hero__signup .date__bold
 	font-size: vw(37)
 	line-height: vw(37)
 	margin-right: vw(7)
+	+media-breakpoint-down(lg)
+		font-size: 37rem
+		line-height: 37rem
+		margin-right: 7rem
 
 .hero__signup .date__time
 	font-size: vw(9)	
+	+media-breakpoint-down(lg)
+		font-size: 9rem
 
 .hero__signup .hero__date img
 	width: vw(39)	
 	margin-right: vw(11)
+	+media-breakpoint-down(lg)
+		width: 39rem	
+		margin-right: 11rem
 
 .hero__signup .date__month
 	font-size: vw(32)	
 	margin-right: vw(8)
+	+media-breakpoint-down(lg)
+		font-size: 32rem
+		margin-right: 8rem
 
 .hero__signup-header
 	margin-bottom: vw(15)
 	font-size: vw(13)
 	letter-spacing: vw(0.7)
+	+media-breakpoint-down(lg)
+		margin-bottom: 15rem
+		font-size: 13rem
+		letter-spacing: .7rem
 
 .hero__signup .hero__date
 	margin-bottom: vw(16)
+	+media-breakpoint-down(lg)
+		margin-bottom: 16rem
 
 .signup__getpdf
 	margin-bottom: vw(10)
 	font-size: vw(13)
 	color: #969494
 	letter-spacing: vw(0.7)
+	+media-breakpoint-down(lg)
+		margin-bottom: 10rem
+		font-size: 13rem
+		letter-spacing: .7rem
 
 .signup__title
 	margin-bottom: vw(24)
 	font-family: "Bebas Neue"
 	font-weight: 700
 	font-size: vw(24)
-	line-height: vw(34.3)
+	line-height: vw(34)
 	letter-spacing: vw(1.25)
+	+media-breakpoint-down(lg)
+		margin-bottom: 24rem
+		font-size: 24rem
+		line-height: 34rem
+		letter-spacing: 1.25rem
 
 .signup-form
 	margin-bottom: vw(22)
+	+media-breakpoint-down(lg)
+		margin-bottom: 22rem
 
 .signup-form label
 	display: block
+	margin-bottom: vw(8)
 	font-size: vw(12)
 	letter-spacing: vw(0.13)
+	+media-breakpoint-down(lg)
+		margin-bottom: 8rem
+		font-size: 12rem
+		letter-spacing: .13rem
 
 .signup-form input
 	display: inline-block
@@ -406,16 +545,31 @@ ul
 	height: vw(48)
 	margin-bottom: vw(15)
 	color: #fff
+	font-size: vw(13)
 	line-height: 1
+	letter-spacing: vw(0.7)
 	background-color: #1c1c1d
 	border: vw(1) solid #292929
 	border-radius: vw(5)
+	+media-breakpoint-down(lg)
+		padding: 13rem 25rem	
+		width: 289rem
+		height: 48rem
+		margin-bottom: 15rem
+		font-size: 13rem
+		letter-spacing: .7rem
+		border: 1rem solid #292929
+		border-radius: 5rem	
 	&:placeholder
 		color: #969494
 		font-size: vw(13)
 		font-weight: 300
 		line-height: vw(40)
 		letter-spacing: vw(0.7)
+		+media-breakpoint-down(lg)
+			font-size: 13rem
+			line-height: 40rem
+			letter-spacing: .7rem
 
 .select-occupation-wrap
 	display: flex
@@ -432,15 +586,27 @@ ul
 	background-color: #1c1c1d
 	border: vw(1) solid #292929
 	border-radius: vw(5)
+	+media-breakpoint-down(lg)
+		margin-bottom: 15rem
+		padding: 15rem 25rem	
+		width: 289rem
+		height: 48rem
+		border: 1rem solid #292929
+		border-radius: 5rem
 
 .select-occupation .current	
+	font-size: vw(13)
 	color: #969494
+	+media-breakpoint-down(lg)
+		font-size: 13rem
 
 .select-occupation .option
-	// display: block
 	width: vw(289)
-	padding: vw(10) vw(30)
+	padding: 0 vw(30)
 	background-color: #1c1c1d
+	+media-breakpoint-down(lg)
+		width: 289rem
+		padding: 0 30rem
 	
 .nice-select .option.focus, .nice-select .option.selected.focus, .nice-select .option:hover
 	background-color: $accent
@@ -462,10 +628,12 @@ ul
 	letter-spacing: vw(1)
 	transition: box-shadow .2s ease-in
 	overflow: hidden
+	+media-breakpoint-down(lg)
 	&:hover
-		box-shadow: vw(0) vw(0) vw(30) vw(5) $accent
+		box-shadow: 0 0 vw(30) vw(5) $accent
 		transition: box-shadow .2s ease-in
-	
+		+media-breakpoint-down(lg)
+			box-shadow: 0 0 30rem 5rem $accent
 
 .input-sbmt-btn
 	position: relative
@@ -473,9 +641,16 @@ ul
 	width: vw(289)
 	box-sizing: border-box
 	font-size: vw(11)
+	+media-breakpoint-down(lg)
+		padding: 21rem 50rem 18rem 60rem
+		width: 289rem
+		font-size: 11rem
 	span
 		margin-right: vw(16)
 		text-shadow: vw(1) vw(1) vw(10) rgba(0, 0, 0, 0.4)
+		+media-breakpoint-down(lg)
+			margin-right: 16rem
+			text-shadow: 1rem 1rem 10rem rgba(0, 0, 0, 0.4)
 	&:after
 		content: ""
 		display: block
@@ -489,33 +664,43 @@ ul
 		z-index: 1
 		-webkit-transform: rotate(45deg)
 		transform: rotate(45deg)
-		-webkit-transition: all 0.1s
 		transition: all 0.1s
-		-webkit-animation-name: slideme
 		animation-name: slideme
-		-webkit-animation-duration: 3s
 		animation-duration: 3s
-		-webkit-animation-delay: 0.05s
 		animation-delay: 0.05s
-		-webkit-animation-timing-function: ease-in-out
 		animation-timing-function: ease-in-out
-		-webkit-animation-iteration-count: infinite
 		animation-iteration-count: infinite
+		+media-breakpoint-down(lg)
+			width: 30rem
+			height: 300rem
+			margin-left: 60rem
+			left: -40rem
+			top: -150rem
 
 @keyframes slideme  
 	0% 
 		left: vw(-30)
 		margin-left: 0px
+		// +media-breakpoint-down(lg)
+		// 	left: -30rem
+		// 	margin-left: 0px
 	30% 
 		left: 110%
 		margin-left: vw(80)
+		// +media-breakpoint-down(lg)
+		// 	margin-left: 80rem
 	100% 
 		left: 110% 
 		margin-left: vw(80)
+		// +media-breakpoint-down(lg)
+		// 	margin-left: 80rem
 
 .input-sbmt-btn--icon
 	width: vw(24)
 	height: vw(28)
+	+media-breakpoint-down(lg)
+		width: 24rem
+		height: 28rem
 
 .form-safety
 	vertical-align: bottom
@@ -523,10 +708,17 @@ ul
 		margin-right: vw(6)
 		width: vw(17)	
 		height: vw(22)
+		+media-breakpoint-down(lg)
+			margin-right: 6rem
+			width: 17rem	
+			height: 22rem
 	span
 		color: #969494
 		font-size: vw(11)	
 		letter-spacing: vw(0.6)
+		+media-breakpoint-down(lg)
+			font-size: 11rem
+			letter-spacing: 0.6rem
 
 .mouse 
 	position: absolute
@@ -535,12 +727,21 @@ ul
 	bottom: vw(54)
 	width: vw(23)		
 	height: vw(74)
+	+media-breakpoint-down(lg)
+		display: none
+		bottom: 54rem
+		width: 23rem		
+		height: 74rem
 
 .program
 	padding-top: vw(80)
 	padding-bottom: vw(110)
 	min-height: vw(1000)
 	background: url('../img/@2x/program-bg.jpg') no-repeat top right
+	+media-breakpoint-down(lg)
+		padding-top: 80rem
+		padding-bottom: 110rem
+		min-height: 1000rem
 
 .section-title
 	margin-bottom: vw(85)
@@ -549,6 +750,10 @@ ul
 	font-size: vw(60)
 	font-weight: 300
 	letter-spacing: vw(2.8)
+	+media-breakpoint-down(lg)
+		margin-bottom: 85rem
+		font-size: 60rem
+		letter-spacing: 2.8rem
 	span
 		font-weight: 600
 
@@ -557,6 +762,8 @@ ul
 
 .program .section-title	
 	margin-bottom: vw(35)
+	+media-breakpoint-down(lg)
+		margin-bottom: 35rem
 
 .program .date__month, .program .date__time	
 	color: $black	
@@ -569,6 +776,8 @@ ul
 	display: flex
 	justify-content: flex-start
 	margin-bottom: vw(50)
+	+media-breakpoint-down(lg)
+		margin-bottom: 50rem
 	&:after
 		content: ""
 		position: absolute
@@ -577,6 +786,10 @@ ul
 		width: vw(187)
 		height: vw(65)
 		background: url('../img/@2x/program-arrow.png') no-repeat
+		+media-breakpoint-down(lg)
+			left: 350rem
+			width: 187rem
+			height: 65rem
 
 .program__will-learn
 	margin-bottom: vw(24)
@@ -584,20 +797,30 @@ ul
 	font-size: vw(24)
 	font-weight: 600
 	letter-spacing: vw(0.6) 
+	+media-breakpoint-down(lg)
+		margin-bottom: 24rem
+		font-size: 24rem
+		letter-spacing: 0.6rem 
 
 .learn-list
 	margin-bottom: vw(94)
+	+media-breakpoint-down(lg)
+		margin-bottom: 94rem
 
 .learn-item
 	display: flex
 	align-items: center
 	&:not(:last-child)
 		margin-bottom: vw(25)
-
+		+media-breakpoint-down(lg)
+			margin-bottom: 25rem
 
 .learn-img
 	margin-right: vw(35)
 	width: vw(65)
+	+media-breakpoint-down(lg)
+		margin-right: 35rem
+		width: 65rem
 
 .lear-text
 
@@ -607,14 +830,21 @@ ul
 	color: $black
 	font-weight: 800
 	letter-spacing: vw(0.45)
+	+media-breakpoint-down(lg)
+		font-size: 18rem
+		letter-spacing: 0.45rem
 
 .lear-text__desc
 	color: $black	
 	letter-spacing: vw(0.4)
+	+media-breakpoint-down(lg)
+		letter-spacing: 0.4rem
 
 .learn__btn-wrap
 	position: relative
 	margin-left: vw(170)
+	+media-breakpoint-down(lg)
+		margin-left: 170rem
 	img
 		position: absolute
 		top: vw(-25)
@@ -622,15 +852,28 @@ ul
 		width: vw(175)
 		height: vw(189)
 		z-index: 0
+		+media-breakpoint-down(lg)
+			top: -25rem
+			left: -80rem
+			width: 175rem
+			height: 189rem
 
 .learn__btn
 	padding: vw(40) vw(31) vw(36) vw(86)
 	border-radius: vw(20)	
+	+media-breakpoint-down(lg)
+		padding: 40rem 31rem 36rem 86rem
+		border-radius: 20rem
 	&:hover
 		box-shadow: vw(0) vw(0) vw(10) vw(3) $accent
+		+media-breakpoint-down(lg)
+			box-shadow: 0 0 10rem 3rem $accent
 	span
 		font-size: vw(13)
 		text-shadow: vw(1) vw(1) vw(10) rgba(0, 0, 0, 0.4)
+		+media-breakpoint-down(lg)
+			font-size: 13rem
+			text-shadow: 1rem 1rem 10rem rgba(0, 0, 0, 0.4)
 
 .audience
 	position: relative
@@ -639,10 +882,16 @@ ul
 	min-height: vw(1250)
 	background: url('../img/@2x/audience.jpg') no-repeat center
 	background-size: cover
+	+media-breakpoint-down(lg)
+		padding-top: 125rem
+		padding-bottom: 140rem
+		min-height: 1250rem
 
 .audience__section-title
 	color:  $white
 	margin-bottom: vw(30)
+	+media-breakpoint-down(lg)
+		margin-bottom: 30rem
 
 .section-tittle--accent
 	color: #093bfe
@@ -652,13 +901,21 @@ ul
 	display: flex
 	flex-wrap: wrap
 	max-width: vw(935)
+	+media-breakpoint-down(lg)
+		margin-bottom: 60rem
+		max-width: 935rem
 
 .audience__item
 	margin-right: vw(46)
 	width: vw(265)
+	+media-breakpoint-down(lg)
+		margin-right: 46rem
+		width: 265rem
 
 .audience__img
 	max-height: vw(219)	
+	+media-breakpoint-down(lg)
+		max-height: 219rem
 
 .audience__item__header	
 	margin-bottom: vw(22)
@@ -666,12 +923,19 @@ ul
 	font-weight: 600
 	line-height: 1
 	letter-spacing: vw(0.6)
+	+media-breakpoint-down(lg)
+		margin-bottom: 22rem
+		letter-spacing: 0.6rem
 
 .audience__item__content	
 	font-size: vw(16)
 	line-height: vw(22)
 	letter-spacing: vw(0.8)
 	opacity: 0.5
+	+media-breakpoint-down(lg)
+		font-size: 16rem
+		line-height: 22rem
+		letter-spacing: 0.8rem
 
 .audience__mockup
 	position: absolute
@@ -679,20 +943,32 @@ ul
 	bottom: vw(-30)
 	width: vw(923)
 	height: vw(912)
+	+media-breakpoint-down(lg)
+		right: -20rem
+		bottom: -30rem
+		width: 923rem
+		height: 912rem
 
 .audience .learn__btn-wrap
 	margin-left: vw(500)
+	+media-breakpoint-down(lg)
+		margin-left: 500rem
 
 .speaker
 	padding-top: vw(60)	
 	min-height: vw(1110)
 	background: url('../img/@2x/speaker-bg.jpg') no-repeat bottom right vw(-130)
+	+media-breakpoint-down(lg)
+		padding-top: 60rem
+		min-height: 1110rem
 	
 .speaker .container	
 	position: relative
 
 .speaker__section-title
-	margin-bottom: vw(8)	
+	margin-bottom: vw(8)
+	+media-breakpoint-down(lg)	
+		margin-bottom: 8rem
 
 .speaker .hero-title
 	margin-bottom: vw(45)
@@ -702,6 +978,11 @@ ul
 	font-size: vw(20)
 	text-transform: none
 	letter-spacing: vw(0)
+	+media-breakpoint-down(lg)
+		margin-bottom: 45rem
+		padding-top: 15rem
+		padding-bottom: 14rem
+		font-size: 20rem
 
 .speaker__facts
 	margin-bottom: vw(25)
@@ -711,6 +992,10 @@ ul
 	font-size: vw(36)
 	text-transform: uppercase
 	letter-spacing: vw(1.8)
+	+media-breakpoint-down(lg)
+		margin-bottom: 25rem
+		font-size: 36rem
+		letter-spacing: 1.8rem
 	span
 		font-weight: 700
 
@@ -719,6 +1004,9 @@ ul
 	flex-wrap: wrap	
 	margin-bottom: vw(50)
 	max-width: vw(1040)	
+	+media-breakpoint-down(lg)
+		margin-bottom: 50rem
+		max-width: 1040rem
 
 .facts__item
 	display: flex
@@ -731,42 +1019,83 @@ ul
 	border: vw(1) dashed #ddd
 	background-color: #fff
 	border-radius: vw(5)
+	+media-breakpoint-down(lg)
+		margin-right: 15rem
+		margin-bottom: 12rem
+		padding-right: 20rem
+		height: 108rem
+		border: 1rem dashed #ddd
+		border-radius: 5rem
 	&:nth-child(1)
 		width: vw(595)
 		color: $blackish
+		+media-breakpoint-down(lg)
+			width: 595rem
 		& .facts__img
 			margin-right: vw(5)
 			width: vw(174)
 			align-self: flex-end
+			+media-breakpoint-down(lg)
+				margin-right: 5rem
+				width: 174rem
 		& .facts__text
 			width: vw(395)
+			+media-breakpoint-down(lg)
+				width: 395rem
 	&:nth-child(2)
 		width: vw(411)
+		+media-breakpoint-down(lg)
+			width: 411rem
 		& .facts__img
 			width: vw(171)
+			+media-breakpoint-down(lg)
+				width: 171rem
 		& .facts__text
 			width: vw(233)
+			+media-breakpoint-down(lg)
+				width: 233rem
 	&:nth-child(3)
 		width: vw(349)
+		+media-breakpoint-down(lg)
+			width: 349rem
 		& .facts__img
 			width: vw(85)
+			+media-breakpoint-down(lg)
+				width: 85rem
 		& .facts__text
 			width: vw(235)
+			+media-breakpoint-down(lg)
+				width: 235rem
 	&:nth-child(4)
 		width: vw(275)
+		+media-breakpoint-down(lg)
+			width: 275rem
 		& .facts__img
 			margin-left: vw(20)
 			width: vw(81)
+			+media-breakpoint-down(lg)
+				margin-left: 20rem
+				width: 81rem
 		& .facts__text
 			width: vw(125)
+			+media-breakpoint-down(lg)
+				width: 125rem
 	&:nth-child(5)
 		width: vw(349)
+		+media-breakpoint-down(lg)
+			width: 349rem
 		& .facts__img
 			margin-left: vw(17)
 			margin-right: vw(11)
 			width: vw(136)
+			+media-breakpoint-down(lg)
+				margin-left: 17rem
+				margin-right: 11rem
+				width: 136rem
 		& .facts__text
 			width: vw(235)
+			+media-breakpoint-down(lg)
+				width: 235rem
 
 .facts__img
 	flex-shrink: 0
@@ -782,6 +1111,10 @@ ul
 	line-height: vw(20)
 	font-weight: 300
 	letter-spacing: vw(0.4)
+	+media-breakpoint-down(lg)
+		font-size: 16rem
+		line-height: 20rem
+		letter-spacing: 0.4rem
 	span
 		font-weight: 800
 	
@@ -793,6 +1126,11 @@ ul
 	font-weight: 300
 	letter-spacing: vw(1.8)
 	text-transform: uppercase
+	+media-breakpoint-down(lg)
+		margin-bottom: 22rem
+		font-size: 36rem	
+		letter-spacing: 1.8rem
+
 	span
 		font-weight: 700
 
@@ -802,6 +1140,9 @@ ul
 	justify-content: space-between
 	margin-bottom: vw(60)
 	width: vw(530)
+	+media-breakpoint-down(lg)
+		margin-bottom: 60rem
+		width: 530rem
 
 .competence__item
 	position: relative
@@ -812,6 +1153,12 @@ ul
 	font-size: vw(16)
 	font-weight: 400
 	letter-spacing: vw(0.8)
+	+media-breakpoint-down(lg)
+		padding-left: 22rem
+		margin-bottom: 15rem
+		width: 235rem
+		font-size: 16rem
+		letter-spacing: 0.8rem
 	&:before
 		content: ""
 		position: absolute
@@ -823,6 +1170,9 @@ ul
 		height: vw(19)
 		background: url('../img/@2x/lightning-no-shadow.png') no-repeat
 		background-size: cover
+		+media-breakpoint-down(lg)
+			width: 11rem
+			height: 19rem
 
 .facts__clients
 	// display: flex
@@ -831,19 +1181,24 @@ ul
 
 .clients-row
 	display: table-row	
-	
 
 .client-item
 	// max-width: vw()
 	display: table-cell
 	padding-bottom: vw(9)
+	+media-breakpoint-down(lg)
+		padding-bottom: 9rem
 	&:not(:last-child)
 		padding-right: vw(23)
+		+media-breakpoint-down(lg)
+			padding-right: 23rem
 
 .play-btn
 	position: absolute
 	left: 50%
-	bottom: vw(160)		
+	bottom: vw(160)
+	+media-breakpoint-down(lg)
+		bottom: 160rem
 
 .speaker__invoke
 	position: absolute
@@ -853,6 +1208,11 @@ ul
 	font-size: vw(12)
 	text-align: center
 	letter-spacing: vw(0.3)
+	+media-breakpoint-down(lg)
+		left: -150rem
+		bottom: 30rem
+		font-size: 12rem
+		letter-spacing: 0.3rem
 	&:before
 		content: ""
 		position: absolute
@@ -860,12 +1220,20 @@ ul
 		width: vw(87)
 		height: vw(60)
 		background: url(../img/@2x/speaker-arrow.png) no-repeat
+		+media-breakpoint-down(lg)
+			top: -250%
+			width: 87rem
+			height: 60rem
 
 .booking
 	padding-top: vw(80)
 	padding-bottom: vw(80)
 	min-height: vw(1060)
-	background: url('../img/@2x/booking-bg.png') no-repeat center / cover		
+	background: url('../img/@2x/booking-bg.png') no-repeat center / cover
+	+media-breakpoint-down(lg)		
+		padding-top: 80rem
+		padding-bottom: 80rem
+		min-height: 1060rem
 
 .booking .container
 	text-align: center
@@ -875,20 +1243,32 @@ ul
 	font-family: "Bebas Neue"
 	color: $white
 	letter-spacing: vw(2.13)
+	+media-breakpoint-down(lg)
+		margin-bottom: 25rem
+		letter-spacing: 2.13rem
 	span
 		font-weight: 600
 
 .booking .signup__getpdf
 	margin-bottom: vw(15)
 	font-size: vw(18)	
+	+media-breakpoint-down(lg)
+		margin-bottom: 15rem
+		font-size: 18rem
 
 .booking .signup__title
 	margin-bottom: vw(50)
 	line-height: vw(50)
 	font-size: vw(40)
+	+media-breakpoint-down(lg)
+		margin-bottom: rem50rem
+		line-height: 50rem
+		font-size: 40rem
 
 .booking .hero__date
 	margin-bottom: vw(15)	
+	+media-breakpoint-down(lg)
+		margin-bottom: 15rem
 
 .booking .hero__signup
 	margin-left: auto
@@ -897,17 +1277,29 @@ ul
 	padding-bottom: vw(0)
 	min-height: vw(550)
 	background: url(../img/@2x/booking-signup.png) no-repeat 
+	+media-breakpoint-down(lg)
+		padding-top: 110rem
+		padding-bottom: 0
+		min-height: 550rem
 	&:before
 		top: vw(-50)
 		left: vw(-280)
 		width: vw(440)
 		height: vw(479)
 		background: url(../img/@2x/mockup.png) no-repeat 
+		+media-breakpoint-down(lg)
+			top: -50rem
+			left: -280rem
+			width: 440rem
+			height: 479rem
 
 .footer
 	padding-top: vw(80)
 	background-color: #18191b
 	border-top: vw(1) solid #142036
+	+media-breakpoint-down(lg)
+		padding-top: 80rem
+		border-top: 1rem solid #142036
 
 .footer .container
 	display: flex
@@ -917,20 +1309,33 @@ ul
 	margin-right: vw(68)
 	font-size: vw(12)
 	line-height: vw(24)
+	+media-breakpoint-down(lg)
+		margin-right: 68rem
+		font-size: 12rem
+		line-height: 24rem
 
 .footer__documents 
 	margin-right: vw(70)
+	+media-breakpoint-down(lg)
+		margin-right: 70rem
 	a
 		display: block
 		font-size: vw(12)
 		line-height: vw(24)
 		text-decoration: underline
+		+media-breakpoint-down(lg)
+			font-size: 12rem
+			line-height: 24rem
 
 .footer .phones
 	display: block
 	margin-right: vw(32)
+	+media-breakpoint-down(lg)
+		margin-right: 32rem
 	.phones-item
 		margin-bottom: vw(11)
+		+media-breakpoint-down(lg)
+			margin-bottom: 11rem
 
 .footer__links
 	text-align: center
@@ -939,18 +1344,28 @@ ul
 	margin-right: vw(49)
 	margin-bottom: vw(17)
 	vertical-align: middle
+	+media-breakpoint-down(lg)
+		margin-right: 49rem
+		margin-bottom: 17rem
 
 .links__list
 	display: flex
 	justify-content: center
 	margin-bottom: vw(17)
+	+media-breakpoint-down(lg)
+		margin-bottom: 17rem
 	.social__item:not(:last-child)
-		margin-right: vw(16)		
+		margin-right: vw(16)	
+		+media-breakpoint-down(lg)	
+			margin-right: 16rem
 
 .social-link
 	display: block	
 	width: vw(24)
 	height: vw(23)
+	+media-breakpoint-down(lg)
+		width: 24rem
+		height: 23rem
 
 .website-link
 	color: #2e58fb	
@@ -958,6 +1373,10 @@ ul
 	line-height: vw(18)
 	text-decoration: underline
 	letter-spacing: vw(0.7)
+	+media-breakpoint-down(lg)
+		font-size: 14rem
+		line-height: 18rem
+		letter-spacing: 0.7rem
 	&:visited
 		color: #2e58fb	
 
@@ -995,11 +1414,18 @@ ul
 		bottom: vw(100)
 	width: vw(832)
 	height: vw(1053)
-
 	text-align: center
 	background: url('../img/@2x/popup.png') no-repeat center / contain
 	background-origin: border-box
 	z-index: 20
+	+media-breakpoint-down(lg)
+		padding:
+			top: 130rem
+			left: 70rem
+			right: vw(70)
+			bottom: vw(100)
+		width: vw(832)
+		height: vw(1053)
 		
 
 .popup__header
@@ -1009,12 +1435,21 @@ ul
 	font-weight: 700
 	font-size: vw(48)
 	letter-spacing: vw(1.88)
+	+media-breakpoint-down(lg)
+		margin-bottom: 20rem
+		font-size: 48rem
+		letter-spacing: 1.88rem
 
 .popup__this-popup
 	margin-bottom: vw(30)
 	font-size: vw(24)
 	line-height: vw(25)
 	letter-spacing: vw(0.47)
+	+media-breakpoint-down(lg)
+		margin-bottom: 30rem
+		font-size: 24rem
+		line-height: 25rem
+		letter-spacing: 0.47rem
 
 .popup__get-bonus
 	margin-bottom: vw(30)
@@ -1023,15 +1458,27 @@ ul
 	font-size: vw(48)
 	line-height: vw(46)
 	letter-spacing: vw(1.88)
+	+media-breakpoint-down(lg)
+		margin-bottom: 30rem
+		font-size: 48rem
+		line-height: 46rem
+		letter-spacing: 1.88rem
 
 .popup .signup-form
 	margin-bottom: vw(22)
+	+media-breakpoint-down(lg)
+		margin-bottom: 22rem
 
 .popup label
 	margin-bottom: vw(12)
 	font-size: vw(17)
 	letter-spacing: vw(0.13)
 	line-height: vw(17.89)
+	+media-breakpoint-down(lg)
+		margin-bottom: 12rem
+		font-size: 17rem
+		letter-spacing: 0.13rem
+		line-height: 17.89rem
 
 .popup input, .popup .select-occupation
 	display: block
@@ -1040,36 +1487,60 @@ ul
 	width: vw(388)
 	height: vw(65)
 	font-size: vw(18)
+	+media-breakpoint-down(lg)
+		width: 388rem
+		height: 65rem
+		font-size: 18rem
 
 .popup .select-occupation
 	padding-top: 0
 	span
-	line-height: vw(65)
+		line-height: vw(65)
+		+media-breakpoint-down(lg)
+			line-height: vw(65)
 
 .popup .select-occupation .option
 	width: vw(388)
 	height: vw(65)
+	+media-breakpoint-down(lg)
+		width: 388rem
+		height: 65rem
 
 .popup 	.input-sbmt-btn
 	padding: vw(28) vw(50)
 	width: vw(388)
 	height: vw(82)
 	vertical-align: middle
+	+media-breakpoint-down(lg)
+		padding: 28rem 50rem
+		width: 388rem
+		height: 82rem
 	span
 		font-size: vw(15)
 		font-weight: 700
 		letter-spacing: vw(0.9)
+		+media-breakpoint-down(lg)
+			font-size: 15rem
+			letter-spacing: 0.9rem
 
 .popup .input-sbmt-btn--icon	
 	padding-bottom: vw(3)
 	width: vw(28)	
 	height: vw(26)
+	+media-breakpoint-down(lg)
+		padding-bottom: 3rem
+		width: 28rem
+		height: 26rem
 
 .popup .form-safety span
 	font-size: vw(15)
+	+media-breakpoint-down(lg)
+		font-size: 15rem
 
 .popup .select-occupation, .popup input
-	margin-bottom: vw(33)	
+	margin-bottom: vw(33)
+	+media-breakpoint-down(lg)
+		margin-bottom: 33rem
 
 .popup__bonus
 	position: absolute
@@ -1077,6 +1548,12 @@ ul
 	left: vw(-230)
 	width: vw(438)	
 	height: vw(419)
+	+media-breakpoint-down(lg)
+		position: absolute
+		top: 230rem
+		left: -230rem
+		width: 438rem	
+		height: 419rem
 
 .popup__close
 	position: absolute
@@ -1085,6 +1562,12 @@ ul
 	width: vw(40)
 	height: vw(40)	
 	cursor: pointer
+	+media-breakpoint-down(lg)
+		top: 110rem
+		right: 80rem
+		width: 40rem
+		height: 40rem
+		
 	&:before, &:after
 		content: ""
 		position: absolute
@@ -1094,6 +1577,12 @@ ul
 		height: vw(5)
 		background-color: #464647
 		border-radius: vw(10)
+		+media-breakpoint-down(lg)
+			top: 17rem
+			left: 8rem
+			width: 25rem
+			height: 5rem
+			border-radius: 10rem
 	&:before
 		transform: rotate(45deg)
 	&:after
