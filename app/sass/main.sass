@@ -115,11 +115,11 @@ ul
 		justify-content: center
 
 .hero-bg
+	position: relative
 	min-height: vw(1279)
-	background-image: url(../img/@2x/hero-bg.jpg)
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: bottom center
+	background-color: 
+	background: #1b1b1b url(../img/_src/speaker.png) no-repeat left 15% bottom
+	background-size: vw(450) vw(813)
 	+media-breakpoint-down(lg)
 		min-height: 1279rem
 		background-position: bottom left -250rem
@@ -260,7 +260,7 @@ ul
 	font-size: vw(22)
 	margin-bottom: vw(30)
 	display: inline-block
-	padding: vw(10) vw(45) vw(6) vw(45)
+	padding: vw(12) vw(45) vw(8) vw(45)
 	background-color: $accent
 	transform: skew(-10deg)
 	letter-spacing: vw(1.1)
@@ -373,7 +373,7 @@ ul
 
 .form__author
 	position: absolute	
-	top: vw(340)
+	top: vw(400)
 	left: vw(230)
 	+media-breakpoint-down(lg)
 		top: 500rem
@@ -405,13 +405,13 @@ ul
 
 .author__mockup
 	position: absolute
-	top: vw(100)
+	top: vw(165)
 	left: vw(574)
 	width: vw(409)	
 	z-index: 5
 	+media-breakpoint-down(lg)
 		display: none
-		top: 160rem
+		top: 165rem
 		left: 574rem
 		width: 409rem
 
@@ -511,8 +511,8 @@ ul
 	&:before
 		content: ""
 		position: absolute
-		top: vw(20)
-		left: vw(-240)
+		top: vw(-40)
+		left: vw(-300)
 		width: vw(263)
 		height: vw(143)
 		background: url('../img/@2x/hero-arrow.png')
@@ -810,21 +810,21 @@ label[for="input-phone"]
 	position: absolute
 	left: 50%
 	transform: translateX(-50%)
-	bottom: vw(-10)
+	bottom: vw(100)
 	width: vw(23)		
 	height: vw(74)
 	+media-breakpoint-down(lg)
 		display: none
-		bottom: 54rem
+		bottom: 100rem
 		width: 23rem		
 		height: 74rem
 
 .program__paralax
 	position: absolute
 	bottom: 0
-	right: vw(-200)
+	right: vw(-110)
 	width: vw(1256)
-	height: vw(1020)
+	height: vw(950)
 	+media-breakpoint-down(lg)
 		display: none
 
@@ -976,7 +976,7 @@ label[for="input-phone"]
 		// font-size: 20rem
 
 .learn-list
-	margin-bottom: vw(94)
+	margin-bottom: vw(70)
 	width: vw(660)
 	+media-breakpoint-down(lg)
 		margin-bottom: 94rem
@@ -1533,7 +1533,7 @@ label[for="input-phone"]
 
 .booking
 	padding-top: vw(80)
-	padding-bottom: vw(80)
+	padding-bottom: vw(10)
 	min-height: vw(1060)
 	background: url('../img/@2x/booking-bg.png') no-repeat center / cover
 	overflow: hidden
@@ -1573,7 +1573,7 @@ label[for="input-phone"]
 		font-size: 40rem
 
 .booking .hero__date
-	margin-bottom: vw(15)	
+	margin-bottom: vw(65)	
 	+media-breakpoint-down(lg)
 		margin-bottom: 15rem
 
@@ -1596,8 +1596,8 @@ label[for="input-phone"]
 		height: vw(479)
 		background: url(../img/@2x/mockup.png) no-repeat center / contain
 		+media-breakpoint-down(lg)
-			top: -50rem
-			left: -280rem
+			top: -130rem
+			left: -350rem
 			width: 440rem
 			height: 479rem
 
@@ -1613,6 +1613,7 @@ label[for="input-phone"]
 
 .footer .container
 	display: flex
+	align-items: flex-end
 	+media-breakpoint-down(lg)
 		flex-wrap: wrap
 		justify-content: space-between
@@ -1645,10 +1646,13 @@ label[for="input-phone"]
 .footer .phones
 	display: block
 	margin-right: vw(32)
+	margin-bottom: 0
+	align-self: flex-end
 	+media-breakpoint-down(lg)
 		margin-right: 32rem
 	.phones-item
-		margin-bottom: vw(11)
+		&:not(:last-child)
+			margin-bottom: vw(11)
 		+media-breakpoint-down(lg)
 			margin-bottom: 11rem
 
@@ -1657,7 +1661,7 @@ label[for="input-phone"]
 
 .footer .socials	
 	margin-right: vw(49)
-	margin-bottom: vw(17)
+	margin-bottom: vw(0)
 	vertical-align: middle
 	+media-breakpoint-down(lg)
 		margin-right: 49rem
@@ -1681,6 +1685,11 @@ label[for="input-phone"]
 	+media-breakpoint-down(lg)
 		width: 24rem
 		height: 23rem
+	&:hover
+		position: relative
+		img
+			transform: translateY(vw(-10))
+			transition: transform .2s ease-in
 
 .website-link
 	color: #2e58fb	
