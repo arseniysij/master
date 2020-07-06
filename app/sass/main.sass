@@ -118,7 +118,7 @@ ul
 	position: relative
 	min-height: vw(1279)
 	background-color: 
-	background: #1b1b1b url(../img/_src/speaker.png) no-repeat left 15% bottom / vw(450) vw(868)
+	background:  url(../img/_src/hero-left.png) no-repeat top left / vw(612) vw(1190), url(../img/_src/hero-center-right.png) no-repeat top center / vw(612) vw(1190), url(../img/_src/hero-right.png) no-repeat right bottom / vw(582) vw(884) #1b1b1b
 	+media-breakpoint-down(lg)
 		min-height: 1279rem
 		background-size: 450rem 868rem
@@ -366,24 +366,33 @@ ul
 			display: none
 
 .hero__form
-	padding-top: vw(70)
 	position: relative
+	display: flex
+	padding-top: vw(70)
 	overflow: hidden
 	+media-breakpoint-down(lg)
 		padding-top: 70rem
 
+
+
 .form__author
-	position: absolute	
-	top: vw(400)
-	left: vw(230)
+	position: relative
 	+media-breakpoint-down(lg)
-		top: 500rem
+		top: 0rem
 		left: 0rem
 	+media-breakpoint-down(sm)
 		display: none
 
+.author-img
+	width: vw(450)		
+	height: vw(868)
+
+.author__info
+	position: absolute
+	left: 45%
+	top: 45%
 .author__icon
-	position: relative
+	
 	display: flex
 	justify-content: center
 	align-items: center

@@ -53,7 +53,7 @@ var parallaxInstance = new Parallax(scene, {
   }
 
   // form__author hover
-  let formAuthor = $('.form__author');
+  let formAuthor = $('.author__info');
   let desc = $('.author__decs');
 
   formAuthor.on('mouseleave', function() {
