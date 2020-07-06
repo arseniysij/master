@@ -147,4 +147,5 @@ gulp.task('watch', function() {
 	gulp.watch('app/img/_src/**/*', gulp.parallel('img', 'make-webp'));
 });
 
-gulp.task('default', gulp.parallel('img', 'make-webp', 'styles', 'scripts', 'browser-sync', 'watch'));
+// gulp.task('default', gulp.parallel('img', 'make-webp', 'styles', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));

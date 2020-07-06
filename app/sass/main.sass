@@ -118,11 +118,12 @@ ul
 	position: relative
 	min-height: vw(1279)
 	background-color: 
-	background: #1b1b1b url(../img/_src/speaker.png) no-repeat left 15% bottom
-	background-size: vw(450) vw(813)
+	background: #1b1b1b url(../img/_src/speaker.png) no-repeat left 15% bottom / vw(450) vw(868)
 	+media-breakpoint-down(lg)
 		min-height: 1279rem
-		background-position: bottom left -250rem
+		background-size: 450rem 868rem
+	+media-breakpoint-down(md)
+		background-position: -50rem bottom
 	+media-breakpoint-down(sm)
 		background-image: none
 		background-color: #1b1a1a
@@ -438,7 +439,7 @@ ul
 		left: vw(0)
 		width: vw(33)
 		height: vw(55)
-		background: url(../img/@2x/lightning-blue.png) no-repeat
+		background: url(../img/_src/lightning-blue.png) no-repeat
 		z-index: 3
 		+media-breakpoint-down(lg)
 			top: 7rem
@@ -515,7 +516,7 @@ ul
 		left: vw(-300)
 		width: vw(263)
 		height: vw(143)
-		background: url('../img/@2x/hero-arrow.png')
+		background: url('../img/_src/hero-arrow.png')
 		+media-breakpoint-down(lg)
 			display: none
 			top: 20rem
@@ -616,7 +617,7 @@ label[for="input-phone"]
 		height: vw(77)
 		top: vw(45)
 		left: vw(-35)
-		background: url('../img/@2x/arrow-to-btn.png') no-repeat center center / contain		
+		background: url('../img/_src/arrow-to-btn.png') no-repeat center center / contain		
 		+media-breakpoint-down(lg)
 			width: 54rem
 			height: 77rem
@@ -888,7 +889,7 @@ label[for="input-phone"]
 	padding-top: vw(80)
 	padding-bottom: vw(110)
 	min-height: vw(1000)
-	background: url('../img/@2x/program-bg.jpg') no-repeat top right
+	background: url('../img/_src/program-left.png')  no-repeat top left vw(-150) / vw(513) vw(908), url('../img/_src/program-center.png') no-repeat top vw(250) center / vw(397) vw(411), url('../img/_src/program-right.png') no-repeat top vw(50) right vw(20) / vw(384) vw(590)
 	overflow-x: hidden
 	overflow-y: visible
 	z-index: 1
@@ -896,6 +897,11 @@ label[for="input-phone"]
 		padding-top: 80rem
 		padding-bottom: 110rem
 		min-height: 1000rem
+		background: url('../img/_src/program-left.png')  no-repeat top left vw(-150) / vw(513) vw(908), url('../img/_src/program-right.png') no-repeat top vw(50) right vw(20) / vw(384) vw(590)
+		background-size: 513rem 908rem, 384rem 590rem
+	+media-breakpoint-down(md)
+		background: url('../img/_src/program-left.png')  no-repeat top left vw(-150) / vw(513) vw(908)
+		background-size: 513rem 908rem
 
 .section-title
 	margin-bottom: vw(85)
@@ -914,7 +920,7 @@ label[for="input-phone"]
 		font-weight: 600
 	br
 		+media-breakpoint-down(lg)
-		display: none
+			display: none
 
 .program .container
 	position: relative
@@ -946,7 +952,7 @@ label[for="input-phone"]
 		top: -50%
 		width: vw(187)
 		height: vw(65)
-		background: url('../img/@2x/program-arrow.png') no-repeat
+		background: url('../img/_src/program-arrow.png') no-repeat
 		background-size: contain
 		+media-breakpoint-down(lg)
 			left: 350rem
@@ -1078,13 +1084,15 @@ label[for="input-phone"]
 	padding-top: vw(125)
 	padding-bottom: vw(140)
 	min-height: vw(1250)
-	background: url('../img/@2x/audience.jpg') no-repeat center
-	background-size: cover
+	background:  url('../img/_src/audience-center.png') no-repeat left center/ vw(1467) vw(1253), url('../img/_src/audience-right.png') no-repeat center right / vw(481) vw(1233)  #161922
 	overflow: hidden
 	+media-breakpoint-down(lg)
 		padding-top: 125rem
 		padding-bottom: 140rem
 		min-height: 1250rem
+		background-size: 1467rem 1253rem, 481rem 1233rem
+	+media-breakpoint-down(md)
+		background:  url('../img/_src/audience-center.png') no-repeat left center/ vw(1467) vw(1253)  #161922
 
 .audience__section-title
 	color:  $white
@@ -1208,7 +1216,7 @@ label[for="input-phone"]
 	padding-top: vw(60)	
 	padding-bottom: vw(60)
 	min-height: vw(1110)
-	background: url('../img/@2x/speaker-bg.jpg') no-repeat bottom right vw(-130) / contain
+	background: url('../img/_src/speaker-bottom.png') no-repeat bottom right / vw(900) vw(888)
 	overflow: hidden
 	+media-breakpoint-down(lg)
 		padding-top: 60rem
@@ -1446,7 +1454,7 @@ label[for="input-phone"]
 		display: block
 		width: vw(11)
 		height: vw(19)
-		background: url('../img/@2x/lightning-no-shadow.png') no-repeat
+		background: url('../img/_src/lightning-no-shadow.png') no-repeat
 		background-size: cover
 		+media-breakpoint-down(lg)
 			width: 11rem
@@ -1525,7 +1533,7 @@ label[for="input-phone"]
 		top: -250%
 		width: vw(87)
 		height: vw(60)
-		background: url(../img/@2x/speaker-arrow.png) no-repeat center / contain
+		background: url(../img/_src/speaker-arrow.png) no-repeat center / contain
 		+media-breakpoint-down(lg)
 			top: -250%
 			width: 87rem
@@ -1535,9 +1543,10 @@ label[for="input-phone"]
 	padding-top: vw(80)
 	padding-bottom: vw(10)
 	min-height: vw(1060)
-	background: url('../img/@2x/booking-bg.png') no-repeat center / cover
+	background: url('../img/_src/booking-left.png') no-repeat left center / vw(545) vw(1062), url('../img/_src/booking-right.png') no-repeat right center / vw(794) vw(1047), url('../img/_src/booking-center.png') no-repeat center / vw(1253) vw(1306) #181a20
 	overflow: hidden
-	+media-breakpoint-down(lg)		
+	+media-breakpoint-down(lg)	
+	background-size: 542rem 1062rem, 794rem 1047rem, 1253rem 1306rem 
 		padding-top: 80rem
 		padding-bottom: 80rem
 		min-height: 1060rem
@@ -1594,7 +1603,7 @@ label[for="input-phone"]
 		left: vw(-350)
 		width: vw(440)
 		height: vw(479)
-		background: url(../img/@2x/mockup.png) no-repeat center / contain
+		background: url(../img/_src/mockup.png) no-repeat center / contain
 		+media-breakpoint-down(lg)
 			top: -130rem
 			left: -350rem
@@ -1604,7 +1613,7 @@ label[for="input-phone"]
 .footer
 	padding-top: vw(80)
 	padding-bottom: vw(80)
-	background-color: #18191b
+	// background-color: #18191b
 	border-top: vw(1) solid #142036
 	overflow: hidden
 	+media-breakpoint-down(lg)
@@ -1739,7 +1748,7 @@ label[for="input-phone"]
 	width: vw(832)
 	height: vw(1053)
 	text-align: center
-	background: url('../img/@2x/popup.png') no-repeat center / contain
+	background: url('../img/_src/popup.png') no-repeat center / contain
 	background-origin: border-box
 	z-index: 20
 	+media-breakpoint-down(lg)
@@ -1920,7 +1929,7 @@ label[for="input-phone"]
 		top: vw(167)
 		// bottom: vw(90)
 	min-height: vw(992)
-	background: url('../img/@2x/thanks-hero-bg.jpg') no-repeat center / cover
+	background: url('../img/_src/thanks-hero-bg.jpg') no-repeat center 
 
 .thanks-hero
 	text-align: center	
@@ -2021,7 +2030,7 @@ label[for="input-phone"]
 		bottom: vw(-90)
 		width: vw(63)
 		height: vw(125)
-		background: url("../img/@2x/thanks-video.png") no-repeat center / contain
+		background: url("../img/_src/thanks-video.png") no-repeat center / contain
 		
 
 .video-long
@@ -2041,7 +2050,7 @@ label[for="input-phone"]
 	width: vw(1300)		
 	height: vw(704)
 	text-align: left
-	background: url("../img/@2x/video.jpg") no-repeat center right / cover
+	background: url("../img/_src/video.jpg") no-repeat center right / cover
 	border-radius: vw(15)
 
 .video__text
@@ -2073,4 +2082,4 @@ label[for="input-phone"]
 		bottom: vw(-90)
 		width: vw(63)
 		height: vw(125)
-		background: url("../img/@2x/sell-arrow.png") no-repeat center / contain
+		background: url("../img/_src/sell-arrow.png") no-repeat center / contain
