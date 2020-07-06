@@ -19,6 +19,7 @@ input, textarea
 		border-color: green
 
 html
+	scroll-behavior: smooth;
 	font-size: 1px
 	+media-breakpoint-down(sm)
 		font-size: 0.8px
@@ -372,12 +373,12 @@ ul
 
 .form__author
 	position: absolute	
-	top: vw(400)
-	left: vw(220)
+	top: vw(340)
+	left: vw(230)
 	+media-breakpoint-down(lg)
-		top: 500rem
-		left: 0rem
-	+media-breakpoint-down(md)
+		top: 300rem
+		left: 110rem
+	+media-breakpoint-down(sm)
 		display: none
 
 .author__icon
@@ -404,7 +405,7 @@ ul
 
 .author__mockup
 	position: absolute
-	top: vw(160)
+	top: vw(100)
 	left: vw(574)
 	width: vw(409)	
 	z-index: 5
@@ -483,27 +484,32 @@ ul
 	width: vw(483)
 	min-height: vw(652)
 	text-align: center
-	background: url(../img/svg/form-hero.svg) no-repeat
-	// background-origin: border-box
-	background-size: 100% 100%
+	background: url(../img/svg/form-hero.svg) no-repeat center center / contain
+	// filter: drop-shadow(0px 1px 15px 15px rgba(0, 0, 0, 0.4))
 	+media-breakpoint-down(lg)
 		top: -10rem
 		margin-left: auto
 		margin-right: 0rem
-		padding: 100rem 65rem 48rem 65rem
+		padding: 56rem 64rem 48rem 64rem
+		
 		width: 483rem
 		min-height: 652rem
 	+media-breakpoint-down(sm)
 		margin-right: auto
 	@media (max-width: 500px)
-		left: -10vw
-	@media (max-width: 390px)
-		left: -20vw
-	@media (max-width: 350px)
-		left: -20vw
+		// left: -10vw
 		padding: 
 			left: 10rem
-			right: 100rem
+			right: 10rem
+		width: 360rem
+		background-size: 360rem 650rem
+	@media (max-width: 390px)
+		// left: -20vw
+	@media (max-width: 350px)
+		// left: -20vw
+		
+		// background-size: 360rem 690rem
+		
 
 	&:before
 		content: ""
@@ -558,12 +564,12 @@ ul
 		letter-spacing: .7rem
 
 .hero__signup .hero__date
-	margin-bottom: vw(16)
+	margin-bottom: vw(15)
 	+media-breakpoint-down(lg)
-		margin-bottom: 16rem
+		margin-bottom: 5rem
 
 .signup__getpdf
-	margin-bottom: vw(10)
+	margin-bottom: vw(5)
 	font-size: vw(13)
 	color: #969494
 	letter-spacing: vw(0.7)
@@ -573,22 +579,19 @@ ul
 		letter-spacing: .7rem
 
 .signup__title
-	margin-bottom: vw(24)
+	margin-bottom: vw(15)
 	font-family: "Bebas Neue"
 	font-weight: 700
 	font-size: vw(24)
-	line-height: vw(34)
+	line-height: vw(34.3)
 	letter-spacing: vw(0.7)
 	+media-breakpoint-down(lg)
-		margin-bottom: 24rem
+		margin-bottom: 15rem
 		font-size: 24rem
-		line-height: 34rem
+		line-height: 34.3rem
 		letter-spacing: 0.7rem
-	@media (max-width: 390px)
-		padding: 
-			left: 63rem
-			right: 63rem
-		br
+	br
+		@media (max-width: 500px)
 			display: none
 
 .signup-form
@@ -789,7 +792,7 @@ ul
 	position: absolute
 	left: 50%
 	transform: translateX(-50%)
-	bottom: vw(54)
+	bottom: vw(-10)
 	width: vw(23)		
 	height: vw(74)
 	+media-breakpoint-down(lg)
@@ -1557,14 +1560,15 @@ ul
 .booking .hero__signup
 	margin-left: auto
 	margin-right: auto
-	padding-top: vw(90)
-	padding-bottom: vw(0)
-	min-height: vw(550)
-	background: url(../img/@2x/booking-signup.png) no-repeat center / contain
+	padding-top: vw(50)
+	padding-bottom: vw(48)
+	min-height: vw(467)
+	background-size: vw(483) vw(467)
 	+media-breakpoint-down(lg)
 		padding-top: 90rem
 		padding-bottom: 0
 		min-height: 550rem
+		background-size: 483rem 467rem
 	&:before
 		top: vw(-70)
 		left: vw(-300)
