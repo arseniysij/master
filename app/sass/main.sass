@@ -2,6 +2,7 @@
 @import fonts
 @import libs
 @import "_nice-select"
+@import 'animate.min'
 
 ::placeholder
 	color: #666
@@ -19,6 +20,9 @@ input, textarea
 
 html
 	font-size: 1px
+	+media-breakpoint-down(sm)
+		font-size: 0.8px
+	+media-breakpoint-down(xs)
 
 body
 	position: relative
@@ -76,7 +80,9 @@ input[type="radio"].visually-hidden
 		left: 
 	margin:
 		left: auto
-		right: auto  	
+		right: auto  
+	+media-breakpoint-down(lg)
+		max-width: 90vw	
 
 ul
 	list-style: none
@@ -101,9 +107,11 @@ ul
 	display: flex
 	justify-content: space-between
 	+media-breakpoint-down(lg)
-		margin-bottom: 30rem
+		flex-wrap: wrap
+		// margin-bottom: 30rem
 		padding-top: 37rem
-	
+	@media (max-width: 350px)
+		justify-content: center
 
 .hero-bg
 	// width: vw(1920)
@@ -115,15 +123,26 @@ ul
 	+media-breakpoint-down(lg)
 		min-height: 1279rem
 		background-position: bottom left -250rem
+	+media-breakpoint-down(sm)
+		background-image: none
+		background-color: #1b1a1a
+
 .logo
 	display: flex
 	align-items: flex-end
 	align-self: flex-start
+	+media-breakpoint-down(lg)
+		margin-bottom: 20rem
+	+media-breakpoint-down(xs)
+		flex-direction: column
+		align-items: end
 
 .logo img
 	margin-right: vw(44)
 	+media-breakpoint-down(lg)
 		margin-right: 44rem
+	+media-breakpoint-down(xs)
+		margin-bottom: 10rem
 
 .logo-text
 	padding-bottom: vw(2)
@@ -139,6 +158,13 @@ ul
 		font-size: 14rem
 		line-height: 19rem
 		letter-spacing: 0.7rem
+	+media-breakpoint-down(xs)
+		margin-left: 10rem
+
+// .contacts
+// 	+media-breakpoint-down(lg)
+// 		display: flex
+// 		flex-direction: column
 
 
 .phones
@@ -146,6 +172,8 @@ ul
 	margin-bottom: vw(24)
 	+media-breakpoint-down(lg)
 		margin-bottom: 24rem
+	+media-breakpoint-down(md)
+		flex-direction: column
 
 .phone-numb
 	font-family: "Proxima Nova"
@@ -155,11 +183,15 @@ ul
 	line-height: vw(19)
 	letter-spacing: vw(0.8)
 	+media-breakpoint-down(lg)
-		font-size: 16rem
+		font-size: 12rem
 		line-height: 19rem
 		letter-spacing: .8rem
 	&:hover
 		color: $accent
+
+.phones-item
+	+media-breakpoint-down(md)
+		margin-bottom: 10rem
 
 .phones-item img
 	margin-right: vw(11)
@@ -173,6 +205,8 @@ ul
 
 .socials
 	text-align: right
+	+media-breakpoint-down(xs)
+		margin-bottom: 30rem
 
 .socials img
 	margin-right: vw(9)	
@@ -298,7 +332,7 @@ ul
 		letter-spacing: 1.8rem
 
 .hero-h1
-	margin-bottom: 0
+	margin-bottom: vw(70)
 	font-family: "Bebas Neue"
 	font-weight: 400
 	color: $white
@@ -310,6 +344,10 @@ ul
 		font-size: 68rem
 		letter-spacing: 2.4rem
 		text-shadow: 0 0 103rem rgba(0, 52, 255, 0.25)
+	+media-breakpoint-down(md)
+		font-size: 46rem
+	+media-breakpoint-down(sm)
+		font-size: 40rem
 	span
 		font-family: "MyriadPro"
 		font-weight: 600
@@ -318,9 +356,19 @@ ul
 		+media-breakpoint-down(lg)
 			font-size: 72rem
 			letter-spacing: 1.1rem
+		+media-breakpoint-down(md)
+			font-size: 46rem
+		+media-breakpoint-down(sm)
+			font-size: 40rem
+	br
+		+media-breakpoint-down(lg)
+			display: none
 
 .hero__form
 	position: relative
+	overflow: hidden
+	+media-breakpoint-down(sm)
+
 
 .form__author
 	position: absolute	
@@ -328,7 +376,9 @@ ul
 	left: vw(220)
 	+media-breakpoint-down(lg)
 		top: 500rem
-		left: -80rem
+		left: 0rem
+	+media-breakpoint-down(md)
+		display: none
 
 .author__icon
 	position: relative
@@ -384,7 +434,7 @@ ul
 		display: block
 		position: absolute
 		top: vw(7)
-		left: vw(10)
+		left: vw(0)
 		width: vw(33)
 		height: vw(55)
 		background: url(../img/@2x/lightning-blue.png) no-repeat
@@ -428,21 +478,33 @@ ul
 	position: relative
 	top: vw(-10)
 	margin-left: auto
-	margin-right: vw(70)
-	padding: vw(100) vw(65) vw(48) vw(65)
-	width: vw(593)
-	min-height: vw(763)
+	margin-right: vw(140)
+	padding: vw(56) vw(64) vw(48) vw(64)
+	width: vw(483)
+	min-height: vw(652)
 	text-align: center
-	background: url(../img/@2x/signup.png) no-repeat
-	background-origin: border-box
-	background-size: contain
+	background: url(../img/svg/form-hero.svg) no-repeat
+	// background-origin: border-box
+	background-size: 100% 100%
 	+media-breakpoint-down(lg)
 		top: -10rem
 		margin-left: auto
-		margin-right: -80rem
+		margin-right: 0rem
 		padding: 100rem 65rem 48rem 65rem
-		width: 593rem
-		min-height: 763rem
+		width: 483rem
+		min-height: 652rem
+	+media-breakpoint-down(sm)
+		margin-right: auto
+	@media (max-width: 500px)
+		left: -10vw
+	@media (max-width: 390px)
+		left: -20vw
+	@media (max-width: 350px)
+		left: -20vw
+		padding: 
+			left: 10rem
+			right: 100rem
+
 	&:before
 		content: ""
 		position: absolute
@@ -516,12 +578,18 @@ ul
 	font-weight: 700
 	font-size: vw(24)
 	line-height: vw(34)
-	letter-spacing: vw(1.25)
+	letter-spacing: vw(0.7)
 	+media-breakpoint-down(lg)
 		margin-bottom: 24rem
 		font-size: 24rem
 		line-height: 34rem
-		letter-spacing: 1.25rem
+		letter-spacing: 0.7rem
+	@media (max-width: 390px)
+		padding: 
+			left: 63rem
+			right: 63rem
+		br
+			display: none
 
 .signup-form
 	margin-bottom: vw(22)
@@ -540,7 +608,7 @@ ul
 
 .signup-form input
 	display: inline-block
-	padding: vw(13) vw(25)	
+	padding: 0 vw(25)	
 	width: vw(289)
 	height: vw(48)
 	margin-bottom: vw(15)
@@ -552,7 +620,7 @@ ul
 	border: vw(1) solid #292929
 	border-radius: vw(5)
 	+media-breakpoint-down(lg)
-		padding: 13rem 25rem	
+		padding: 0 25rem	
 		width: 289rem
 		height: 48rem
 		margin-bottom: 15rem
@@ -576,9 +644,10 @@ ul
 	justify-content: center
 
 .select-occupation
-	display: inline-block
+	display: flex
+	align-items: center
 	margin-bottom: vw(15)
-	padding: vw(15) vw(25)	
+	// padding: vw(15) vw(25)	
 	width: vw(289)
 	height: vw(48)
 	color: #fff
@@ -679,21 +748,17 @@ ul
 
 @keyframes slideme  
 	0% 
-		left: vw(-30)
+		left: -30px
 		margin-left: 0px
-		// +media-breakpoint-down(lg)
-		// 	left: -30rem
-		// 	margin-left: 0px
+		
 	30% 
 		left: 110%
-		margin-left: vw(80)
-		// +media-breakpoint-down(lg)
-		// 	margin-left: 80rem
+		margin-left: 80px
+		
 	100% 
 		left: 110% 
-		margin-left: vw(80)
-		// +media-breakpoint-down(lg)
-		// 	margin-left: 80rem
+		margin-left: 80px
+		
 
 .input-sbmt-btn--icon
 	width: vw(24)
@@ -733,11 +798,77 @@ ul
 		width: 23rem		
 		height: 74rem
 
+.program__paralax
+	position: absolute
+	bottom: 0
+	right: vw(-200)
+	width: vw(1256)
+	height: vw(1020)
+	+media-breakpoint-down(lg)
+		display: none
+
+.paralax__imac
+	position: absolute
+	top: 0 !important
+	left: 0 !important
+	width: vw(775)
+	height: vw(706)
+
+.paralax__headphones
+	position: absolute 
+	left: vw(200) !important
+	top: vw(700) !important
+
+
+.paralax__screen
+	position: absolute
+	width: vw(492)
+	height: vw(238)
+	top: vw(530) !important
+	left: vw(320)	 !important
+
+.paralax__pen
+	position: absolute
+	top: vw(510) !important
+	left: vw(680) !important
+	width: vw(210)
+	height: vw(109)
+
+.paralax__lens
+	position: absolute
+	width: vw(93)
+	height: vw(98)
+	top: vw(700) !important
+	left: vw(750) !important
+
+.paralax__bot-screen
+	position: absolute
+	width: vw(861)
+	height: vw(482)
+	top: vw(200) !important
+	left: vw(550) !important
+
+.paralax__top-screen
+	position: absolute
+	width: vw(904)
+	height: vw(506)
+	top: vw(50) !important
+	left: vw(550) !important
+	
+.paralax__queen
+	position: absolute
+	width: vw(197)
+	height: vw(215)
+	top: vw(-250) !important
+	left: vw(700) !important
+
 .program
+	position: relative
 	padding-top: vw(80)
 	padding-bottom: vw(110)
 	min-height: vw(1000)
 	background: url('../img/@2x/program-bg.jpg') no-repeat top right
+	overflow: hidden
 	+media-breakpoint-down(lg)
 		padding-top: 80rem
 		padding-bottom: 110rem
@@ -752,18 +883,25 @@ ul
 	letter-spacing: vw(2.8)
 	+media-breakpoint-down(lg)
 		margin-bottom: 85rem
-		font-size: 60rem
+		font-size: 40rem
 		letter-spacing: 2.8rem
+	+media-breakpoint-down(xs)
+		font-size: 32rem
 	span
 		font-weight: 600
+	br
+		+media-breakpoint-down(lg)
+		display: none
 
 .program .container
-	// text-align: left
+	position: relative
+	z-index: 1
 
 .program .section-title	
 	margin-bottom: vw(35)
 	+media-breakpoint-down(lg)
 		margin-bottom: 35rem
+	
 
 .program .date__month, .program .date__time	
 	color: $black	
@@ -786,26 +924,46 @@ ul
 		width: vw(187)
 		height: vw(65)
 		background: url('../img/@2x/program-arrow.png') no-repeat
+		background-size: contain
 		+media-breakpoint-down(lg)
 			left: 350rem
 			width: 187rem
 			height: 65rem
+		@media (max-width: 500px)
+			display: none
 
 .program__will-learn
 	margin-bottom: vw(24)
+	width: vw(660)
 	color: $black
 	font-size: vw(24)
 	font-weight: 600
 	letter-spacing: vw(0.6) 
 	+media-breakpoint-down(lg)
 		margin-bottom: 24rem
+		margin: 
+			left: auto
+			right: auto
+		width: 660rem
 		font-size: 24rem
+		// text-align: center
 		letter-spacing: 0.6rem 
+	+media-breakpoint-down(xs)
+		width: auto
+		// font-size: 20rem
 
 .learn-list
 	margin-bottom: vw(94)
+	width: vw(660)
 	+media-breakpoint-down(lg)
 		margin-bottom: 94rem
+		width: 660rem
+		margin: 
+			left: auto
+			right: auto
+		// margin-left: 20vw
+	+media-breakpoint-down(xs)
+		width: auto
 
 .learn-item
 	display: flex
@@ -844,7 +1002,15 @@ ul
 	position: relative
 	margin-left: vw(170)
 	+media-breakpoint-down(lg)
-		margin-left: 170rem
+		// margin-left: 340rem
+		width: 404rem
+		margin: 
+				right: auto
+				left: auto
+	+media-breakpoint-down(lg)
+		text-align: center
+		width: auto
+		max-width: 100%
 	img
 		position: absolute
 		top: vw(-25)
@@ -857,13 +1023,22 @@ ul
 			left: -80rem
 			width: 175rem
 			height: 189rem
+		@media (max-width: 500px)
+			display: none
+			width: auto
+			
 
 .learn__btn
+	position: relative
 	padding: vw(40) vw(31) vw(36) vw(86)
 	border-radius: vw(20)	
+	overflow: visible
 	+media-breakpoint-down(lg)
 		padding: 40rem 31rem 36rem 86rem
 		border-radius: 20rem
+	@media (max-width: 500px)
+		padding: 40rem 40rem
+		max-width: 100%
 	&:hover
 		box-shadow: vw(0) vw(0) vw(10) vw(3) $accent
 		+media-breakpoint-down(lg)
@@ -882,6 +1057,7 @@ ul
 	min-height: vw(1250)
 	background: url('../img/@2x/audience.jpg') no-repeat center
 	background-size: cover
+	overflow: hidden
 	+media-breakpoint-down(lg)
 		padding-top: 125rem
 		padding-bottom: 140rem
@@ -902,20 +1078,69 @@ ul
 	flex-wrap: wrap
 	max-width: vw(935)
 	+media-breakpoint-down(lg)
+		justify-content: space-between
 		margin-bottom: 60rem
-		max-width: 935rem
+		max-width: 100%
+	@media (max-width: 500px)
+		justify-content: space-around
 
 .audience__item
 	margin-right: vw(46)
 	width: vw(265)
 	+media-breakpoint-down(lg)
 		margin-right: 46rem
-		width: 265rem
+		width: 200rem
+	@media (max-width: 500px)
+		margin-right: 0
+	&:nth-child(1) .audience__img
+		width: vw(190)
+		height: vw(230)
+		+media-breakpoint-down(lg)
+			width: 190rem
+			height: 230rem	
+	&:nth-child(2) 
+		.audience__img
+			width: vw(193)
+			height: vw(219)
+			+media-breakpoint-down(lg)
+				width: 193rem
+				height: 219rem
+		.audience__item__header
+			margin-bottom: vw(45)
+			+media-breakpoint-down(lg)
+				margin-bottom: 45rem
+	&:nth-child(3) .audience__img
+		width: vw(197)
+		height: vw(227)
+		+media-breakpoint-down(lg)
+			width: 197rem
+			height: 227rem
+	&:nth-child(4) .audience__img
+		width: vw(176)
+		height: vw(220)
+		+media-breakpoint-down(lg)
+			width: 176rem
+			height: 220rem
+	&:nth-child(5) .audience__img
+		width: vw(205)
+		height: vw(224)
+		+media-breakpoint-down(lg)
+			width: 205rem
+			height: 224rem
+	&:nth-child(6) .audience__img
+		width: vw(172)
+		height: vw(230)
+		+media-breakpoint-down(lg)
+			width: 172rem
+			height: 230rem
 
 .audience__img
 	max-height: vw(219)	
 	+media-breakpoint-down(lg)
-		max-height: 219rem
+		max-height: 219rem	
+	img
+		// width: 100%
+		
 
 .audience__item__header	
 	margin-bottom: vw(22)
@@ -925,6 +1150,7 @@ ul
 	letter-spacing: vw(0.6)
 	+media-breakpoint-down(lg)
 		margin-bottom: 22rem
+		font-size: 16rem
 		letter-spacing: 0.6rem
 
 .audience__item__content	
@@ -944,6 +1170,7 @@ ul
 	width: vw(923)
 	height: vw(912)
 	+media-breakpoint-down(lg)
+		display: none
 		right: -20rem
 		bottom: -30rem
 		width: 923rem
@@ -952,15 +1179,19 @@ ul
 .audience .learn__btn-wrap
 	margin-left: vw(500)
 	+media-breakpoint-down(lg)
-		margin-left: 500rem
+		margin-left: 0
 
 .speaker
 	padding-top: vw(60)	
+	padding-bottom: vw(60)
 	min-height: vw(1110)
-	background: url('../img/@2x/speaker-bg.jpg') no-repeat bottom right vw(-130)
+	background: url('../img/@2x/speaker-bg.jpg') no-repeat bottom right vw(-130) / contain
+	overflow: hidden
 	+media-breakpoint-down(lg)
 		padding-top: 60rem
+		padding-bottom: 60rem
 		min-height: 1110rem
+		background-image: none
 	
 .speaker .container	
 	position: relative
@@ -996,6 +1227,8 @@ ul
 		margin-bottom: 25rem
 		font-size: 36rem
 		letter-spacing: 1.8rem
+	+media-breakpoint-down(sm)
+		font-size: 26rem
 	span
 		font-weight: 700
 
@@ -1026,11 +1259,22 @@ ul
 		height: 108rem
 		border: 1rem dashed #ddd
 		border-radius: 5rem
+	+media-breakpoint-down(xs)
+		flex-direction: column
+		height: auto
+		align-items: end
+		padding: 10rem
+		.facts__img
+			margin-bottom: 10rem
+		.facts__text
+			width: auto
 	&:nth-child(1)
 		width: vw(595)
 		color: $blackish
 		+media-breakpoint-down(lg)
 			width: 595rem
+		+media-breakpoint-down(xs)
+			width: auto
 		& .facts__img
 			margin-right: vw(5)
 			width: vw(174)
@@ -1038,10 +1282,17 @@ ul
 			+media-breakpoint-down(lg)
 				margin-right: 5rem
 				width: 174rem
+			
+				align-self: start
 		& .facts__text
 			width: vw(395)
 			+media-breakpoint-down(lg)
 				width: 395rem
+			+media-breakpoint-down(xs)
+				flex-grow: 1
+				// padding: 10rem 20rem
+				width: 70%
+				height: auto
 	&:nth-child(2)
 		width: vw(411)
 		+media-breakpoint-down(lg)
@@ -1143,6 +1394,8 @@ ul
 	+media-breakpoint-down(lg)
 		margin-bottom: 60rem
 		width: 530rem
+	+media-breakpoint-down(xs)
+		width: auto
 
 .competence__item
 	position: relative
@@ -1159,6 +1412,8 @@ ul
 		width: 235rem
 		font-size: 16rem
 		letter-spacing: 0.8rem
+	+media-breakpoint-down(xs)
+		margin-right: 15rem
 	&:before
 		content: ""
 		position: absolute
@@ -1178,9 +1433,14 @@ ul
 	// display: flex
 	// flex-wrap: wrap
 	display: table
+	+media-breakpoint-down(sm)
+		display: block
 
 .clients-row
 	display: table-row	
+	+media-breakpoint-down(sm)
+		display: flex
+		flex-wrap: wrap
 
 .client-item
 	// max-width: vw()
@@ -1188,6 +1448,8 @@ ul
 	padding-bottom: vw(9)
 	+media-breakpoint-down(lg)
 		padding-bottom: 9rem
+	+media-breakpoint-down(sm)
+		display: block
 	&:not(:last-child)
 		padding-right: vw(23)
 		+media-breakpoint-down(lg)
@@ -1196,9 +1458,27 @@ ul
 .play-btn
 	position: absolute
 	left: 50%
-	bottom: vw(160)
+	bottom: vw(186)
+	width: vw(186)	
+	height: vw(186)
+	cursor: pointer
 	+media-breakpoint-down(lg)
 		bottom: 160rem
+		left: auto
+		right: 10vw
+		bottom: 186rem
+		width: 116rem
+		height: 116rem
+	+media-breakpoint-down(md)
+		position: relative
+		bottom: auto
+		left: auto
+		right: auto
+		margin: 
+			left: auto
+			right: auto
+			bottom: 100rem
+		
 
 .speaker__invoke
 	position: absolute
@@ -1210,16 +1490,19 @@ ul
 	letter-spacing: vw(0.3)
 	+media-breakpoint-down(lg)
 		left: -150rem
-		bottom: 30rem
+		bottom: -20%
 		font-size: 12rem
 		letter-spacing: 0.3rem
+	@media (max-width: 390px)
+		left: -130rem
+		bottom: 0
 	&:before
 		content: ""
 		position: absolute
 		top: -250%
 		width: vw(87)
 		height: vw(60)
-		background: url(../img/@2x/speaker-arrow.png) no-repeat
+		background: url(../img/@2x/speaker-arrow.png) no-repeat center / contain
 		+media-breakpoint-down(lg)
 			top: -250%
 			width: 87rem
@@ -1230,6 +1513,7 @@ ul
 	padding-bottom: vw(80)
 	min-height: vw(1060)
 	background: url('../img/@2x/booking-bg.png') no-repeat center / cover
+	overflow: hidden
 	+media-breakpoint-down(lg)		
 		padding-top: 80rem
 		padding-bottom: 80rem
@@ -1273,20 +1557,20 @@ ul
 .booking .hero__signup
 	margin-left: auto
 	margin-right: auto
-	padding-top: vw(110)
+	padding-top: vw(90)
 	padding-bottom: vw(0)
 	min-height: vw(550)
-	background: url(../img/@2x/booking-signup.png) no-repeat 
+	background: url(../img/@2x/booking-signup.png) no-repeat center / contain
 	+media-breakpoint-down(lg)
-		padding-top: 110rem
+		padding-top: 90rem
 		padding-bottom: 0
 		min-height: 550rem
 	&:before
-		top: vw(-50)
-		left: vw(-280)
+		top: vw(-70)
+		left: vw(-300)
 		width: vw(440)
 		height: vw(479)
-		background: url(../img/@2x/mockup.png) no-repeat 
+		background: url(../img/@2x/mockup.png) no-repeat center / contain
 		+media-breakpoint-down(lg)
 			top: -50rem
 			left: -280rem
@@ -1295,15 +1579,20 @@ ul
 
 .footer
 	padding-top: vw(80)
+	padding-bottom: vw(80)
 	background-color: #18191b
 	border-top: vw(1) solid #142036
+	overflow: hidden
 	+media-breakpoint-down(lg)
 		padding-top: 80rem
 		border-top: 1rem solid #142036
 
 .footer .container
 	display: flex
-	// justify-content: space-between
+	+media-breakpoint-down(lg)
+		flex-wrap: wrap
+		justify-content: space-between
+		
 
 .footer__credentials
 	margin-right: vw(68)
@@ -1311,6 +1600,7 @@ ul
 	line-height: vw(24)
 	+media-breakpoint-down(lg)
 		margin-right: 68rem
+		margin-bottom: 30rem
 		font-size: 12rem
 		line-height: 24rem
 
@@ -1318,6 +1608,7 @@ ul
 	margin-right: vw(70)
 	+media-breakpoint-down(lg)
 		margin-right: 70rem
+		margin-bottom: 30rem
 	a
 		display: block
 		font-size: vw(12)

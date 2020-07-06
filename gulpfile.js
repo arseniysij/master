@@ -47,8 +47,10 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
 		'app/js/_jquery.nice-select.min.js', // custom select
+		'app/js/_parallax.min.js', // paralax on mouse
+		'app/js/_wow.min.js', // paralax on mouse
 		// 'app/js/_modernizr-custom.js', // bg webp
-		// 'app/js/_libs.js', // JS libraries (all in one)
+		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
