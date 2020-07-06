@@ -115,7 +115,6 @@ ul
 		justify-content: center
 
 .hero-bg
-	// width: vw(1920)
 	min-height: vw(1279)
 	background-image: url(../img/@2x/hero-bg.jpg)
 	background-repeat: no-repeat
@@ -333,7 +332,7 @@ ul
 		letter-spacing: 1.8rem
 
 .hero-h1
-	margin-bottom: vw(70)
+	margin-bottom: vw(0)
 	font-family: "Bebas Neue"
 	font-weight: 400
 	color: $white
@@ -366,10 +365,11 @@ ul
 			display: none
 
 .hero__form
+	padding-top: vw(70)
 	position: relative
 	overflow: hidden
-	+media-breakpoint-down(sm)
-
+	+media-breakpoint-down(lg)
+		padding-top: 70rem
 
 .form__author
 	position: absolute	
@@ -480,16 +480,20 @@ ul
 	top: vw(-10)
 	margin-left: auto
 	margin-right: vw(140)
+	margin-bottom: vw(100)
 	padding: vw(56) vw(64) vw(48) vw(64)
 	width: vw(483)
 	min-height: vw(652)
 	text-align: center
+	filter: drop-shadow(0px 1px 65px rgba(0, 0, 0, 0.4))
+	// filter: drop-shadow(vw(10) vw(10) vw(65) red)
+	
 	background: url(../img/svg/form-hero.svg) no-repeat center center / contain
-	// filter: drop-shadow(0px 1px 15px 15px rgba(0, 0, 0, 0.4))
 	+media-breakpoint-down(lg)
 		top: -10rem
 		margin-left: auto
 		margin-right: 0rem
+		margin-bottom: 100rem
 		padding: 56rem 64rem 48rem 64rem
 		
 		width: 483rem
@@ -503,13 +507,6 @@ ul
 			right: 10rem
 		width: 360rem
 		background-size: 360rem 650rem
-	@media (max-width: 390px)
-		// left: -20vw
-	@media (max-width: 350px)
-		// left: -20vw
-		
-		// background-size: 360rem 690rem
-		
 
 	&:before
 		content: ""
@@ -609,6 +606,25 @@ ul
 		font-size: 12rem
 		letter-spacing: .13rem
 
+label[for="input-phone"]
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		display: block
+		width: vw(54)
+		height: vw(77)
+		top: vw(45)
+		left: vw(-35)
+		background: url('../img/@2x/arrow-to-btn.png') no-repeat center center / contain		
+		+media-breakpoint-down(lg)
+			width: 54rem
+			height: 77rem
+			top: 45rem
+			left: -35rem
+		+media-breakpoint-down(xs)
+			display: none
+
 .signup-form input
 	display: inline-block
 	padding: 0 vw(25)	
@@ -641,6 +657,8 @@ ul
 			font-size: 13rem
 			line-height: 40rem
 			letter-spacing: .7rem
+
+
 
 .select-occupation-wrap
 	display: flex
@@ -862,7 +880,7 @@ ul
 	position: absolute
 	width: vw(197)
 	height: vw(215)
-	top: vw(-250) !important
+	top: vw(-50) !important
 	left: vw(700) !important
 
 .program
@@ -871,7 +889,9 @@ ul
 	padding-bottom: vw(110)
 	min-height: vw(1000)
 	background: url('../img/@2x/program-bg.jpg') no-repeat top right
-	overflow: hidden
+	overflow-x: hidden
+	overflow-y: visible
+	z-index: 1
 	+media-breakpoint-down(lg)
 		padding-top: 80rem
 		padding-bottom: 110rem
@@ -1570,8 +1590,8 @@ ul
 		min-height: 550rem
 		background-size: 483rem 467rem
 	&:before
-		top: vw(-70)
-		left: vw(-300)
+		top: vw(-130)
+		left: vw(-350)
 		width: vw(440)
 		height: vw(479)
 		background: url(../img/@2x/mockup.png) no-repeat center / contain
@@ -1882,3 +1902,166 @@ ul
 		transform: rotate(45deg)
 	&:after
 		transform: rotate(-45deg)
+
+// Thanks page
+
+.thanks .header
+	position: relative	
+	padding: 
+		top: vw(167)
+		// bottom: vw(90)
+	min-height: vw(992)
+	background: url('../img/@2x/thanks-hero-bg.jpg') no-repeat center / cover
+
+.thanks-hero
+	text-align: center	
+
+.thanks__h1
+	margin-bottom: vw(38)	
+
+.thanks__date-start
+	margin-right: vw(17)
+	font-family: "Bebas Neue"
+	font-size: vw(42)
+	font-weight: 200
+	text-transform: uppercase;
+	letter-spacing: vw(0.89)
+
+.thanks .hero__date
+	margin-bottom: vw(58)
+
+.thanks .check-mail
+	margin: 
+		left: auto
+		right: auto
+		bottom: vw(46)
+	width: vw(955)
+	font-size: vw(18)
+	line-height: vw(30)
+	letter-spacing: vw(0.9)
+
+.thanks .messengers
+	padding: vw(73) vw(120) vw(58) vw(120)
+	margin: 
+		left: auto
+		right: auto
+	width: vw(1005)
+	min-height: vw(273)
+	text-align: center
+	background: url('../img/svg/thanks-form.svg') no-repeat center center 
+	background-size: vw(1005) vw(320)
+	filter: drop-shadow(0 vw(1) vw(65) rgba(0, 0, 0, 0.5))
+
+.messengers__title
+	margin-bottom: vw(15)
+	font-family: "Bebas Neue"
+	font-size: vw(30)
+	letter-spacing: vw(1.5)
+
+.messengers__text
+	margin-bottom: vw(28)
+	font-weight: 200
+	letter-spacing: vw(0.8)
+
+.messengers__list
+	display: flex
+	justify-content: space-between
+	li:not(:last-child)
+		margin-right: vw(22)
+
+.messengers__link
+	display: inline-block
+	padding: vw(22) vw(30) vw(20) vw(30)
+	font-size: vw(14)
+	line-height: vw(16.26)
+	text-transform: uppercase
+	letter-spacing: vw(1.16)
+	white-space: nowrap
+	border: 1px dashed #0034ff
+	border-radius: vw(4)
+	&:hover
+		background-color: #0034ff;
+
+.messengers__link-img
+	margin-right: vw(10)
+
+.wave
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100vw
+	height: vw(140)
+
+.video .container 
+	padding-bottom: vw(160)
+	text-align: center	
+
+.video
+	background-color: #fff	
+
+.video .section-title
+	position: relative
+	display: inline-block
+	margin-bottom: vw(23)
+	text-align: center
+	&:after
+		content: ""
+		position: absolute
+		display: block
+		right: vw(-40)
+		bottom: vw(-90)
+		width: vw(63)
+		height: vw(125)
+		background: url("../img/@2x/thanks-video.png") no-repeat center / contain
+		
+
+.video-long
+	margin-bottom: vw(60)
+	color: $black
+	font-size: vw(16)
+	opacity: 0.65;
+	letter-spacing: vw(0.8)
+
+.video__content
+	// position: relative
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	margin: 0 auto
+	padding: vw(100) vw(146) vw(100) vw(146)
+	width: vw(1300)		
+	height: vw(704)
+	text-align: left
+	background: url("../img/@2x/video.jpg") no-repeat center right / cover
+	border-radius: vw(15)
+
+.video__text
+	 
+
+.video__text-item
+	font-family: "Bebas Neue"
+	font-size: vw(106)
+	letter-spacing: 0.8px
+	&:nth-child(1)
+		color: $whitish
+		font-weight: 300
+	&:nth-child(2)
+		color: $accent
+		font-weight: 700
+
+.video__play-btn
+	width: vw(186)	
+	height: vw(187)
+
+.sell .section-title
+	margin-bottom: vw(101)
+	text-align: center	
+	&:after
+		content: ""
+		position: absolute
+		display: block
+		right: vw(-40)
+		bottom: vw(-90)
+		width: vw(63)
+		height: vw(125)
+		background: url("../img/@2x/sell-arrow.png") no-repeat center / contain
