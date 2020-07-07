@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     e.preventDefault();
     $('body').css('overflow', 'hidden');
     videoWrap.fadeIn(200);
-    videoContainer.html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vs5k_wLFaH4" frameborder="0" allow="accelerometer"; autoplay="1"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    videoContainer.html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vs5k_wLFaH4?autoplay=1" frameborder="0" allow="accelerometer" allow="autoplay"; autoplay;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
     
     videoClose.click(function() {
       videoContainer.html('');
@@ -36,18 +36,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
   //paralax mouse
     
-      if($('.program__paralax')) {
+      if($('.program__paralax').length && $(window).innerWidth > 767) {
       var scene = document.querySelector('.program__paralax');
   var parallaxInstance = new Parallax(scene, {
     // relativeInput: true
   });
+  var scene2 = document.querySelector('.audience__mockup');
+  var parallaxInstance2 = new Parallax(scene2);
   }
     
  
  
   
-  var scene2 = document.querySelector('.audience__mockup');
-  var parallaxInstance2 = new Parallax(scene2);
     
     
   

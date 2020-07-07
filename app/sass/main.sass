@@ -1361,6 +1361,7 @@ label[for="input-phone"]
 	picture
 		display: block
 
+
 .audience .learn__btn-wrap
 	margin-left: vw(500)
 	+media-breakpoint-down(lg)
@@ -2234,7 +2235,7 @@ label[for="input-phone"]
 		top: vw(167)
 		// bottom: vw(90)
 	min-height: vw(992)
-	background: url('../img/src/thanks-hero-bg.jpg') no-repeat center 
+	background-color: #1b1918
 
 .thanks-hero
 	text-align: center	
@@ -2249,6 +2250,10 @@ label[for="input-phone"]
 	font-weight: 200
 	text-transform: uppercase;
 	letter-spacing: vw(0.89)
+	+media-breakpoint-down(lg)
+		margin-right: 17rem
+		font-size: 42rem
+		letter-spacing: .89rem
 
 .thanks .hero__date
 	margin-bottom: vw(58)
@@ -2262,6 +2267,12 @@ label[for="input-phone"]
 	font-size: vw(18)
 	line-height: vw(30)
 	letter-spacing: vw(0.9)
+	+media-breakpoint-down(lg)
+		margin-bottom: 46rem
+		width: 955rem
+		font-size: 18rem
+		line-height: 30rem
+		letter-spacing: .9rem
 
 .thanks .messengers
 	padding: vw(73) vw(120) vw(58) vw(120)
@@ -2271,9 +2282,13 @@ label[for="input-phone"]
 	width: vw(1005)
 	min-height: vw(273)
 	text-align: center
-	background: url('../img/svg/thanks-form.svg') no-repeat center center 
-	background-size: vw(1005) vw(320)
+	background: url('../img/svg/thanks-form.svg') no-repeat center center / vw(1005) vw(300)
 	filter: drop-shadow(0 vw(1) vw(65) rgba(0, 0, 0, 0.5))
+	+media-breakpoint-down(lg)
+		padding: 73rem 120rem 58rem 120rem
+		width: 1005rem
+		min-height: 273rem
+
 
 .messengers__title
 	margin-bottom: vw(15)
