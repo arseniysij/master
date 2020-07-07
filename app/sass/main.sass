@@ -407,6 +407,7 @@ ul
 	
 
 .author__icon
+	position: relative
 	display: flex
 	justify-content: center
 	align-items: center
@@ -567,12 +568,26 @@ ul
 		width: vw(409)
 		height: vw(445)
 		background: url('../img/_src/mockup.png') no-repeat center / cover
+		animation: fly 2s infinite
 		+media-breakpoint-down(lg)
 			display: none
 			top: 110rem
 			left: -300rem
 			width: 409rem
 			height: 445rem
+
+@keyframes fly 
+	0%
+		transform: translateY(0) 
+	// 33%
+	// 	transform: translateY(-5%) 
+	50%
+		transform: translateY(5%) skew(15deg) rotateX(40deg)
+
+	// 66%
+	// 	transform: translateY(10%)
+	100% 
+		transform: translateY(0)
 
 .hero__signup .date__bold
 	font-size: vw(37)
@@ -909,7 +924,7 @@ label[for="input-phone"]
         opacity: 1
     
     100% 
-        opacity: 0;
+        opacity: 0
         transform: translateY(26px)
     		
 
@@ -1330,13 +1345,12 @@ label[for="input-phone"]
 
 .speaker
 	padding-top: vw(60)	
-	padding-bottom: vw(60)
 	min-height: vw(1110)
 	background: url('../img/_src/speaker-right.png') no-repeat top right / contain
 	overflow: hidden
 	+media-breakpoint-down(lg)
 		padding-top: 60rem
-		padding-bottom: 60rem
+		// padding-bottom: 60rem
 		min-height: 1110rem
 	+media-breakpoint-down(xs)
 		background-image: none
@@ -1589,6 +1603,9 @@ label[for="input-phone"]
 	// display: flex
 	// flex-wrap: wrap
 	display: table
+	padding-bottom: 60rem
+	+media-breakpoint-down(lg)
+		
 	+media-breakpoint-down(sm)
 		display: block
 
@@ -1611,31 +1628,42 @@ label[for="input-phone"]
 		+media-breakpoint-down(lg)
 			padding-right: 23rem
 
+.speaker__video
+	position: absolute
+	bottom: 0	
+	right: -12%
+	width: vw(900)
+	height: vw(888)
+	+media-breakpoint-down(lg)
+		position: relative
+		right: auto
+		margin: 0 auto
+		width: 630rem
+		height: 621.6rem
+	+media-breakpoint-down(xs)
+		width: auto
+		height: auto
+		vertical-align: bottom
+
+
 .play-btn
 	position: absolute
-	left: 50%
-	bottom: vw(186)
+	left: -10%
+	bottom: 30%
 	width: vw(186)	
 	height: vw(186)
 	cursor: pointer
 	+media-breakpoint-down(lg)
-		bottom: 160rem
-		left: auto
-		right: 10vw
-		bottom: 186rem
+		bottom: 30%
+		left: 50%
+		transform: translateX(-50%)
 		width: 116rem
 		height: 116rem
 	+media-breakpoint-down(md)
-		position: relative
-		bottom: auto
-		left: auto
-		right: auto
-		margin: 
-			left: auto
-			right: auto
-			bottom: 100rem
-		
+	+media-breakpoint-down(xs)
+		left: 
 
+		
 .speaker__invoke
 	position: absolute
 	left: vw(-150)
@@ -1645,13 +1673,10 @@ label[for="input-phone"]
 	text-align: center
 	letter-spacing: vw(0.3)
 	+media-breakpoint-down(lg)
-		left: -150rem
-		bottom: -20%
+		left: 0%
+		bottom: -50%
 		font-size: 12rem
 		letter-spacing: 0.3rem
-	@media (max-width: 390px)
-		left: -130rem
-		bottom: 0
 	&:before
 		content: ""
 		position: absolute
@@ -1660,6 +1685,7 @@ label[for="input-phone"]
 		height: vw(60)
 		background: url(../img/_src/speaker-arrow.png) no-repeat center / contain
 		+media-breakpoint-down(lg)
+		display: none
 			top: -250%
 			width: 87rem
 			height: 60rem
@@ -1760,10 +1786,20 @@ label[for="input-phone"]
 
 .footer .container
 	display: flex
-	align-items: flex-end
+	align-items: center
 	+media-breakpoint-down(lg)
+		width: 758rem
 		flex-wrap: wrap
 		justify-content: space-between
+	+media-breakpoint-down(md)
+		justify-content: center
+		width: 420px
+	+media-breakpoint-down(sm)
+		width: 387px
+	+media-breakpoint-down(xs)
+		width: 288px
+	@media (max-width: 272px)
+		justify-content: center
 		
 
 .footer__credentials
@@ -1775,12 +1811,16 @@ label[for="input-phone"]
 		margin-bottom: 30rem
 		font-size: 12rem
 		line-height: 24rem
+	+media-breakpoint-down(md)
+		margin-right: 0
 
 .footer__documents 
 	margin-right: vw(70)
 	+media-breakpoint-down(lg)
 		margin-right: 70rem
 		margin-bottom: 30rem
+	+media-breakpoint-down(md)
+		margin-right: 0
 	a
 		display: block
 		font-size: vw(12)
@@ -1794,7 +1834,7 @@ label[for="input-phone"]
 	display: block
 	margin-right: vw(32)
 	margin-bottom: 0
-	align-self: flex-end
+	// align-self: flex-end
 	+media-breakpoint-down(lg)
 		margin-right: 32rem
 	.phones-item
@@ -1814,6 +1854,8 @@ label[for="input-phone"]
 	+media-breakpoint-down(lg)
 		margin-right: 49rem
 		margin-bottom: 17rem
+	+media-breakpoint-down(md)
+		margin-right: 0
 
 .links__list
 	display: flex
