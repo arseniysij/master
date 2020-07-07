@@ -1253,6 +1253,7 @@ label[for="input-phone"]
 .audience__item
 	margin-right: vw(46)
 	width: vw(265)
+	animation: breath 2s infinite
 	+media-breakpoint-down(lg)
 		margin-right: 46rem
 		width: 200rem
@@ -1299,6 +1300,14 @@ label[for="input-phone"]
 		+media-breakpoint-down(lg)
 			width: 172rem
 			height: 230rem
+
+@keyframes breath
+	0%
+		transform: scaleZ(0)
+	50%	
+		transform: scaleZ(10%)
+	100%
+		transform: scaleZ(0)
 
 .audience__img
 	max-height: vw(219)	
