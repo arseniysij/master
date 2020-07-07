@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
       duration: 500,
       // easing: 'ease-in-sine',
       delay: 50,
-      // once: true
+      once: true
     });
   
   // video play
