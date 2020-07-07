@@ -58,7 +58,10 @@
 				<div class="hero__form">
 					<div class="form__author">
 						<div class="author-img">
+							<picture>
+								<source type="image/webp" srcset="img/webp/speaker.webp">
 							<img src="img/_src/speaker.png" alt="">
+							</picture>
 						</div>
 						<div class="author__info">
 							<div class="author__icon">
@@ -76,9 +79,9 @@
 						</div><!-- author__info -->
 			
 					</div>
-						<div class="author__mockup">
+						<!-- <div class="author__mockup">
 							<img src="img/_src/mockup.png" alt="">
-						</div>
+						</div> -->
 
 				<div class="hero__signup">
 					<div class="hero__signup-header">Забронируйте Ваше участие в мастер-классе</div>
@@ -94,7 +97,7 @@
 					<p class="signup__getpdf">и получите PDF-файл</p>
 					<p class="signup__title">"ТОП-11 ошибок при разработке сайта,<br>
 						из-за которых сайт не продает"</p>
-					<form class="signup-form" action="" id="signup-form">
+					<form class="signup-form" action="mail.php" id="signup-form" method="post">
 						<label for="input-occupation">К кому вы себя больше относите?</label>
 						<div class="select-occupation-wrap">
 							<select class="select-occupation" name="select-occupation" id="select-occupation">
@@ -108,7 +111,7 @@
 						<input class="input-email" type="text" id="input-email" placeholder="* Ваш E-mail" required>
 						<label for="input-phone">На него вышлем Вам напоминание о мастер-классе</label>
 						<input class="input-phone" type="text" id="input-phone" placeholder="* Ваш телефон" required>
-						<button class="input-sbmt-btn btn" form="signup-form" type="submit" value="submit"><span>Принять участие<br> и
+						<button class="input-sbmt-btn btn" form="signup-form" type="submit" value="submit" onclick="window.location.href = '//thanks.html';"><span>Принять участие<br> и
 								получить бонус</span>
 							<img class="input-sbmt-btn--icon" src="img/_src/fingerprint.png" alt="">
 						</button>
@@ -119,7 +122,9 @@
 </div>
 				</div> <!-- END hero__signup -->
 				<div class="mouse">
-					<img src="img/_src/mouse.png" alt="">
+					<div class="scroll-downs">
+						<div class="icon-scroll"></div>
+					</div>
 				</div>
 				</div>
 			</div> <!-- hero end -->
@@ -203,8 +208,20 @@
 				</div>
 			</li>
 		</ul>
+		<div class="program-dec">
+			<picture>
+				<source type="image/webp"
+					media="(max-width:600px)"
+					srcset="img/webp/program-dec-sm.webp">
+				
+				<source type="image/webp"
+					srcset="img/webp/program-dec.webp">
+				<source media="(max-width:600px)"
+					srcset="img/_src/program-dec-sm.png">
+				<img src="img/_src/program-dec.png" alt="">
+			</picture>
+		</div>
 		<div class="learn__btn-wrap">
-
 			<a href="#booking" class="learn__btn btn">
 				<img src="img/_src/mockup-no-shadow.png">
 				<span>Принять участие и получить бонус</span>
@@ -218,50 +235,59 @@
 	<div class="container">
 		<h2 class="section-title audience__section-title">За моими работами и кейсами следят <span class="section-tittle--accent">2125+</span>
 			вебмасеров <br>и маркетологов. <span>Но мастер-класс полезен не только им, но и:</span></h2>
-		<ul class="audience__list">
-			<li class="audience__item">
-				<div class="audience__img">
-					<img src="img/_src/dollar.png" alt="">
+			<div class="audience__list-wrap">
+
+				<ul class="audience__list">
+					<li class="audience__item">
+						<div class="audience__img">
+							<img src="img/_src/dollar.png" alt="">
+						</div>
+						<p class="audience__item__header">Предпринимателям<br>и владельцам<br>бизнесов </p>
+						<p class="audience__item__content">Lorem ipsum dolor sit amet</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__img">
+							<img src="img/_src/maze.png" alt="">
+						</div>
+						<p class="audience__item__header">Дизайнерам</p>
+						<p class="audience__item__content">Lorem ipsum dolor sit amet</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__img">
+							<img src="img/_src/check.png" alt="">
+						</div>
+						<p class="audience__item__header">Таргетологам<br> и директологам</p>
+						<p class="audience__item__content">Lorem ipsum dolor sit ametadlit</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__img">
+							<img src="img/_src/question.png" alt="">
+						</div>
+						<p class="audience__item__header">Начинающим<br>специалистам</p>
+						<p class="audience__item__content">Lorem ipsum dolor sit ametseacing </p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__img">
+							<img src="img/_src/chat.png" alt="">
+						</div>
+						<p class="audience__item__header">Интернет<br>маркетологам</p>
+						<p class="audience__item__content">Lorem ipsum dolor sit amet</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__img">
+							<img src="img/_src/wifi.png" alt="">
+						</div>
+						<p class="audience__item__header">Веб-мастерам </p>
+						<p class="audience__item__content">Lorem ipsum dolor sit amedpisicing</p>
+					</li>
+				</ul>
+				<div class="audience__mockup">
+					<picture>
+
+						<img src="img/_src/audience-mockup.png" alt="">
+					</picture>
 				</div>
-				<p class="audience__item__header">Предпринимателям<br>и владельцам<br>бизнесов </p>
-				<p class="audience__item__content">Lorem ipsum dolor sit amet</p>
-			</li>
-			<li class="audience__item">
-				<div class="audience__img">
-					<img src="img/_src/maze.png" alt="">
-				</div>
-				<p class="audience__item__header">Дизайнерам</p>
-				<p class="audience__item__content">Lorem ipsum dolor sit amet</p>
-			</li>
-			<li class="audience__item">
-				<div class="audience__img">
-					<img src="img/_src/check.png" alt="">
-				</div>
-				<p class="audience__item__header">Таргетологам<br> и директологам</p>
-				<p class="audience__item__content">Lorem ipsum dolor sit ametadlit</p>
-			</li>
-			<li class="audience__item">
-				<div class="audience__img">
-					<img src="img/_src/question.png" alt="">
-				</div>
-				<p class="audience__item__header">Начинающим<br>специалистам</p>
-				<p class="audience__item__content">Lorem ipsum dolor sit ametseacing </p>
-			</li>
-			<li class="audience__item">
-				<div class="audience__img">
-					<img src="img/_src/chat.png" alt="">
-				</div>
-				<p class="audience__item__header">Интернет<br>маркетологам</p>
-				<p class="audience__item__content">Lorem ipsum dolor sit amet</p>
-			</li>
-			<li class="audience__item">
-				<div class="audience__img">
-					<img src="img/_src/wifi.png" alt="">
-				</div>
-				<p class="audience__item__header">Веб-мастерам </p>
-				<p class="audience__item__content">Lorem ipsum dolor sit amedpisicing</p>
-			</li>
-		</ul>
+			</div>
 		<div class="learn__btn-wrap">
 
 			<a href="#booking" class="learn__btn btn">
@@ -270,9 +296,7 @@
 			</a>
 		</div>
 	</div><!-- /.container -->
-	<div class="audience__mockup">
-		<img src="img/_src/audience-mockup.png" alt="">
-	</div>
+	
 </section>
 	
 <section class="speaker">
@@ -299,7 +323,7 @@
 				<div class="facts__img">
 					<img src="img/_src/fact-2.png" alt="">
 				</div>
-				<p class="facts__text">Первый и уже 3 года внедряю<br>и запускаю квиз-сайты.<br><span>Запустил лично 50+ квизов</span></p>
+				<p class="facts__text">Первый и уже 3 года внедряю<br>и запускаю квиз-сайты.<br><span> Запустил лично 50+ квизов</span></p>
 			</li>
 			<li class="facts__item">
 				<div class="facts__img">
@@ -339,12 +363,7 @@
 				Digital-аналитика
 			</li>
 		</ul>
-		<div class="play-btn">
-			<img src="img/_src/play.png" alt="">
-			<div class="speaker__invoke">
-				<p>Смотреть<br>видеоприглашение</p>
-			</div>
-		</div>
+		
 		<h2 class="facts__list-title">среди <span>клиентов:</span></h2>
 		<ul class="facts__clients">
 			<ul class="clients-row">
@@ -388,7 +407,15 @@
 				</li>
 			</ul>
 		</ul>
-		
+		<div class="speaker__video">
+			<img src="" alt="" class="speaker__img">
+			<div class="play-btn">
+				<img src="img/_src/play.png" alt="">
+				<div class="speaker__invoke">
+					<p>Смотреть<br>видеоприглашение</p>
+				</div>
+			</div>
+		</div>
 	</div><!-- /.container -->
 </section>	
 
@@ -443,9 +470,9 @@
 			<p>УНП 291503669 | Р/с BY510LMP30133000421110000933</p>
 		</div>
 		<div class="footer__documents">
-			<a href="">Соглашение о персональных данных</a>
-			<a href="">Договор оферты</a>
-			<a href="">Согласие на использование фото и видеоматериалов</a>
+			<a href="" target="_blank">Соглашение о персональных данных</a>
+			<a href=" target="_blank"">Договор оферты</a>
+			<a href="" target="_blank">Согласие на использование фото и видеоматериалов</a>
 		</div>
 		<div class="phones">
 			<div class="phones-item">
@@ -458,7 +485,7 @@
 			</div>
 		</div>
 		<div class="socials">
-			<a class="socials__btn" href="//vk.com" target="_blank">
+			<a class="socials__btn" href="//vk.com/paradigma.website" target="_blank">
 				<img src="img/_src/vk.png" alt="">
 				<span class="social__text">Задать вопрос</span>
 			</a>
@@ -466,17 +493,17 @@
 		<div class="footer__links">
 			<ul class="links__list">
 				<li class="social__item">
-					<a class="social-link" href="">
+					<a class="social-link" href="//www.behance.net/paradigma_website" target="_blank">
 						<img src="img/_src/behance.png" alt="">
 					</a>
 				</li>
 				<li class="social__item">
-					<a class="social-link" href="">
+					<a class="social-link" href="//www.instagram.com/alex_dein/" target="_blank">
 						<img src="img/_src/instagramm.png" alt="">
 					</a>
 				</li>
 				<li class="social__item">
-					<a class="social-link" href="">
+					<a class="social-link" href="//youtu.be/HuvF4FnZnzM" target="_blank">
 						<img src="img/_src/youtube.png" alt="">
 					</a>
 				</li>

@@ -4,11 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	$('.select-occupation').niceSelect();
   //paralax mouse
-  
-  var scene = document.querySelector('.program__paralax');
+  if($('.program__paralax')) {
+    var scene = document.querySelector('.program__paralax');
 var parallaxInstance = new Parallax(scene, {
   // relativeInput: true
 });
+  }
+  
 
 // animate css
 // function callbackFunc(entries, observer)
