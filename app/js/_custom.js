@@ -1,15 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	  
+  $('.section-title').attr("data-aos", "fade-up");
+  $('.learn-item').attr("data-aos", "fade-up");
+  $('.audience__item').attr("data-aos", "zoom-out-up");
+
+    AOS.init({
+      offset: 100,
+      duration: 500,
+      easing: 'ease-in-sine',
+      delay: 50,
+      // once: true
+    });
+  
 
 	$('.select-occupation').niceSelect();
+
   //paralax mouse
   if($('.program__paralax')) {
     var scene = document.querySelector('.program__paralax');
 var parallaxInstance = new Parallax(scene, {
-  // relativeInput: true
+  relativeInput: true
 });
+
   }
+  
+
   
 
 // animate css

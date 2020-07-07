@@ -2,7 +2,7 @@
 @import fonts
 @import libs
 @import "_nice-select"
-@import 'animate.min'
+// @import 'animate.min'
 
 ::placeholder
 	color: #666
@@ -554,6 +554,7 @@ ul
 		width: vw(263)
 		height: vw(143)
 		background: url('../img/_src/hero-arrow.png') no-repeat center / contain
+		animation: arrow 2s infinite
 		+media-breakpoint-down(lg)
 			display: none
 			top: -45rem
@@ -568,7 +569,7 @@ ul
 		width: vw(409)
 		height: vw(445)
 		background: url('../img/_src/mockup.png') no-repeat center / cover
-		animation: fly 2s infinite
+		animation: fly 2s infinite ease
 		+media-breakpoint-down(lg)
 			display: none
 			top: 110rem
@@ -582,12 +583,21 @@ ul
 	// 33%
 	// 	transform: translateY(-5%) 
 	50%
-		transform: translateY(5%) skew(15deg) rotateX(40deg)
+		transform: translateY(5%) skew(15deg) rotateX(40deg) rotateY(10deg)
 
 	// 66%
 	// 	transform: translateY(10%)
 	100% 
 		transform: translateY(0)
+
+
+@keyframes arrow
+	0%
+		transform: translate(0) 
+	50%
+		transform: translate(-10%, -25%) rotate(15deg) 
+	100%
+		transform: translate(0, 0)
 
 .hero__signup .date__bold
 	font-size: vw(37)
@@ -1763,6 +1773,7 @@ label[for="input-phone"]
 		// 	left: -350rem
 		// 	width: 440rem
 		// 	height: 479rem
+
 
 .booking label[for="input-phone"]
 	&:before
