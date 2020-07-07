@@ -1165,6 +1165,7 @@ label[for="input-phone"]
 		width: vw(175)
 		height: vw(189)
 		z-index: 0
+		animation: fly 2s infinite
 		+media-breakpoint-down(lg)
 			top: -25rem
 			left: -80rem
@@ -1253,12 +1254,13 @@ label[for="input-phone"]
 .audience__item
 	margin-right: vw(46)
 	width: vw(265)
-	// animation: breath 2s infinite
 	+media-breakpoint-down(lg)
 		margin-right: 46rem
 		width: 200rem
 	@media (max-width: 500px)
 		margin-right: 0
+	.audience__img
+		animation: breath 2s infinite
 	&:nth-child(1) .audience__img
 		width: vw(190)
 		height: vw(230)
@@ -1303,11 +1305,11 @@ label[for="input-phone"]
 
 @keyframes breath
 	0%
-		transform: scale(0)
+		transform: scale(1)
 	50%	
-		transform: scale(10%)
+		transform: scale(1.1)
 	100%
-		transform: scale(0)
+		transform: scale(1)
 
 .audience__img
 	max-height: vw(219)	
@@ -1344,18 +1346,20 @@ label[for="input-phone"]
 	// bottom: vw(-30)
 	width: vw(923)
 	height: vw(912)
-	// flex-shrink: 1
-	transform: translate(vw(200), 20%)
+	overflow: visible
+	transform: translate(vw(230), 20%) !important
 	+media-breakpoint-down(lg)
 		// display: none
 		// right: -20rem
 		// bottom: -30rem
-		transform: translate(25%,0)
+		transform: translate(25%,0) !important
 		width: 923rem
 		height: auto
 	// @media (max-width: 1125px)
 	+media-breakpoint-down(md)
-		transform: translate(6%,0)
+		transform: translate(6%,0) !important
+	picture
+		display: block
 
 .audience .learn__btn-wrap
 	margin-left: vw(500)
@@ -1664,6 +1668,60 @@ label[for="input-phone"]
 		height: auto
 		vertical-align: bottom
 
+.video-wrap
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(#000, 0.7)
+	z-index: 50
+
+.video-close
+
+
+.video-frame	
+	position: absolute
+	display: flex
+	width: 100%
+	height: 100%
+	justify-content: center
+	align-items: center
+
+.video-container
+	// width: 560px
+	// height: 315px
+	width: 53.3vw
+	height: 30vw
+	+media-breakpoint-down(xs)	
+		width: 320px
+		height: 180px
+
+.video-close
+	position: absolute
+	top: 10%
+	right: 10%
+	width: 40px	
+	height: 40px
+	cursor: pointer
+	z-index: 5
+	&::before,
+	&::after
+		content: ""
+		position: absolute
+		left: 0
+		display: block
+		width: 40px
+		height: 4px
+		background-color: #fff
+		border-radius: 5px
+	&::before
+		top: 17px
+		transform: rotate(-45deg)
+	&::after
+		top: 17px
+		transform: rotate(45deg)
 
 .play-btn
 	position: absolute
@@ -1672,6 +1730,8 @@ label[for="input-phone"]
 	width: vw(186)	
 	height: vw(186)
 	cursor: pointer
+	border-radius: 50%
+	animation: pulse 2s infinite
 	+media-breakpoint-down(lg)
 		bottom: 30%
 		left: 50%
@@ -1680,9 +1740,48 @@ label[for="input-phone"]
 		height: 116rem
 	+media-breakpoint-down(md)
 	+media-breakpoint-down(xs)
-		left: 
+	.icon
+		animation: breath 2s infinite
+	&:hover
+		animation: none	
 
-		
+@keyframes spin 
+	to 
+		transform: rotate(360deg)
+
+
+.stroke-dotted 
+	opacity: 0
+	stroke-dasharray: 4,5
+	stroke-width: 1px
+	transform-origin: 50% 50%
+	animation: spin 4s infinite linear
+	transition: opacity 1s ease, stroke-width 1s ease
+
+.stroke-solid 
+	stroke-dashoffset: 0
+	stroke-dashArray: 300
+	stroke-width: 4px
+	transition: stroke-dashoffset 1s ease, opacity 1s ease
+
+
+.icon 
+	transform-origin: 50% 50%
+	transition: transform 200ms ease-out
+
+
+// Hover
+#play:hover 
+	.stroke-dotted 
+		stroke-width: 4px
+		opacity: 1
+	.stroke-solid 
+		opacity: 0
+		stroke-dashoffset: 300
+	.icon 
+    	transform: scale(1.05)
+  		
+
 .speaker__invoke
 	position: absolute
 	left: vw(-150)
@@ -1691,6 +1790,7 @@ label[for="input-phone"]
 	font-size: vw(12)
 	text-align: center
 	letter-spacing: vw(0.3)
+	user-select: none
 	+media-breakpoint-down(lg)
 		left: 0%
 		bottom: -50%
@@ -1704,10 +1804,10 @@ label[for="input-phone"]
 		height: vw(60)
 		background: url(../img/src/speaker-arrow.png) no-repeat center / contain
 		+media-breakpoint-down(lg)
-		display: none
-			top: -250%
-			width: 87rem
-			height: 60rem
+			display: none
+				top: -250%
+				width: 87rem
+				height: 60rem
 
 .booking
 	padding-top: vw(80)
@@ -1849,6 +1949,8 @@ label[for="input-phone"]
 		+media-breakpoint-down(lg)
 			font-size: 12rem
 			line-height: 24rem
+		&:hover
+			color: $accent
 
 .footer .phones
 	display: block
@@ -1913,6 +2015,8 @@ label[for="input-phone"]
 		letter-spacing: 0.7rem
 	&:visited
 		color: #2e58fb	
+	&:hover
+		color: $white
 
 .popup-backdrop
 	display: none
@@ -2268,9 +2372,6 @@ label[for="input-phone"]
 		color: $accent
 		font-weight: 700
 
-.video__play-btn
-	width: vw(186)	
-	height: vw(187)
 
 .sell .section-title
 	margin-bottom: vw(101)
