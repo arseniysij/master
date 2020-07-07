@@ -2232,16 +2232,43 @@ label[for="input-phone"]
 .thanks .header
 	position: relative	
 	padding: 
-		top: vw(167)
-		// bottom: vw(90)
+		top: vw(160)
+		bottom: vw(250)
 	min-height: vw(992)
 	background-color: #1b1918
+	+media-breakpoint-down(lg)
+		padding: 
+			top: 160rem
+			bottom: 250rem
+		min-height: 992rem
+
+.thanks__header-left
+	position: absolute
+	left: 0
+	top: 27%	
+	width: vw(423)
+	height: vw(390)
+	+media-breakpoint-down(lg)
+		width: 423rem
+		height: 390rem
+
+.thanks__header-right	
+	position: absolute	
+	right: 0
+	top: 14%
+	width: vw(460)
+	height: vw(618)
+	+media-breakpoint-down(lg)
+		width: 460rem
+		height: 618rem
 
 .thanks-hero
 	text-align: center	
 
 .thanks__h1
 	margin-bottom: vw(38)	
+	+media-breakpoint-down(lg)
+		margin-bottom: 38rem
 
 .thanks__date-start
 	margin-right: vw(17)
@@ -2256,7 +2283,9 @@ label[for="input-phone"]
 		letter-spacing: .89rem
 
 .thanks .hero__date
-	margin-bottom: vw(58)
+	margin-bottom: vw(40)
+	+media-breakpoint-down(lg)
+		margin-bottom: 40rem
 
 .thanks .check-mail
 	margin: 
@@ -2275,7 +2304,7 @@ label[for="input-phone"]
 		letter-spacing: .9rem
 
 .thanks .messengers
-	padding: vw(73) vw(120) vw(58) vw(120)
+	padding: vw(60) vw(120) vw(58) vw(120)
 	margin: 
 		left: auto
 		right: auto
@@ -2295,17 +2324,26 @@ label[for="input-phone"]
 	font-family: "Bebas Neue"
 	font-size: vw(30)
 	letter-spacing: vw(1.5)
+	+media-breakpoint-down(lg)
+		margin-bottom: 15rem
+		font-size: 30rem
+		letter-spacing: 1.5rem
 
 .messengers__text
 	margin-bottom: vw(28)
 	font-weight: 200
 	letter-spacing: vw(0.8)
+	+media-breakpoint-down(lg)
+		margin-bottom: 28rem
+		letter-spacing: .8rem
 
 .messengers__list
 	display: flex
 	justify-content: space-between
 	li:not(:last-child)
 		margin-right: vw(22)
+		+media-breakpoint-down(lg)
+			margin-right: 22rem
 
 .messengers__link
 	display: inline-block
@@ -2317,11 +2355,15 @@ label[for="input-phone"]
 	white-space: nowrap
 	border: 1px dashed #0034ff
 	border-radius: vw(4)
+	+media-breakpoint-down(lg)
+		padding: 22rem 30rem 20rem 30rem
 	&:hover
 		background-color: #0034ff;
 
 .messengers__link-img
 	margin-right: vw(10)
+	+media-breakpoint-down(lg)
+		margin-right: 10rem
 
 .wave
 	position: absolute
@@ -2329,10 +2371,14 @@ label[for="input-phone"]
 	left: 0
 	width: 100vw
 	height: vw(140)
+	+media-breakpoint-down(lg)
+		height: 140rem
 
 .video .container 
 	padding-bottom: vw(160)
 	text-align: center	
+	+media-breakpoint-down(lg)
+
 
 .video
 	background-color: #fff	

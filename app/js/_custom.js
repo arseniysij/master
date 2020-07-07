@@ -17,12 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
   videoContainer = videoWrap.find('.video-container');
   let videoClose = videoWrap.find('.video-close');
   
+ 
+
   $('.play-btn').click(function(e) {
     e.preventDefault();
     $('body').css('overflow', 'hidden');
     videoWrap.fadeIn(200);
     videoContainer.html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vs5k_wLFaH4?autoplay=1" frameborder="0" allow="accelerometer" allow="autoplay"; autoplay;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
-    
+    // $('.ytp-icon').delay(1000).trigger('click');
     videoClose.click(function() {
       videoContainer.html('');
       videoWrap.fadeOut(200);
