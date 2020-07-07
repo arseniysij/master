@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     AOS.init({
       offset: 100,
       duration: 500,
-      easing: 'ease-in-sine',
+      // easing: 'ease-in-sine',
       delay: 50,
-      once: true
+      // once: true
     });
   
 
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if($('.program__paralax')) {
     var scene = document.querySelector('.program__paralax');
 var parallaxInstance = new Parallax(scene, {
-  relativeInput: true
+  // relativeInput: true
 });
 
   }
