@@ -118,7 +118,7 @@ ul
 	position: relative
 	height: vw(1300)
 	background-color: 
-	background:  url(../img/src/hero-left.png) no-repeat top left / vw(612) vw(1190), url(../img/src/hero-center-right.png) no-repeat top center / vw(612) vw(1190), url(../img/src/hero-right.png) no-repeat right bottom / vw(582) vw(884) #1b1b1b
+	background:  url(../img/src/hero-left.png) no-repeat bottom left / vw(612) vw(1190), url(../img/src/hero-center-right.png) no-repeat bottom center / vw(612) vw(1190), url(../img/src/hero-right.png) no-repeat right bottom / vw(582) vw(884) #1b1b1b
 	overflow: hidden
 	+media-breakpoint-down(lg)
 		min-height: 1279rem
@@ -554,7 +554,7 @@ ul
 		width: vw(263)
 		height: vw(143)
 		background: url('../img/src/hero-arrow.png') no-repeat center / contain
-		animation: arrow 2s infinite
+		animation: arrow 4s infinite
 		+media-breakpoint-down(lg)
 			display: none
 			top: -45rem
@@ -583,7 +583,7 @@ ul
 	// 33%
 	// 	transform: translateY(-5%) 
 	50%
-		transform: translateY(5%) skew(15deg) rotateX(40deg) rotateY(10deg)
+		transform: translateY(3%)
 
 	// 66%
 	// 	transform: translateY(10%)
@@ -892,50 +892,22 @@ label[for="input-phone"]
 	bottom: vw(200)
 	width: vw(23)		
 	height: vw(74)
+	animation: scroll 2s infinite
 	+media-breakpoint-down(lg)
 		display: none
 		bottom: 200rem
 		width: 23rem		
 		height: 74rem
 
-.icon-scroll,
-.icon-scroll:before 
-    position: absolute
-    left: 50%
 
-.icon-scroll 
-    width: 30px
-    height: 50px
-    margin-left: -20px
-    bottom: 10px
-    margin-top: -35px
-    border: 2px solid #1d4afc
-    border-radius: 25px
-
-// @media (max-width: 767px) 
-//     .icon-scroll 
-//         position: relative
-    
-
-.icon-scroll:before 
-    content: ''
-    width: 8px
-    height: 8px
-    background: #1d4afc
-    margin-left: -4px
-    top: 8px
-    border-radius: 4px
-    animation-duration: 1.5s
-    animation-iteration-count: infinite
-    animation-name: scroll
 
 @keyframes scroll 
-    0% 
-        opacity: 1
-    
-    100% 
-        opacity: 0
-        transform: translateY(26px)
+	0% 
+		transform: translate(0, 0)
+	40%	
+		transform: translate(0, 30%)
+	100% 
+        transform: translate(0, 0)
     		
 
 .program__paralax
