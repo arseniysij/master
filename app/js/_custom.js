@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     AOS.init({
       offset: 100,
-      duration: 500,
+      duration: 1000,
       // easing: 'ease-in-sine',
       delay: 50,
       once: true
@@ -37,22 +37,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('.select-occupation').niceSelect();
 
   //paralax mouse
-    
-      if($('.program__paralax').length && $(window).innerWidth > 767) {
-      var scene = document.querySelector('.program__paralax');
-  var parallaxInstance = new Parallax(scene, {
-    // relativeInput: true
-  });
-  var scene2 = document.querySelector('.audience__mockup');
-  var parallaxInstance2 = new Parallax(scene2);
-  }
-    
+     $(window).resize(function() {
+          
+        if($('.program__paralax').css('display') == 'block' && window.innerWidth > 1199) {
+          console.log("работает");
+        var scene = document.querySelector('.program__paralax');
+        var parallaxInstance = new Parallax(scene, {
+          // relativeInput: true
+        });
+        // var scene2 = document.querySelector('.audience__mockup');
+        // var parallaxInstance2 = new Parallax(scene2);
+        // } 
+
+        // if (window.innerWidth < 1199) {
+        //   console.log("должна вырубить");
+        //    $('.program__paralax').attr('data-depth', '');
+        }
+  }); 
+      
+    //  var scene2 = document.querySelector('.audience__mockup');
+    //     var parallaxInstance2 = new Parallax(scene2);
  
- 
-  
-    
-    
-  
+
 
 
   

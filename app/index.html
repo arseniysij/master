@@ -240,7 +240,15 @@
 		<h2 class="section-title audience__section-title">За моими работами и кейсами следят <span class="section-tittle--accent">2125+</span>
 			вебмасеров <br>и маркетологов. <span>Но мастер-класс полезен не только им, но и:</span></h2>
 			<div class="audience__list-wrap">
-
+				<div class="audience__mockup">
+					<picture class="audience__mockup-dt" data-depth="0.4">
+						<source media="(max-width:500px)" type="image/webp" srcset="img/webp/audience-mockup-sm.webp">
+						<source media="(max-width:500px)"  srcset="img/src/audience-mockup-sm.png">
+						<source type="image/webp" srcset="img/webp/audience-mockup.webp">
+						<img  src="img/src/audience-mockup.png" alt="">
+					</picture>
+					
+				</div>
 				<ul class="audience__list">
 					<li class="audience__item" data-aos-delay="50">
 						<div class="audience__img">
@@ -303,15 +311,7 @@
 						<p class="audience__item__content">Lorem ipsum dolor sit amedpisicing</p>
 					</li>
 				</ul>
-				<div class="audience__mockup">
-					<picture class="audience__mockup-dt" data-depth="0.4">
-						<source media="(max-width:500px)" type="image/webp" srcset="img/webp/audience-mockup-sm.webp">
-						<source media="(max-width:500px)"  srcset="img/src/audience-mockup-sm.png">
-						<source type="image/webp" srcset="img/webp/audience-mockup.webp">
-						<img  src="img/src/audience-mockup.png" alt="">
-					</picture>
-					
-				</div>
+				
 			</div>
 		<div class="learn__btn-wrap">
 
@@ -483,7 +483,7 @@
 		</div>
 		<div class="hero__signup">
 					
-					<form class="signup-form" action="" id="signup-form">
+					<form class="signup-form" action="mail.php" id="signup-form-footer">
 						<label for="input-occupation">К кому вы себя больше относите?</label>
 						<div class="select-occupation-wrap">
 							<select class="select-occupation" name="select-occupation" id="select-occupation-booking">
@@ -497,7 +497,7 @@
 						<input class="input-email" type="text" id="input-email" placeholder="* Ваш E-mail" required>
 						<label for="input-phone">На него вышлем Вам напоминание о мастер-классе</label>
 						<input class="input-phone" type="text" id="input-phone" placeholder="* Ваш телефон" required>
-						<button class="input-sbmt-btn btn" form="signup-form" type="submit" value="submit"><span>Принять участие<br> и
+						<button class="input-sbmt-btn btn" form="signup-form-footer" type="submit" value="submit"><span>Принять участие<br> и
 								получить бонус</span>
 							<img class="input-sbmt-btn--icon" src="img/src/fingerprint.png" alt="">
 						</button>

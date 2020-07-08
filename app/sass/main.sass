@@ -569,26 +569,12 @@ ul
 		width: vw(409)
 		height: vw(445)
 		background: url('../img/src/mockup.png') no-repeat center / cover
-		animation: fly 2s infinite ease
 		+media-breakpoint-down(lg)
 			display: none
 			top: 110rem
 			left: -300rem
 			width: 409rem
 			height: 445rem
-
-@keyframes fly 
-	0%
-		transform: translateY(0) 
-	// 33%
-	// 	transform: translateY(-5%) 
-	50%
-		transform: translateY(3%)
-
-	// 66%
-	// 	transform: translateY(10%)
-	100% 
-		transform: translateY(0)
 
 
 @keyframes arrow
@@ -785,7 +771,8 @@ label[for="input-phone"]
 	background-color: #1c1c1d	
 
 .btn
-	background-image: linear-gradient(to top, #0034ff 0%, #4f71f8 100%)
+	background-color: #1141fe
+	background-image: linear-gradient(to top, #0034ff 10%, #4f71f8 100%)
 	border-radius: vw(15)
 	text-transform: uppercase
 	display: inline-flex
@@ -1200,28 +1187,27 @@ label[for="input-phone"]
 	color: #093bfe
 
 .audience__list-wrap
-	display: flex
 	+media-breakpoint-down(lg)
-		flex-wrap: wrap
-
 
 
 .audience__list
 	margin-bottom: vw(60)
 	display: flex
 	flex-wrap: wrap
-	width: vw(1450)
+	width: vw(950)
 	+media-breakpoint-down(lg)
-		justify-content: center
-		margin: 
-			left: auto
-			right: auto
+		// justify-content: center
+		// margin: 
+		// 	left: auto
+		// 	right: auto
 		margin-bottom: 60rem
-		// max-width: 100%
+		width: 950rem
 	+media-breakpoint-down(md)
-		justify-content: space-between
-	@media (max-width: 500px)
+		// justify-content: center
 		justify-content: space-around
+		width: 100%
+	@media (max-width: 395px)
+		justify-content: space-between
 
 .audience__item
 	margin-right: vw(46)
@@ -1229,16 +1215,23 @@ label[for="input-phone"]
 	+media-breakpoint-down(lg)
 		margin-right: 46rem
 		width: 200rem
+	+media-breakpoint-down(md)
+		margin-right: 0
+		padding: 0 23rem
 	@media (max-width: 500px)
 		margin-right: 0
+	@media (max-width: 395px)
+		max-width: 160rem
 	.audience__img
-		animation: breath 2s infinite
+
 	&:nth-child(1) .audience__img
 		width: vw(190)
 		height: vw(230)
 		+media-breakpoint-down(lg)
 			width: 190rem
-			height: 230rem	
+			height: 230rem
+		@media (max-width: 395px)
+			max-width: 160rem	
 	&:nth-child(2) 
 		.audience__img
 			width: vw(193)
@@ -1246,6 +1239,8 @@ label[for="input-phone"]
 			+media-breakpoint-down(lg)
 				width: 193rem
 				height: 219rem
+			@media (max-width: 395px)
+				max-width: 160rem	
 		.audience__item__header
 			margin-bottom: vw(45)
 			+media-breakpoint-down(lg)
@@ -1275,13 +1270,6 @@ label[for="input-phone"]
 			width: 172rem
 			height: 230rem
 
-@keyframes breath
-	0%
-		transform: scale(1)
-	50%	
-		transform: scale(1.1)
-	100%
-		transform: scale(1)
 
 .audience__img
 	max-height: vw(219)	
@@ -1313,23 +1301,28 @@ label[for="input-phone"]
 		letter-spacing: 0.8rem
 
 .audience__mockup
-	// position: relative
-	// right: vw(-20)
-	// bottom: vw(-30)
+	position: absolute
+	right: vw(-20)
+	bottom: vw(-30)
 	width: vw(923)
 	height: vw(912)
+	// width: vw(1200)
+	// height: vw(1185)
 	overflow: visible
-	transform: translate(vw(230), 20%) !important
 	+media-breakpoint-down(lg)
-		// display: none
-		// right: -20rem
-		// bottom: -30rem
-		transform: translate(25%,0) !important
-		width: 923rem
+		right: -20rem
+		bottom: 35vw
+		// transform: translate(50%,0) !important
+		width: 35vw
 		height: auto
 	// @media (max-width: 1125px)
 	+media-breakpoint-down(md)
-		transform: translate(6%,0) !important
+		position: static
+		width: 90vw
+		transform: translate(5%,0) !important
+	+media-breakpoint-down(md)
+		width: 100vw
+		transform: translate(-5%,0) !important
 	picture
 		display: block
 
