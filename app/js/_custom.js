@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  var lazyLoadInstance = new LazyLoad({
+  // Your custom settings go here
+});
+
   $('.section-title').attr("data-aos", "fade-up");
   $('.learn-item').attr("data-aos", "fade-up");
   $('.audience__item').attr("data-aos", "zoom-out-up");

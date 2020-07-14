@@ -49,6 +49,7 @@ gulp.task('scripts', function() {
 		'app/js/_jquery.nice-select.min.js', // custom select
 		'app/js/_parallax.min.js', // paralax on mouse
 		'app/js/_aos.js', // showup element
+		'app/js/_lazyload.min.js', 
 		// 'app/js/_modernizr-custom.js', // bg webp
 		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end
