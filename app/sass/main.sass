@@ -111,12 +111,16 @@ ul
 		flex-wrap: wrap
 		// margin-bottom: 30rem
 		padding-top: 37rem
+	+media-breakpoint-down(lg)
+		margin-bottom: 30rem
 	@media (max-width: 350px)
-		justify-content: center
+		align-items: center
+		flex-direction: column
+
 
 .hero-bg
 	position: relative
-	height: vw(1300)
+	// height: vw(1300)
 	background-color: 
 	background:  url(../img/src/hero-left.png) no-repeat bottom left / vw(612) vw(1190), url(../img/src/hero-center-right.png) no-repeat bottom center / vw(612) vw(1190), url(../img/src/hero-right.png) no-repeat right bottom / vw(582) vw(884) #1b1b1b
 	overflow: hidden
@@ -141,11 +145,17 @@ ul
 		flex-direction: column
 		align-items: end
 		margin-right: 20rem
+	@media (max-width: 350px)
+		flex-direction: row
+		margin-right: 0
+		align-self: auto
 
 .logo img
 	margin-right: vw(44)
 	+media-breakpoint-down(lg)
 		margin-right: 44rem
+	+media-breakpoint-down(md)
+		margin-right: 15rem
 	+media-breakpoint-down(sm)
 		width: 100rem
 	+media-breakpoint-down(xs)
@@ -215,6 +225,16 @@ ul
 	+media-breakpoint-down(xs)
 		margin-bottom: 30rem
 
+.main-header .socials		
+	+media-breakpoint-down(md)
+		padding-top: 30rem
+		transform: translateX(-35vw)
+	+media-breakpoint-down(xs)
+		transform: translateX(-28vw)
+	@media (max-width: 350px)
+		transform: translateX(0)
+		padding-top: 0
+
 .socials img
 	margin-right: vw(9)	
 	+media-breakpoint-down(lg)
@@ -279,6 +299,8 @@ ul
 		padding: 10rem 45rem 6rem 45rem
 		letter-spacing: 1.1rem
 		border-radius: 5rem
+	+media-breakpoint-down(xs)
+		font-size: 16rem
 	p
 		transform: skew(10deg)
 	span
@@ -292,11 +314,15 @@ ul
 	align-items: center
 	+media-breakpoint-down(lg)
 		margin-bottom: 15rem
+	
+
 
 .hero__date img
 	margin-right: vw(16)
 	+media-breakpoint-down(lg)
 		margin-right: 16rem
+	+media-breakpoint-down(xs)
+		width: 40rem
 
 .date__bold
 	margin-right: vw(10)
@@ -309,6 +335,8 @@ ul
 		margin-right: 10rem
 		font-size: 48rem
 		line-height: 48rem
+	+media-breakpoint-down(xs)
+		font-size: 35rem
 
 .date__month
 	margin-right: vw(11)
@@ -324,6 +352,8 @@ ul
 		font-size: 42rem
 		line-height: 42rem
 		letter-spacing: .9rem
+	+media-breakpoint-down(xs)
+		font-size: 30rem
 
 .date__time
 	display: block
@@ -337,6 +367,8 @@ ul
 	+media-breakpoint-down(lg)
 		font-size: 12rem
 		letter-spacing: 1.8rem
+	+media-breakpoint-down(xs)
+		font-size: 10rem
 
 .hero-h1
 	margin-bottom: vw(0)
@@ -355,6 +387,8 @@ ul
 		font-size: 46rem
 	+media-breakpoint-down(sm)
 		font-size: 40rem
+	+media-breakpoint-down(xs)
+		font-size: 30rem
 	span
 		font-family: "MyriadPro"
 		font-weight: 600
@@ -367,6 +401,8 @@ ul
 			font-size: 46rem
 		+media-breakpoint-down(sm)
 			font-size: 40rem
+		+media-breakpoint-down(xs)
+			font-size: 30rem
 	br
 		+media-breakpoint-down(lg)
 			display: none
@@ -381,33 +417,39 @@ ul
 		flex-wrap: wrap
 		justify-content: center
 		padding-top: 70rem
-
+	@media (max-width: 1125px)
+		flex-direction: column
+		align-items: center
+		margin-bottom: 50rem
+		padding-top: 10rem
 
 .form__author
 	position: relative
 	+media-breakpoint-down(lg)
-		top: 0rem
+		bottom: 0rem
 		left: 0rem
 		width: 530rem
 	@media (max-width: 1125px)
-		order: 2
+		order: 1
+		transform: translateY(5%)
+		width: 300rem
+		display: flex
+		align-items: flex-end
 	+media-breakpoint-down(sm)
 		
 
 .author-img
 	width: vw(450)	
-	// height: vw(868)
+	transform: translateY(-2vw)
 	+media-breakpoint-down(lg)
 		width: 450rem
-	+media-breakpoint-down(lg)
-		width: auto
 
 .author__info
 	position: absolute
 	left: 45%
 	top: 45%
-	// animation: pulse 2s infinite
-	
+	+media-breakpoint-down(lg)
+		top: 80%
 
 .author__icon
 	position: relative
@@ -426,10 +468,13 @@ ul
 	&:hover
 		animation: none
 	+media-breakpoint-down(lg)
+		display: none
 		width: 65rem
 		height: 65rem
 		filter: drop-shadow(0 0 49rem rgba(0, 52, 255, 0.3)) 
 		border-radius: 15rem
+	+media-breakpoint-down(xs)
+		
 	img
 		transform: skew(4deg)
 	
@@ -470,9 +515,10 @@ ul
 		padding: 40rem 32rem 23rem 40rem
 		width: 285rem
 		border-radius: 5rem
-	+media-breakpoint-down(xs)
-		transform: translateX(-50%)	
+		display: block !important
+		transform: translateX(-45%)	
 		bottom: 120%
+		
 	&:before
 		content: ""
 		display: block
@@ -526,7 +572,6 @@ ul
 	top: vw(-10)
 	margin-right: vw(140)
 	margin-bottom: vw(100)
-	// padding: vw(56) vw(64) vw(48) vw(64)
 	width: vw(483)
 	height: vw(652)
 	text-align: center
@@ -539,16 +584,21 @@ ul
 		// padding: 56rem 64rem 48rem 64rem
 		width: 483rem
 		min-height: 652rem
-		background-size: 483rem 652rem
+		background-size: 100% 100%
+	@media (max-width: 1125px)
+		order: 2
 	+media-breakpoint-down(sm)
-		
 	@media (max-width: 500px)
-		// left: -10vw
 		padding: 
 			left: 10rem
 			right: 10rem
 		width: 360rem
-		background-size: 360rem 650rem
+		min-height: 700rem
+		height: auto
+		background-image: none
+		background-color: #1e1e1e
+		clip-path: polygon(0 0, 100% 2%, 100% 100%, 0% 100%)
+		// background-size: 100% 100%
 	&:before
 		content: ""
 		position: absolute
@@ -670,6 +720,7 @@ ul
 		margin-bottom: 8rem
 		font-size: 12rem
 		letter-spacing: .13rem
+
 
 label[for="input-phone"]
 	position: relative
@@ -1024,7 +1075,13 @@ label[for="input-phone"]
 	justify-content: flex-start
 	margin-bottom: vw(50)
 	+media-breakpoint-down(lg)
+		margin: 0 auto
 		margin-bottom: 50rem
+		max-width: 300rem
+	+media-breakpoint-down(xs)
+		max-width: none
+		margin-left: 0
+		margin-right: 0
 	&:after
 		content: ""
 		position: absolute
@@ -1142,6 +1199,10 @@ label[for="input-phone"]
 	+media-breakpoint-down(lg)
 		display: block		
 		transform: translateX(60rem)
+	+media-breakpoint-down(md)
+		width: 100vw
+		transform: translateX(-5vw)
+		margin-bottom: 10vw
 
 .learn__btn
 	position: relative
@@ -1178,7 +1239,7 @@ label[for="input-phone"]
 		min-height: 1250rem
 		background-size: 1467rem 1253rem, 481rem 1233rem
 	+media-breakpoint-down(md)
-		background:  url('../img/src/audience-center.png') no-repeat left center/ vw(1467) vw(1253)  #161922
+		background:  url('../img/src/audience-center.png') no-repeat left bottom / 1467rem 1253rem #161922
 
 .audience__section-title
 	color:  $white
@@ -1191,99 +1252,96 @@ label[for="input-phone"]
 
 .audience__list-wrap
 	+media-breakpoint-down(lg)
-
+		display: flex
+		flex-direction: column
 
 .audience__list
 	margin-bottom: vw(60)
 	display: flex
+	justify-content: space-between
 	flex-wrap: wrap
-	width: vw(950)
+	width: vw(900)
 	+media-breakpoint-down(lg)
-		// justify-content: center
-		// margin: 
-		// 	left: auto
-		// 	right: auto
+		margin: 
+			left: auto
+			right: auto
 		margin-bottom: 60rem
-		width: 950rem
+		width: 800rem
 	+media-breakpoint-down(md)
-		// justify-content: center
-		justify-content: space-around
 		width: 100%
+	+media-breakpoint-down(sm)
+		// width: 600rem
 	@media (max-width: 395px)
 		justify-content: space-between
 
-.audience__item
-	margin-right: vw(46)
-	width: vw(265)
+picture
+	display: block
+
+picture img	
+	width: 100%
+
+.audience__img
+	position: absolute
+	top: vw(0)
+	left: vw(-30)
+	width: vw(180)
 	+media-breakpoint-down(lg)
-		margin-right: 46rem
-		width: 200rem
+		top: 0
+		left: -30rem
+		width: 180rem	
+
+.audience__item
+	position: relative
+	padding-top: vw(200)
+	width: vw(300)
+	+media-breakpoint-down(lg)
+		width: 33%
+		padding-top: 200rem
 	+media-breakpoint-down(md)
-		margin-right: 0
 		padding: 0 23rem
-	@media (max-width: 500px)
-		margin-right: 0
+		// width: 200rem
+		
+	// @media (max-width: 500px)
 	@media (max-width: 395px)
 		max-width: 160rem
-	.audience__img
-
-	&:nth-child(1) .audience__img
-		width: vw(190)
-		height: vw(230)
-		+media-breakpoint-down(lg)
-			width: 190rem
-			height: 230rem
-		@media (max-width: 395px)
-			max-width: 160rem	
+	
+	&:nth-child(1) 
+	
 	&:nth-child(2) 
 		.audience__img
-			width: vw(193)
-			height: vw(219)
-			+media-breakpoint-down(lg)
-				width: 193rem
-				height: 219rem
-			@media (max-width: 395px)
-				max-width: 160rem	
-		.audience__item__header
-			margin-bottom: vw(45)
+			top: vw(13)	
 			+media-breakpoint-down(lg)
 				margin-bottom: 45rem
 	&:nth-child(3) .audience__img
-		width: vw(197)
-		height: vw(227)
+		top: vw(8)
 		+media-breakpoint-down(lg)
-			width: 197rem
-			height: 227rem
-	&:nth-child(4) .audience__img
-		width: vw(176)
-		height: vw(220)
-		+media-breakpoint-down(lg)
-			width: 176rem
-			height: 220rem
-	&:nth-child(5) .audience__img
-		width: vw(205)
-		height: vw(224)
-		+media-breakpoint-down(lg)
-			width: 205rem
-			height: 224rem
-	&:nth-child(6) .audience__img
-		width: vw(172)
-		height: vw(230)
-		+media-breakpoint-down(lg)
-			width: 172rem
-			height: 230rem
-
-
-.audience__img
-	max-height: vw(219)	
-	+media-breakpoint-down(lg)
-		max-height: 219rem	
-	img
-		// width: 100%
 		
+		+media-breakpoint-down(md)
+			
+	&:nth-child(4) .audience__img
+	
+		+media-breakpoint-down(lg)
+			
+		+media-breakpoint-down(md)
+			
+	&:nth-child(5) .audience__img
+		top: vw(22)
+		+media-breakpoint-down(lg)
+			
+		+media-breakpoint-down(md)
+		
+	&:nth-child(6) .audience__img
+		top: vw(-15)
+		+media-breakpoint-down(lg)
+			
+		+media-breakpoint-down(md)
+			
+
+
 
 .audience__item__header	
 	margin-bottom: vw(22)
+	min-height: 2em
 	font-size: vw(24)
 	font-weight: 600
 	line-height: 1
@@ -1313,19 +1371,17 @@ label[for="input-phone"]
 	// height: vw(1185)
 	overflow: visible
 	+media-breakpoint-down(lg)
-		right: -20rem
-		bottom: 35vw
-		// transform: translate(50%,0) !important
-		width: 35vw
-		height: auto
-	// @media (max-width: 1125px)
-	+media-breakpoint-down(md)
 		position: static
-		width: 90vw
-		transform: translate(5%,0) !important
-	+media-breakpoint-down(md)
+		// right: -20rem
+		// bottom: 35vw
+		transform: translate(18vw,0) 
 		width: 100vw
-		transform: translate(-5%,0) !important
+		max-width: 923rem
+		height: auto
+	@media (max-width: 1125px)
+		transform: translate(13vw,0)
+	+media-breakpoint-down(md)
+		transform: translate(2vw,0)
 	picture
 		display: block
 
@@ -1694,10 +1750,14 @@ label[for="input-phone"]
 
 .play-btn
 	position: absolute
+	display: flex
+	justify-content: center
+	align-items: center
 	left: -10%
 	bottom: 30%
-	width: vw(186)	
-	height: vw(186)
+	width: vw(120)	
+	height: vw(120)
+	background-color: $accent;
 	cursor: pointer
 	border-radius: 50%
 	animation: pulse 2s infinite
@@ -1709,6 +1769,13 @@ label[for="input-phone"]
 		height: 116rem
 	+media-breakpoint-down(md)
 	+media-breakpoint-down(xs)
+	svg
+		transform: translate(10%)
+		width: vw(37)
+		height: vw(42)
+		+media-breakpoint-down(lg)
+			width: 37rem
+			height: 42rem
 	.icon
 		animation: breath 2s infinite
 	&:hover
@@ -1836,7 +1903,7 @@ label[for="input-phone"]
 	+media-breakpoint-down(lg)
 		// padding-top: 90rem
 		padding-bottom: 0
-		min-height: 550rem
+		min-height: 467rem
 		background-size: 483rem 467rem
 	&:before
 		display: none
@@ -2340,7 +2407,10 @@ label[for="input-phone"]
 	width: 100vw
 	height: vw(140)
 	+media-breakpoint-down(lg)
-		height: 140rem
+		// height: 70rem
+		height: 5vw
+	+media-breakpoint-down(sm)
+		// height: 5vw
 
 .video .container 
 	padding-bottom: vw(160)

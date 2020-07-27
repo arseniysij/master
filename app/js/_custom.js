@@ -1,20 +1,27 @@
+window.onload = function() {
+  AOS.init({
+      offset: 100,
+      duration: 1000,
+      // easing: 'ease-in-sine',
+      delay: 100,
+      once: true
+    });
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
 
   var lazyLoadInstance = new LazyLoad({
-  // Your custom settings go here
+  startEvent: 'DOMContentLoaded',
+  
 });
 
   $('.section-title').attr("data-aos", "fade-up");
   $('.learn-item').attr("data-aos", "fade-up");
   $('.audience__item').attr("data-aos", "zoom-out-up");
 
-    AOS.init({
-      offset: 100,
-      duration: 1000,
-      // easing: 'ease-in-sine',
-      delay: 50,
-      once: true
-    });
+    
   
   // video play
   let videoWrap = $('.video-wrap'),
@@ -41,53 +48,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('.select-occupation').niceSelect();
 
   //paralax mouse
-     $(window).resize(function() {
-          
-        if($('.program__paralax').css('display') == 'block' && window.innerWidth > 1199) {
-          console.log("работает");
+     
+        if($('.program__paralax').css('display') == 'block' && window.innerWidth > 1200) {
         var scene = document.querySelector('.program__paralax');
         var parallaxInstance = new Parallax(scene, {
           // relativeInput: true
-        });
-        // var scene2 = document.querySelector('.audience__mockup');
-        // var parallaxInstance2 = new Parallax(scene2);
-        // } 
-
-        // if (window.innerWidth < 1199) {
-        //   console.log("должна вырубить");
-        //    $('.program__paralax').attr('data-depth', '');
+         });
         }
-  }); 
-      
-    //  var scene2 = document.querySelector('.audience__mockup');
-    //     var parallaxInstance2 = new Parallax(scene2);
- 
-
-
-
-  
-
-  // animate css
-  // function callbackFunc(entries, observer)
-  // {
-  //   entries.forEach(entry => {
-  //     var txt = entry.target.id + " visibility: " + entry.isIntersecting;
-      
-  //     document.getElementById('log').appendChild(document.createTextNode(txt));
-  //     document.getElementById('log').appendChild(document.createElement("br"));
-  //   });
-  // }
-
-  // let options = {
-  //     root: null,
-  //     rootMargin: '0px',
-  //     threshold: 0.3
-  //   };
-
-  // let observer = new IntersectionObserver(callbackFunc, options);
-
-  // observer.observe(document.querySelector('firstBlock'));
-  // observer.observe(document.getElementById('secondBlock'));
+     
 
 
 
@@ -104,21 +72,42 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
   $(monthOnPage).text(getMonth(now));
-  $(dateOnPage).text(userDay);
+  
   if (userHours >= 19) {
-    (dateOnPage).text(userDay+1);
+    $(dateOnPage).text(userDay+1);
+  } else {
+    $(dateOnPage).text(userDay);
   }
 
   // form__author hover
   let formAuthor = $('.author__info');
   let desc = $('.author__decs');
+  let formAuthorWidth = 1200;
 
-  formAuthor.on('mouseleave', function() {
-    desc.fadeOut(200);   
-  });
+  if (window.innerWidth >= formAuthorWidth) {
+      formAuthor.on('mouseleave', function() {
+        desc.fadeOut(200);   
+      });
    
-  formAuthor.on('mouseenter', function() {
-    desc.fadeIn(200);
+      formAuthor.on('mouseenter', function() {
+        desc.fadeIn(200);
+      });
+    } else {
+      formAuthor.unbind();
+    }
+
+  $(window).resize(function() {
+    if (window.innerWidth >= formAuthorWidth) {
+      formAuthor.on('mouseleave', function() {
+        desc.fadeOut(200);   
+      });
+   
+      formAuthor.on('mouseenter', function() {
+        desc.fadeIn(200);
+      });
+    } if (window.innerWidth < formAuthorWidth) {
+      formAuthor.unbind();
+    }
   });
 
   
