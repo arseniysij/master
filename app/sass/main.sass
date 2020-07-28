@@ -573,10 +573,10 @@ ul
 	margin-right: vw(140)
 	margin-bottom: vw(100)
 	width: vw(483)
-	height: vw(652)
+	height: vw(700)
 	text-align: center
 	filter: drop-shadow(0px 1px 65px rgba(0, 0, 0, 0.4))
-	background: url(../img/svg/form-hero.svg) no-repeat center center / vw(483) vw(652)
+	background: url(../img/svg/form-hero.svg) no-repeat center center / 100% 100%
 	+media-breakpoint-down(lg)
 		top: -10rem
 		margin-right: 0rem
@@ -584,7 +584,6 @@ ul
 		// padding: 56rem 64rem 48rem 64rem
 		width: 483rem
 		min-height: 652rem
-		background-size: 100% 100%
 	@media (max-width: 1125px)
 		order: 2
 	+media-breakpoint-down(sm)
@@ -1896,29 +1895,16 @@ picture img
 	margin-left: auto
 	margin-right: auto
 	margin-bottom: vw(70)
-	// padding-top: vw(50)
-	padding-bottom: vw(20)
-	height: vw(467)
+	height: vw(500)
 	background-size: vw(483) vw(467)
 	+media-breakpoint-down(lg)
-		// padding-top: 90rem
-		padding-bottom: 0
-		min-height: 467rem
+		min-height: 500rem
 		background-size: 483rem 467rem
 	&:before
 		display: none
 	&:after
 		top: vw(-120)
 		left: vw(-350)
-		// width: vw(440)
-		// height: vw(479)
-		// background: url(../img/src/mockup.png) no-repeat center / contain
-		// +media-breakpoint-down(lg)
-		// 	top: -130rem
-		// 	left: -350rem
-		// 	width: 440rem
-		// 	height: 479rem
-
 
 .booking label[for="input-phone"]
 	&:before
@@ -2045,8 +2031,8 @@ picture img
 	&:hover
 		position: relative
 		img
-			transform: translateY(vw(-10))
-			transition: transform .2s ease-in
+			transform: translateY(-30%)
+			transition: transform .1s ease-in
 
 .website-link
 	color: #2e58fb	
