@@ -6,7 +6,7 @@ window.onload = function() {
       delay: 100,
       once: true
     });
-}
+};
 
 
 
