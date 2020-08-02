@@ -21,4 +21,5 @@ $gutter: $grid-gutter-width
 
 @function vw($size) 
     $result: $size * 100 / 1920
+    $result: round($result * 100000) / 100000
     @return $result+vw

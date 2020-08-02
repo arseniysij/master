@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // video play
   let videoWrap = $('.video-wrap'),
   videoContainer = videoWrap.find('.video-container');
-  let videoClose = videoWrap.find('.video-close');
+  let videoClose = videoWrap.find('#video-close');
   
  
 
@@ -64,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function() {
   monthOnPage = $('.date__month');
   let now = new Date();
   let userDay = now.getDate();
+  let nextDay = new Date(now);
+  nextDay.setDate(nextDay.getDate() + 1);
   let userHours = now.getHours();
 
     function getMonth(date) {
@@ -74,7 +76,8 @@ document.addEventListener("DOMContentLoaded", function() {
   $(monthOnPage).text(getMonth(now));
   
   if (userHours >= 19) {
-    $(dateOnPage).text(userDay+1);
+    $(dateOnPage).text(nextDay.getDate());
+    $(monthOnPage).text(getMonth(nextDay));
   } else {
     $(dateOnPage).text(userDay);
   }

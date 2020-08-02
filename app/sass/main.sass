@@ -85,6 +85,10 @@ input[type="radio"].visually-hidden
 	+media-breakpoint-down(lg)
 		max-width: 90vw	
 
+.thanks	.container
+	// width: 76.82vw
+	width: vw(1475)
+
 ul
 	list-style: none
 	margin: 0
@@ -150,7 +154,7 @@ ul
 		margin-right: 0
 		align-self: auto
 
-.logo img
+.logo picture
 	margin-right: vw(44)
 	+media-breakpoint-down(lg)
 		margin-right: 44rem
@@ -263,6 +267,11 @@ ul
 			box-shadow: 5rem 5rem 15rem $accent
 		a
 			border-bottom: none
+
+.socials__btn img
+	width: vw(25)	
+	+media-breakpoint-down(lg)
+		width: 25rem		
 
 .social__text
 	font-family: "Proxima Nova"
@@ -1768,9 +1777,6 @@ picture img
 	background-color: rgba(#000, 0.7)
 	z-index: 50
 
-.video-close
-
-
 .video-frame	
 	position: absolute
 	display: flex
@@ -2261,14 +2267,14 @@ picture img
 	position: relative	
 	padding: 
 		top: vw(160)
-		bottom: vw(250)
-	min-height: vw(992)
+		bottom: vw(70)
+	// min-height: vw(992)
 	background-color: #1b1918
 	+media-breakpoint-down(lg)
 		padding: 
 			top: 160rem
-			bottom: 250rem
-		min-height: 992rem
+			// bottom: 233rem
+		// min-height: 992rem
 
 .thanks__header-left
 	position: absolute
@@ -2293,10 +2299,18 @@ picture img
 .thanks-hero
 	text-align: center	
 
+.thanks .main-link
+	position: absolute
+	right: vw(200)
+	+media-breakpoint-down(lg)
+		right: 200rem
+
 .thanks__h1
-	margin-bottom: vw(38)	
+	margin-bottom: vw(38)
+	letter-spacing: vw(3.35)
 	+media-breakpoint-down(lg)
 		margin-bottom: 38rem
+		letter-spacing: 3.35rem
 
 .thanks__date-start
 	margin-right: vw(17)
@@ -2326,7 +2340,7 @@ picture img
 	letter-spacing: vw(0.9)
 	+media-breakpoint-down(lg)
 		margin-bottom: 46rem
-		width: 955rem
+		width: auto
 		font-size: 18rem
 		line-height: 30rem
 		letter-spacing: .9rem
@@ -2339,12 +2353,11 @@ picture img
 	width: vw(1005)
 	min-height: vw(273)
 	text-align: center
-	background: url('../img/svg/thanks-form.svg') no-repeat center center / vw(1005) vw(300)
+	background: url('../img/svg/thanks-form.svg') no-repeat center center / 100% 100%
 	+media-breakpoint-down(lg)
-		padding: 73rem 120rem 58rem 120rem
-		width: 1005rem
+		padding: 60rem 120rem 58rem 120rem
+		width: auto
 		min-height: 273rem
-
 
 .messengers__title
 	margin-bottom: vw(15)
@@ -2358,23 +2371,31 @@ picture img
 
 .messengers__text
 	margin-bottom: vw(28)
+	font-size: vw(16)
 	font-weight: 200
 	letter-spacing: vw(0.8)
 	+media-breakpoint-down(lg)
 		margin-bottom: 28rem
+		font-size: 16rem
 		letter-spacing: .8rem
 
 .messengers__list
 	display: flex
 	justify-content: space-between
+	margin: 0 auto
+	width: vw(670)
+	+media-breakpoint-down(lg)
+		width: 670rem
 	li:not(:last-child)
 		margin-right: vw(22)
 		+media-breakpoint-down(lg)
 			margin-right: 22rem
 
 .messengers__link
-	display: inline-block
-	padding: vw(22) vw(30) vw(20) vw(30)
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	padding: vw(16) vw(30) vw(14) vw(30)
 	font-size: vw(14)
 	line-height: vw(16.26)
 	text-transform: uppercase
@@ -2383,9 +2404,17 @@ picture img
 	border: 1px dashed #0034ff
 	border-radius: vw(4)
 	+media-breakpoint-down(lg)
-		padding: 22rem 30rem 20rem 30rem
+		padding: 16rem 30rem 14rem 30rem
+		font-size: 14rem
+		line-height: 16.26rem
+		letter-spacing: 1.16rem
 	&:hover
 		background-color: #0034ff;
+
+.messengers__link span
+	display: inline-flex
+	justify-content: center
+	align-items: center
 
 .messengers__link-img
 	margin-right: vw(10)
@@ -2399,31 +2428,43 @@ picture img
 	width: 100vw
 	height: vw(140)
 	+media-breakpoint-down(lg)
-		// height: 70rem
 		height: 5vw
-	+media-breakpoint-down(sm)
-		// height: 5vw
+	+media-breakpoint-down(xs)
+		height: 7vw
+
+.video .wave
+	top: vw(0)
+	height: vw(175)
+
+	
+.thanks .video
+	position: relative
+	padding-top: vw(163)
+	background: url('../img/src/program-left.png') no-repeat -11% -120% / vw(513) vw(908), url('../img/src/video-right.png') no-repeat right 3% top 58% / vw(384) vw(590)
+	z-index: 2
 
 .video .container 
-	padding-bottom: vw(160)
 	text-align: center	
 	+media-breakpoint-down(lg)
 
+.thanks .section-title
+	letter-spacing: vw(3.2)
 
 .video
-	background-color: #fff	
+	background-color: #fff
+	padding-bottom: vw(140)
 
 .video .section-title
 	position: relative
 	display: inline-block
-	margin-bottom: vw(23)
+	margin-bottom: vw(12)
 	text-align: center
 	&:after
 		content: ""
 		position: absolute
 		display: block
-		right: vw(-40)
-		bottom: vw(-90)
+		right: vw(-45)
+		bottom: vw(-65)
 		width: vw(63)
 		height: vw(125)
 		background: url("../img/src/thanks-video.png") no-repeat center / contain
@@ -2437,7 +2478,6 @@ picture img
 	letter-spacing: vw(0.8)
 
 .video__content
-	// position: relative
 	display: flex
 	justify-content: flex-start
 	align-items: center
@@ -2455,24 +2495,326 @@ picture img
 .video__text-item
 	font-family: "Bebas Neue"
 	font-size: vw(106)
-	letter-spacing: 0.8px
+	line-height: 1
+	letter-spacing: vw(3.5)
 	&:nth-child(1)
 		color: $whitish
 		font-weight: 300
+		letter-spacing: vw(5)
 	&:nth-child(2)
 		color: $accent
 		font-weight: 700
+		letter-spacing: vw(6)
+	&:nth-child(3)
+		color: $accent
+		font-weight: 700
 
+.video__play-link
+	position: relative
+	width: vw(186)
+	height: vw(186)
+	transform: translateX(-27%)
+	&:hover .video__play-circle
+		animation: pulse 1s infinite
+	&:hover .video__play-btn
+		animation-play-state: paused
+
+.video__play-btn
+	width: 100%
+	height: 100%
+	animation: rotate 2s infinite linear
+	
+.video__play-circle
+	position: absolute
+	top: 18%
+	left: 18%
+	width: vw(120)
+	height: vw(120)
+	background-color: $accent
+	border-radius: 50%
+
+.thanks .triangle-wrap
+	top: 40%	
+
+@keyframes rotate
+	0%
+		transform: rotate(0deg)	
+	100%
+		transform: rotate(-360deg)	
+
+.sell
+	// padding-bottom: vw(76)
+	background: url("../img/src/sell-left.png") no-repeat left 0 bottom -5% / vw(655) vw(1047), url("../img/src/sell-right.png") no-repeat right bottom / vw(527) vw(750)
 
 .sell .section-title
-	margin-bottom: vw(101)
+	margin-bottom: vw(90)
 	text-align: center	
 	&:after
 		content: ""
 		position: absolute
 		display: block
-		right: vw(-40)
-		bottom: vw(-90)
-		width: vw(63)
-		height: vw(125)
+		right: vw(195)
+		bottom: vw(-185)
+		width: vw(306)
+		height: vw(228)
 		background: url("../img/src/sell-arrow.png") no-repeat center / contain
+
+.sell_wrap
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	padding-left: vw(50)
+	height: vw(1350)
+
+.sell_box
+	margin-bottom: vw(130)
+	width: vw(650)
+	transform: translateX(5%)
+
+.sell-about
+	width: vw(544)
+	margin: 
+		left: vw(50)
+
+.section-subtitle
+	margin-bottom: vw(20)
+	font-family: Bebas Neue
+	font-weight: 700
+	color: $blackish
+	font-size: vw(36)
+	letter-spacing: vw(1.8)
+	text-transform: uppercase
+	span
+		font-weight: 300
+
+.sell-text
+	color: $blackish
+	font-size: vw(18)
+	font-weight: 300
+	letter-spacing: vw(0.9)	
+	&:not(:last-child)
+		margin-bottom: vw(25)
+
+.price__section-subtitle
+	margin-bottom: vw(15)
+
+.sell__price
+	margin-bottom: vw(70)
+	padding-top: vw(64)
+	width: vw(743)
+
+.sell-bullets
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: vw(34)
+
+.bullet-item
+	width: 50%
+	img
+		margin-right: vw(12)
+		width: vw(11)
+
+.bullet-item:nth-child(2n)
+	width: 47%	
+
+.bullet-text
+	color: $blackish
+	letter-spacing: vw(0.8)
+	font-size: vw(16)
+	line-height: vw(36)
+
+.bullet-subtext
+	font-weight: 900
+
+.sell__price-tag
+	display: flex
+	justify-content: space-between
+	padding: vw(27) vw(27) vw(18) vw(42)
+	margin-bottom: vw(45)
+	align-items: center
+	background-color: $accent
+	border-radius: vw(5)
+	transform: skewX(-3deg)
+
+.price-tag__bill
+	width: vw(450)
+	transform: skewX(3deg)
+
+.bill-up
+	// color: #9c9c9c
+	display: flex
+	align-items: center
+	margin-bottom: vw(10)
+	font-family: Bebas Neue
+	font-size: vw(36)
+	font-weight: 200
+	text-transform: uppercase
+	line-height: vw(24)
+	letter-spacing: vw(1.8)
+
+.bill__bold-text
+	font-weight: 700
+	margin-right: vw(13)
+
+.bill-dollar
+	font-family: Proxima Nova
+	letter-spacing: vw(2)
+
+.bill__sm-text
+	font-family: Proxima Nova
+	font-size: vw(24)		
+	letter-spacing: vw(0.6)
+
+.bill-rub
+	font-family: MyriadPro
+	font-weight: 400
+
+.bill-sub
+	font-size: vw(16)
+	font-weight: 200
+	letter-spacing: vw(0.8)
+	line-height: vw(24)
+
+.price-tag__trap-price
+	display: flex
+	justify-content: center
+	align-items: center
+	width: vw(202)	
+	height: vw(63)
+	border: 1px dashed rgba(#fff, .8)
+	// transform: skewX(-5.005deg)
+	border-radius: vw(5)
+
+.trap-price__text
+	margin-right: vw(8)
+	opacity: .9
+	font-size: vw(14)
+	letter-spacing: vw(0.39)
+	transform: skewX(3deg)
+
+.trap-price__numb
+	font-size: vw(27)
+	font-weight: 600
+	text-decoration: line-through
+	letter-spacing: vw(1.5)
+	opacity: .9
+	transform: skewX(3deg)
+
+.sell__timer
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	width: vw(726)
+	height: vw(154)
+	font-family: Bebas Neue
+	border: vw(1) dashed #adadad
+	border-radius: vw(5)
+
+.timer__text
+	position: absolute
+	left: 50%
+	bottom: 85%
+	padding: 
+		left: vw(20)
+		right: vw(20)
+	width: vw(550)
+	text-align: center
+	transform: translateX(-50%)
+	color: $blackish
+	font-size: vw(36)
+	font-weight: 300
+	letter-spacing: vw(0.9)
+	background-color: #fff
+
+.timer__text--bold
+	font-weight: 700	
+	
+.timer__itis
+	font-family: Bebas Neue
+	color: #adadad
+	font-size: vw(119)
+	letter-spacing: vw(0.9)
+
+.form-sect__title
+	margin: 0 auto
+	margin-bottom: vw(34)
+	width: vw(490)	
+	color: $blackish
+	font-family: Bebas Neue
+	font-size: vw(30)
+	font-weight: 300
+	text-align: center
+	letter-spacing: vw(1.5)
+
+.form-sect__title--bold
+	font-weight: 700
+
+.thanks__form-sect
+	position: relative
+	padding: vw(89) vw(60) vw(66) vw(60)
+	margin-left: vw(35)
+	width: vw(611)
+	min-height: vw(631)
+	z-index: 2
+	&:before
+		content: ""
+		position: absolute
+		top: -6%
+		left: -6%
+		width: 112%
+		height: 112%
+		background: url(../img/src/thanks-form.png) no-repeat top left / 100% 100%
+		z-index: -1
+
+.thanks-form
+	margin-bottom: vw(26)
+	
+.thanks-form input
+	display: block
+	margin: 0 auto
+	margin-bottom: vw(12)
+	padding: 
+		left: vw(26)
+	width: vw(385)
+	height: vw(60)
+	border: vw(1) solid #e8e8e8
+	border-radius: vw(5)
+	background-color: #ffffff
+	&:last-of-type
+		margin-bottom: vw(26)
+
+.thanks-form input::placeholder
+	color: #969494
+	font-size: vw(16)
+	font-weight: 200
+	line-height: vw(40)
+	letter-spacing: vw(0.84)
+
+.thanks-btn
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 0 auto
+	width: vw(385)	
+	height: vw(81)
+	color: $whitish
+	text-shadow: vw(1) vw(1) vw(10) rgba(0, 0, 0, 0.4)
+	font-size: vw(16)
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: vw(1.26)
+	background-image: linear-gradient(to top, #0034ff 0%, #4f71f8 100%)
+	box-shadow: vw(7) vw(2) vw(50) rgba(26, 72, 253, 0.4), inset 0 vw(-4) 0px #092baf
+	border-radius: vw(15)
+	transition: box-shadow .2s
+	&:hover
+		box-shadow: vw(7) vw(2) vw(50) rgba(26, 72, 253, 0.4), inset 0 vw(4) 0px #092baf
+		background-image: linear-gradient(to top, #4f71f8 0%, #0034ff 100%)
+		transition: box-shadow .2s
+		color: rgba($whitish, .9)
+
+.thanks .footer
+	background-color: #202221
+	border-top: none
