@@ -35,6 +35,7 @@ body
 	font-weight: 400
 	overflow-x: hidden
 	color: $white
+	overflow-x: hidden
 
 a
 	color: $white
@@ -87,7 +88,10 @@ input[type="radio"].visually-hidden
 
 .thanks	.container
 	// width: 76.82vw
-	width: vw(1475)
+	max-width: vw(1475)
+	+media-breakpoint-down(lg)
+		width: 90vw	
+		max-width: none
 
 ul
 	list-style: none
@@ -1967,7 +1971,7 @@ picture img
 .footer__documents 
 	margin-right: vw(70)
 	+media-breakpoint-down(lg)
-		margin-right: 70rem
+		margin-right: 0
 		margin-bottom: 80rem
 	+media-breakpoint-down(md)
 		margin-right: 0
@@ -2285,6 +2289,8 @@ picture img
 	+media-breakpoint-down(lg)
 		width: 423rem
 		height: 390rem
+	+media-breakpoint-down(xs)
+		display: none
 
 .thanks__header-right	
 	position: absolute	
@@ -2301,9 +2307,13 @@ picture img
 
 .thanks .main-link
 	position: absolute
-	right: vw(200)
+	right: vw(150)
+	top: vw(80)
 	+media-breakpoint-down(lg)
-		right: 200rem
+		right: vw(200)
+		top: 50rem
+	.video-close
+		position: static
 
 .thanks__h1
 	margin-bottom: vw(38)
@@ -2317,17 +2327,28 @@ picture img
 	font-family: "Bebas Neue"
 	font-size: vw(42)
 	font-weight: 200
-	text-transform: uppercase;
+	text-transform: uppercase
 	letter-spacing: vw(0.89)
 	+media-breakpoint-down(lg)
 		margin-right: 17rem
 		font-size: 42rem
 		letter-spacing: .89rem
+	+media-breakpoint-down(xs)
+		font-size: 30rem
 
 .thanks .hero__date
 	margin-bottom: vw(40)
 	+media-breakpoint-down(lg)
 		margin-bottom: 40rem
+		flex-wrap: wrap
+
+.thanks__date-header
+	display: flex
+	align-items: center
+	
+.thanks__date-content
+	display: flex
+	align-items: center			
 
 .thanks .check-mail
 	margin: 
@@ -2358,6 +2379,10 @@ picture img
 		padding: 60rem 120rem 58rem 120rem
 		width: auto
 		min-height: 273rem
+	+media-breakpoint-down(xs)
+		padding: 
+			left: 20rem
+			right: 20rem
 
 .messengers__title
 	margin-bottom: vw(15)
@@ -2385,11 +2410,14 @@ picture img
 	margin: 0 auto
 	width: vw(670)
 	+media-breakpoint-down(lg)
-		width: 670rem
+		width: auto
+		flex-wrap: wrap
+		justify-content: space-around
 	li:not(:last-child)
 		margin-right: vw(22)
 		+media-breakpoint-down(lg)
 			margin-right: 22rem
+			margin-bottom: 15rem
 
 .messengers__link
 	display: inline-flex
@@ -2408,6 +2436,7 @@ picture img
 		font-size: 14rem
 		line-height: 16.26rem
 		letter-spacing: 1.16rem
+		border-radius: 4rem
 	&:hover
 		background-color: #0034ff;
 
@@ -2433,8 +2462,10 @@ picture img
 		height: 7vw
 
 .video .wave
-	top: vw(0)
+	top: -1px
 	height: vw(175)
+	+media-breakpoint-down(lg)
+		// height: 175rem
 
 	
 .thanks .video
@@ -2442,6 +2473,8 @@ picture img
 	padding-top: vw(163)
 	background: url('../img/src/program-left.png') no-repeat -11% -120% / vw(513) vw(908), url('../img/src/video-right.png') no-repeat right 3% top 58% / vw(384) vw(590)
 	z-index: 2
+	+media-breakpoint-down(lg)
+		padding-top: 163rem
 
 .video .container 
 	text-align: center	
@@ -2449,16 +2482,22 @@ picture img
 
 .thanks .section-title
 	letter-spacing: vw(3.2)
+	+media-breakpoint-down(lg)
+		letter-spacing: 3.2rem
 
 .video
 	background-color: #fff
 	padding-bottom: vw(140)
+	+media-breakpoint-down(lg)
+		padding-bottom: 140rem
 
 .video .section-title
 	position: relative
 	display: inline-block
 	margin-bottom: vw(12)
 	text-align: center
+	+media-breakpoint-down(lg)
+		margin-bottom: 12rem
 	&:after
 		content: ""
 		position: absolute
@@ -2468,16 +2507,25 @@ picture img
 		width: vw(63)
 		height: vw(125)
 		background: url("../img/src/thanks-video.png") no-repeat center / contain
-		
+		+media-breakpoint-down(lg)
+			right: -30rem
+			bottom: -80rem
+			width: 63rem
+			height: 125rem
 
 .video-long
 	margin-bottom: vw(60)
 	color: $black
 	font-size: vw(16)
-	opacity: 0.65;
+	opacity: 0.65
 	letter-spacing: vw(0.8)
+	+media-breakpoint-down(lg)
+		margin-bottom: 60rem
+		font-size: 16rem
+		letter-spacing: .8rem
 
 .video__content
+	position: relative
 	display: flex
 	justify-content: flex-start
 	align-items: center
@@ -2488,23 +2536,42 @@ picture img
 	text-align: left
 	background: url("../img/src/video.jpg") no-repeat center right / cover
 	border-radius: vw(15)
+	+media-breakpoint-down(lg)
+		// justify-content: space-between
+		// padding: 100rem 146rem 100rem 146rem
+		padding: 50rem
+		width: 90vw
+		height: 50.625vw
+		border-radius: 15rem
+	+media-breakpoint-down(xs)
+		align-items: start
+		padding: 
+			left: 30rem
+			right: 30rem
+			top: 20rem
 
 .video__text
 	 
-
 .video__text-item
 	font-family: "Bebas Neue"
 	font-size: vw(106)
 	line-height: 1
 	letter-spacing: vw(3.5)
+	+media-breakpoint-down(lg)
+		// font-size: 60rem
+		letter-spacing: 3.5rem
 	&:nth-child(1)
 		color: $whitish
 		font-weight: 300
 		letter-spacing: vw(5)
+		+media-breakpoint-down(lg)
+			letter-spacing: 5rem
 	&:nth-child(2)
 		color: $accent
 		font-weight: 700
 		letter-spacing: vw(6)
+		+media-breakpoint-down(lg)
+			letter-spacing: 6rem
 	&:nth-child(3)
 		color: $accent
 		font-weight: 700
@@ -2514,14 +2581,25 @@ picture img
 	width: vw(186)
 	height: vw(186)
 	transform: translateX(-27%)
+	+media-breakpoint-down(lg)
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 186rem
+		height: 186rem
+	+media-breakpoint-down(xs)
+		width: 100rem
+		height: 100rem
+
 	&:hover .video__play-circle
 		animation: pulse 1s infinite
 	&:hover .video__play-btn
 		animation-play-state: paused
 
 .video__play-btn
-	width: 100%
-	height: 100%
+	min-width: 100%
+	min-height: 100%
 	animation: rotate 2s infinite linear
 	
 .video__play-circle
@@ -2532,9 +2610,22 @@ picture img
 	height: vw(120)
 	background-color: $accent
 	border-radius: 50%
+	+media-breakpoint-down(lg)
+		width: 120rem
+		height: 120rem
+	+media-breakpoint-down(xs)
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		width: 64.5%
+		height: 64.5%
 
 .thanks .triangle-wrap
 	top: 40%	
+
+.thanks .triangle	
+	+media-breakpoint-down(xs)
+		font-size: 8%
 
 @keyframes rotate
 	0%
@@ -2545,10 +2636,14 @@ picture img
 .sell
 	// padding-bottom: vw(76)
 	background: url("../img/src/sell-left.png") no-repeat left 0 bottom -5% / vw(655) vw(1047), url("../img/src/sell-right.png") no-repeat right bottom / vw(527) vw(750)
+	+media-breakpoint-down(lg)
+		background: url("../img/src/sell-left.png") no-repeat left 0 bottom -5% / 655rem 1047rem, url("../img/src/sell-right.png") no-repeat right bottom / 527rem 750rem
 
 .sell .section-title
 	margin-bottom: vw(90)
 	text-align: center	
+	+media-breakpoint-down(lg)
+		margin-bottom: 90rem
 	&:after
 		content: ""
 		position: absolute
@@ -2558,6 +2653,8 @@ picture img
 		width: vw(306)
 		height: vw(228)
 		background: url("../img/src/sell-arrow.png") no-repeat center / contain
+		+media-breakpoint-down(lg)
+			display: none
 
 .sell_wrap
 	display: flex
@@ -2565,16 +2662,49 @@ picture img
 	flex-wrap: wrap
 	padding-left: vw(50)
 	height: vw(1350)
+	+media-breakpoint-down(lg)
+		align-items: center
+		padding-left: 0
+		height: auto
 
-.sell_box
+.sell__box
 	margin-bottom: vw(130)
 	width: vw(650)
 	transform: translateX(5%)
+	+media-breakpoint-down(lg)
+		order: 1
+		margin-bottom: 0rem
+		width: 650rem
+	+media-breakpoint-down(md)
+		width: 100%
+
+.sell__box-inside
+	padding-top: vw(64)
+	width: vw(743)
+	margin-bottom: vw(34)
+	+media-breakpoint-down(lg)	
+		order: 2
+		margin-bottom: 34px
+		padding-top: 64rem
+		width: 743rem	
+	+media-breakpoint-down(md)
+		// padding-left: vw(200)
+		margin: 
+			left: auto
+			right: auto
+		width: auto
 
 .sell-about
 	width: vw(544)
 	margin: 
 		left: vw(50)
+	+media-breakpoint-down(lg)
+		order: 3
+		width: 544rem
+		margin: 
+			left: 0
+	+media-breakpoint-down(sm)
+		width: auto
 
 .section-subtitle
 	margin-bottom: vw(20)
@@ -2584,6 +2714,10 @@ picture img
 	font-size: vw(36)
 	letter-spacing: vw(1.8)
 	text-transform: uppercase
+	+media-breakpoint-down(lg)
+		margin-bottom: 20rem
+		font-size: 36rem
+		letter-spacing: 1.8rem
 	span
 		font-weight: 300
 
@@ -2592,37 +2726,64 @@ picture img
 	font-size: vw(18)
 	font-weight: 300
 	letter-spacing: vw(0.9)	
+	+media-breakpoint-down(lg)
+		font-size: 18rem
+		letter-spacing: .9rem
 	&:not(:last-child)
 		margin-bottom: vw(25)
+		+media-breakpoint-down(lg)
+			mb25rem
 
 .price__section-subtitle
 	margin-bottom: vw(15)
+	+media-breakpoint-down(lg)
+		margin-bottom: 15rem
 
 .sell__price
 	margin-bottom: vw(70)
-	padding-top: vw(64)
 	width: vw(743)
+	+media-breakpoint-down(lg)
+		order: 4
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 70rem
+		padding-top: 64rem
+		width: 100%
 
 .sell-bullets
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
-	margin-bottom: vw(34)
+	+media-breakpoint-down(lg)
+	+media-breakpoint-down(md)
+		flex-direction: column
 
 .bullet-item
 	width: 50%
+	+media-breakpoint-down(md)
+		width: auto
 	img
 		margin-right: vw(12)
 		width: vw(11)
+		+media-breakpoint-down(lg)
+			margin-right: 12rem
+			width: 11rem
 
 .bullet-item:nth-child(2n)
 	width: 47%	
+	+media-breakpoint-down(md)
+		width: auto
 
 .bullet-text
 	color: $blackish
 	letter-spacing: vw(0.8)
 	font-size: vw(16)
 	line-height: vw(36)
+	+media-breakpoint-down(lg)
+		letter-spacing: .8rem
+		font-size: 16rem
+		line-height: 36rem
 
 .bullet-subtext
 	font-weight: 900
@@ -2636,13 +2797,22 @@ picture img
 	background-color: $accent
 	border-radius: vw(5)
 	transform: skewX(-3deg)
+	+media-breakpoint-down(lg)
+		flex-wrap: wrap
+		width: 100%
+		padding: 27rem 27rem 18rem 42rem
+		margin-bottom: 45rem
+		border-radius: 5rem
+	+media-breakpoint-down(xs)
+		margin-bottom: 70rem
 
 .price-tag__bill
 	width: vw(450)
 	transform: skewX(3deg)
+	+media-breakpoint-down(lg)
+		width: 450rem
 
 .bill-up
-	// color: #9c9c9c
 	display: flex
 	align-items: center
 	margin-bottom: vw(10)
@@ -2652,19 +2822,31 @@ picture img
 	text-transform: uppercase
 	line-height: vw(24)
 	letter-spacing: vw(1.8)
+	+media-breakpoint-down(lg)
+		margin-bottom: 10rem
+		font-size: 36rem
+		line-height: 24rem
+		letter-spacing: 1.8rem
 
 .bill__bold-text
 	font-weight: 700
 	margin-right: vw(13)
+	+media-breakpoint-down(lg)
+		margin-right: 13rem
 
 .bill-dollar
 	font-family: Proxima Nova
 	letter-spacing: vw(2)
+	+media-breakpoint-down(lg)
+		letter-spacing: 2rem
 
 .bill__sm-text
 	font-family: Proxima Nova
 	font-size: vw(24)		
 	letter-spacing: vw(0.6)
+	+media-breakpoint-down(lg)
+		font-size: 24rem
+		letter-spacing: .6rem
 
 .bill-rub
 	font-family: MyriadPro
@@ -2675,6 +2857,10 @@ picture img
 	font-weight: 200
 	letter-spacing: vw(0.8)
 	line-height: vw(24)
+	+media-breakpoint-down(lg)
+		font-size: 16rem
+		letter-spacing: .8rem
+		line-height: 24rem
 
 .price-tag__trap-price
 	display: flex
@@ -2685,6 +2871,10 @@ picture img
 	border: 1px dashed rgba(#fff, .8)
 	// transform: skewX(-5.005deg)
 	border-radius: vw(5)
+	+media-breakpoint-down(lg)
+		width: 202rem
+		height: 63rem
+		border-radius: 5rem
 
 .trap-price__text
 	margin-right: vw(8)
@@ -2692,6 +2882,10 @@ picture img
 	font-size: vw(14)
 	letter-spacing: vw(0.39)
 	transform: skewX(3deg)
+	+media-breakpoint-down(lg)
+		margin-right: 
+		font-size: 14rem
+		letter-spacing: .39rem
 
 .trap-price__numb
 	font-size: vw(27)
@@ -2700,6 +2894,9 @@ picture img
 	letter-spacing: vw(1.5)
 	opacity: .9
 	transform: skewX(3deg)
+	+media-breakpoint-down(lg)
+		font-size: 27rem
+		letter-spacing: 1.5rem
 
 .sell__timer
 	position: relative
@@ -2709,8 +2906,17 @@ picture img
 	width: vw(726)
 	height: vw(154)
 	font-family: Bebas Neue
-	border: vw(1) dashed #adadad
+	border: 1px dashed #adadad
 	border-radius: vw(5)
+	+media-breakpoint-down(lg)
+		margin: 
+			left: auto
+			right: auto
+		width: 726rem
+		height: 154rem
+		border-radius: 5rem
+	+media-breakpoint-down(lg)
+		width: 100%
 
 .timer__text
 	position: absolute
@@ -2727,6 +2933,16 @@ picture img
 	font-weight: 300
 	letter-spacing: vw(0.9)
 	background-color: #fff
+	+media-breakpoint-down(lg)
+		padding: 
+			left: 20rem
+			right: 20rem
+		width: 550rem
+		font-size: 36rem
+		letter-spacing: .9rem
+	+media-breakpoint-down(xs)
+		width: 80%
+		font-size: 30rem
 
 .timer__text--bold
 	font-weight: 700	
@@ -2736,6 +2952,9 @@ picture img
 	color: #adadad
 	font-size: vw(119)
 	letter-spacing: vw(0.9)
+	+media-breakpoint-down(lg)
+		font-size: 119rem
+		letter-spacing: .9rem
 
 .form-sect__title
 	margin: 0 auto
@@ -2747,6 +2966,15 @@ picture img
 	font-weight: 300
 	text-align: center
 	letter-spacing: vw(1.5)
+	+media-breakpoint-down(lg)
+		margin-bottom: 34rem
+		width: 490rem
+		font-size: 30rem
+		letter-spacing: 1.5rem
+	+media-breakpoint-down(sm)
+		width: auto
+	+media-breakpoint-down(xs)
+		font-size: 24rem
 
 .form-sect__title--bold
 	font-weight: 700
@@ -2758,6 +2986,21 @@ picture img
 	width: vw(611)
 	min-height: vw(631)
 	z-index: 2
+	+media-breakpoint-down(lg)
+		order: 5
+		padding: 89rem 60rem 66rem 60rem
+		margin-left: 0
+		margin-bottom: 80rem
+		width: 611rem
+		min-height: 631rem
+	+media-breakpoint-down(xs)
+		padding: 
+			left: 35rem
+			right: 35rem
+		width: auto
+		background-color: #fff
+		box-shadow: 0 0 65px rgba(0, 0, 0, 0.15)
+
 	&:before
 		content: ""
 		position: absolute
@@ -2767,9 +3010,13 @@ picture img
 		height: 112%
 		background: url(../img/src/thanks-form.png) no-repeat top left / 100% 100%
 		z-index: -1
+		+media-breakpoint-down(xs)
+			display: none
 
 .thanks-form
 	margin-bottom: vw(26)
+	+media-breakpoint-down(lg)
+		margin-bottom: 26rem
 	
 .thanks-form input
 	display: block
@@ -2779,11 +3026,21 @@ picture img
 		left: vw(26)
 	width: vw(385)
 	height: vw(60)
-	border: vw(1) solid #e8e8e8
+	border: 1px solid #e8e8e8
 	border-radius: vw(5)
 	background-color: #ffffff
+	+media-breakpoint-down(lg)
+		margin-bottom: 12rem
+		padding: 
+			left: 26rem
+		width: 385rem
+		height: 60rem
+		border-radius: 5rem
+	+media-breakpoint-down(xs)
+		width: 90%
 	&:last-of-type
 		margin-bottom: vw(26)
+		margin-bottom: 26rem
 
 .thanks-form input::placeholder
 	color: #969494
@@ -2791,6 +3048,10 @@ picture img
 	font-weight: 200
 	line-height: vw(40)
 	letter-spacing: vw(0.84)
+	+media-breakpoint-down(lg)
+		font-size: 16rem
+		line-height: 40rem
+		letter-spacing: 0.84rem
 
 .thanks-btn
 	display: flex
@@ -2809,12 +3070,92 @@ picture img
 	box-shadow: vw(7) vw(2) vw(50) rgba(26, 72, 253, 0.4), inset 0 vw(-4) 0px #092baf
 	border-radius: vw(15)
 	transition: box-shadow .2s
+	+media-breakpoint-down(lg)
+		width: 385rem
+		height: 81rem
+		font-size: 16rem
+		text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4)
+		letter-spacing: 1.26rem
+		box-shadow: 7rem 2rem 50rem rgba(26, 72, 253, 0.4), inset 0 vw-4rem 0px #092baf
+	+media-breakpoint-down(xs)
+		width: 90%
 	&:hover
 		box-shadow: vw(7) vw(2) vw(50) rgba(26, 72, 253, 0.4), inset 0 vw(4) 0px #092baf
 		background-image: linear-gradient(to top, #4f71f8 0%, #0034ff 100%)
 		transition: box-shadow .2s
 		color: rgba($whitish, .9)
+		+media-breakpoint-down(lg)
+			box-shadow: 7rem 2rem 50rem rgba(26, 72, 253, 0.4), inset 0 4rem 0px #092baf
 
 .thanks .footer
 	background-color: #202221
 	border-top: none
+
+.after-form
+	display: none
+	order: 6
+	margin-bottom: vw(200)	
+	padding-top: vw(150)
+	+media-breakpoint-down(lg)
+		margin-bottom: 200rem
+		padding-top: 150rem
+
+.after-form__title
+	margin-bottom: vw(20)
+	font-family: "Bebas Neue"
+	font-weight: 700
+	text-align: center
+	color: $blackish
+	font-size: vw(56)
+	letter-spacing: vw(1.8)
+	+media-breakpoint-down(lg)
+		margin-bottom: 20rem
+		font-size: 56rem
+		letter-spacing: 1.8rem
+
+.after-form__text
+	color: $blackish
+	font-size: vw(18)
+	font-weight: 300
+	text-align: center
+	letter-spacing: vw(0.9)
+	+media-breakpoint-down(lg)
+		font-size: 18rem
+		letter-spacing: .9rem
+
+.sell__redirect
+	position: fixed
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	top: 0
+	left: 0
+	padding: 
+	width: 100vw
+	height: 100vw
+	background-color: rgba(#000, .8)	
+
+.redirect__text
+	margin-bottom: vw(20)
+	width: vw(700)
+	font-family: "Bebas Neue"
+	font-weight: 700
+	text-align: center
+	color: #fff
+	font-size: vw(56)
+	letter-spacing: vw(1.8)
+	+media-breakpoint-down(lg)
+		margin-bottom: 20rem
+		font-size: 56rem
+		letter-spacing: 1.8rem
+
+.redirect__timer
+	color: #fff
+	font-size: vw(75)
+	font-weight: 300
+	text-align: center
+	letter-spacing: vw(0.9)
+	+media-breakpoint-down(lg)
+		font-size: 18rem
+		letter-spacing: .9rem

@@ -12,6 +12,62 @@ window.onload = function() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
+// Timer
+const timerBlock = $('.timer__itis'),
+timerMinutes = $(timerBlock).find('.timer__minutes'),
+timerSeconds = $(timerBlock).find('.timer__seconds'),
+startingMinutes = 1;
+let time = startingMinutes * 60 ;
+
+let timerInterval = setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+  if (localStorage.getItem('time') !== null && localStorage.getItem('time') >= '0')  {
+    if(localStorage.getItem('time') == '0') {
+      clearInterval(timerInterval);
+      $('.thanks__form-sect').remove();
+      $('.after-form').fadeIn(400);
+    }
+    time = localStorage.getItem('time');
+    let minutes = Math.floor(time / 60),
+  seconds = time % 60;
+  if (minutes < 10) {
+    $(timerMinutes).html("0" + minutes);
+  } else {
+  $(timerMinutes).html(minutes);
+  }
+  if (seconds < 10) {
+    $(timerSeconds).html("0" + seconds);
+  } else {
+  $(timerSeconds).html(seconds);
+  }
+  time--;
+  time = time < 0 ? 0 : time; 
+  localStorage.setItem('time', time);
+  if (time < 30) {
+    timerBlock.find('span').css('color', 'red');
+  }
+    } else if (localStorage.getItem('time') == null) {
+      localStorage.setItem('time', time);
+    } 
+}
+
+
+// redirect Timer
+const redirectTimer = $('.redirect__timer'),
+redirectSeconds = 3;
+let redirectTime = redirectSeconds;
+
+// setInterval(redirectCountdowm, 1000); вызвать с появлением окна
+function redirectCountdowm() {
+  redirectTimer.html(redirectTime);
+  console.log(redirectTime);
+  redirectTime--;
+  redirectTime = redirectTime < 0 ? 0 : redirectTime;
+}
+
+
+
   var lazyLoadInstance = new LazyLoad({
   startEvent: 'DOMContentLoaded',
   
@@ -27,14 +83,14 @@ document.addEventListener("DOMContentLoaded", function() {
   let videoWrap = $('.video-wrap'),
   videoContainer = videoWrap.find('.video-container');
   let videoClose = videoWrap.find('#video-close');
-  
+  let thanksVideoLink = $('.video__play-link');
  
 
-  $('.play-btn').click(function(e) {
+  $('.play-btn').add(thanksVideoLink).click(function(e) {
     e.preventDefault();
     $('body').css('overflow', 'hidden');
     videoWrap.fadeIn(200);
-    videoContainer.html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vs5k_wLFaH4?autoplay=1" frameborder="0" allow="accelerometer" allow="autoplay"; autoplay;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    videoContainer.html($(videoWrap).attr("data-frame"));
     // $('.ytp-icon').delay(1000).trigger('click');
     videoClose.click(function() {
       videoContainer.html('');
@@ -43,7 +99,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
- 
+//  thanks video
+  
+
 
 	$('.select-occupation').niceSelect();
 
