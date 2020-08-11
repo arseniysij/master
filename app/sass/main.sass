@@ -1690,18 +1690,18 @@ picture img
 	position: absolute
 	left: -10%
 	bottom: 30%
-	width: vw(120)	
-	height: vw(120)
-	background-color: $accent;
+	width: vw(186)	
+	height: vw(186)
+	// background-color: $accent;
 	cursor: pointer
-	border-radius: 50%
-	animation: pulse 2s infinite
+	// border-radius: 50%
+	// animation: pulse 2s infinite
 	+media-breakpoint-down(lg)
 		bottom: 30%
 		left: 55%
 		transform: translateX(-50%)
-		width: 116rem
-		height: 116rem
+		width: 186rem
+		height: 186rem
 	+media-breakpoint-down(md)
 	+media-breakpoint-down(xs)
 	svg
@@ -1714,7 +1714,11 @@ picture img
 	.icon
 		animation: breath 2s infinite
 	&:hover
-		animation: none	 	
+		animation: none	 
+		& .video__play-circle
+			animation: pulse 1s infinite
+		.video__play-btn
+			animation-play-state: paused
 
 .triangle-wrap
 	position: absolute
@@ -2076,6 +2080,7 @@ picture img
 	left: 0
 	width: 100vw
 	height: 100vh
+	background-color: rgba(#000, .8)
 	overflow-y: auto
 	z-index: 10	
 
@@ -2084,6 +2089,9 @@ picture img
 	top: 0
 	left: 50%
 	transform: translateX(-50%)
+	margin: 
+		top: vw(100)
+		bottom: vw(100)
 	padding:
 		top: vw(130)
 		left: vw(70)
@@ -2096,15 +2104,24 @@ picture img
 	background-origin: border-box
 	z-index: 20
 	+media-breakpoint-down(lg)
+		margin: 
+			top: 100rem
+			bottom: 100rem
 		padding:
-			top: 130rem
-			left: 70rem
-			right: vw(70)
-			bottom: vw(100)
-		width: vw(832)
-		height: vw(1053)
+			top: 130rem * .7
+			left: 70rem * .7
+			right: 70rem * .7
+			bottom: 100rem * .7
+		width: 832rem * .7
+		height: auto
+		background: none
+		background-color: #1e1e1f
+	+media-breakpoint-down(xs)
+		max-width: 90vw
+		padding: 70rem 6vw
+		padding-top: 100rem
+		width: auto
 		
-
 .popup__header
 	margin-bottom: vw(20)
 	color: #2c56fb
@@ -2124,9 +2141,12 @@ picture img
 	letter-spacing: vw(0.47)
 	+media-breakpoint-down(lg)
 		margin-bottom: 30rem
-		font-size: 24rem
+		font-size: 18rem
 		line-height: 25rem
 		letter-spacing: 0.47rem
+	+media-breakpoint-down(xs)
+		br
+			display: none
 
 .popup__get-bonus
 	margin-bottom: vw(30)
@@ -2137,15 +2157,28 @@ picture img
 	letter-spacing: vw(1.88)
 	+media-breakpoint-down(lg)
 		margin-bottom: 30rem
-		font-size: 48rem
-		line-height: 46rem
+		font-size: 36rem
+		line-height: 48rem
 		letter-spacing: 1.88rem
+	+media-breakpoint-down(xs)
+		br
+			display: none
 
 .popup .signup-form
 	margin-bottom: vw(22)
 	+media-breakpoint-down(lg)
 		margin-bottom: 22rem
 
+.popup .current
+	padding: 
+		top: 0
+		bottom: 0
+	font-size: vw(18)
+	line-height: vw(48)
+	+media-breakpoint-down(lg)
+		font-size: 18rem
+		line-height: 48rem
+	
 .popup label
 	margin-bottom: vw(12)
 	font-size: vw(17)
@@ -2161,27 +2194,34 @@ picture img
 	display: block
 	margin-left: auto
 	margin-right: auto
+	margin-bottom: vw(33)
 	width: vw(388)
 	height: vw(65)
 	font-size: vw(18)
 	+media-breakpoint-down(lg)
+		margin-bottom: 33rem
 		width: 388rem
 		height: 65rem
 		font-size: 18rem
+	+media-breakpoint-down(xs)
+		width: 100%
 
 .popup .select-occupation
-	padding-top: 0
+	display: flex
+	align-items: center
 	span
 		line-height: vw(65)
 		+media-breakpoint-down(lg)
 			line-height: vw(65)
 
 .popup .select-occupation .option
+	line-height: vw(65)
 	width: vw(388)
 	height: vw(65)
 	+media-breakpoint-down(lg)
 		width: 388rem
 		height: 65rem
+		line-height: 65rem
 
 .popup 	.input-sbmt-btn
 	padding: vw(28) vw(50)
@@ -2192,6 +2232,8 @@ picture img
 		padding: 28rem 50rem
 		width: 388rem
 		height: 82rem
+	+media-breakpoint-down(xs)
+		width: auto
 	span
 		font-size: vw(15)
 		font-weight: 700
@@ -2214,23 +2256,32 @@ picture img
 	+media-breakpoint-down(lg)
 		font-size: 15rem
 
-.popup .select-occupation, .popup input
-	margin-bottom: vw(33)
-	+media-breakpoint-down(lg)
-		margin-bottom: 33rem
+
 
 .popup__bonus
 	position: absolute
-	top: vw(230)
+	top: vw(190)
 	left: vw(-230)
 	width: vw(438)	
 	height: vw(419)
 	+media-breakpoint-down(lg)
 		position: absolute
-		top: 230rem
-		left: -230rem
-		width: 438rem	
-		height: 419rem
+		top: 200rem
+		left: -200rem
+		width: 438rem * .7	
+		height: 419rem * .7
+	+media-breakpoint-down(md)
+		width: 438rem * .4	
+		height: 419rem * .4
+		top: 200rem
+		left: -50rem
+	+media-breakpoint-down(xs)
+		// display: none
+		// width: 438rem * .3	
+		// height: 419rem * .3
+		top: -80rem
+		left: 50%
+		transform: translateX(-50%)
 
 .popup__close
 	position: absolute
@@ -2240,11 +2291,13 @@ picture img
 	height: vw(40)	
 	cursor: pointer
 	+media-breakpoint-down(lg)
-		top: 110rem
-		right: 80rem
+		top: 40rem
+		right: 50rem
 		width: 40rem
 		height: 40rem
-		
+	+media-breakpoint-down(xs)
+		top: 30rem
+		right: 30rem
 	&:before, &:after
 		content: ""
 		position: absolute
@@ -2264,6 +2317,10 @@ picture img
 		transform: rotate(45deg)
 	&:after
 		transform: rotate(-45deg)
+	&:hover
+		&:before, &:after
+			background-color: #fff
+			transition: background-color .3s ease-out
 
 // Thanks page
 
@@ -2272,13 +2329,11 @@ picture img
 	padding: 
 		top: vw(160)
 		bottom: vw(70)
-	// min-height: vw(992)
 	background-color: #1b1918
 	+media-breakpoint-down(lg)
 		padding: 
 			top: 160rem
-			// bottom: 233rem
-		// min-height: 992rem
+
 
 .thanks__header-left
 	position: absolute
@@ -2601,6 +2656,8 @@ picture img
 	min-width: 100%
 	min-height: 100%
 	animation: rotate 2s infinite linear
+	img
+		width: 100%
 	
 .video__play-circle
 	position: absolute
@@ -2841,7 +2898,8 @@ picture img
 		letter-spacing: 2rem
 
 .bill__sm-text
-	font-family: Proxima Nova
+	font-family: MyriadPro
+	font-weight: 400
 	font-size: vw(24)		
 	letter-spacing: vw(0.6)
 	+media-breakpoint-down(lg)
@@ -2849,8 +2907,7 @@ picture img
 		letter-spacing: .6rem
 
 .bill-rub
-	font-family: MyriadPro
-	font-weight: 400
+
 
 .bill-sub
 	font-size: vw(16)
@@ -3042,7 +3099,7 @@ picture img
 		margin-bottom: vw(26)
 		margin-bottom: 26rem
 
-.thanks-form input::placeholder
+.thanks-form input::placeholder, .thanks-form input
 	color: #969494
 	font-size: vw(16)
 	font-weight: 200
@@ -3125,16 +3182,17 @@ picture img
 
 .sell__redirect
 	position: fixed
-	display: flex
+	display: none
 	flex-direction: column
 	justify-content: center
 	align-items: center
 	top: 0
 	left: 0
-	padding: 
+	padding: 10vw
 	width: 100vw
-	height: 100vw
-	background-color: rgba(#000, .8)	
+	height: 100vh
+	background-color: rgba(#000, .8)
+	z-index: 100
 
 .redirect__text
 	margin-bottom: vw(20)
@@ -3147,8 +3205,11 @@ picture img
 	letter-spacing: vw(1.8)
 	+media-breakpoint-down(lg)
 		margin-bottom: 20rem
+		width: 700rem
 		font-size: 56rem
 		letter-spacing: 1.8rem
+	+media-breakpoint-down(md)
+		width: auto
 
 .redirect__timer
 	color: #fff
@@ -3157,5 +3218,5 @@ picture img
 	text-align: center
 	letter-spacing: vw(0.9)
 	+media-breakpoint-down(lg)
-		font-size: 18rem
+		font-size: 75rem
 		letter-spacing: .9rem

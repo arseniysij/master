@@ -433,16 +433,14 @@
 				<img class="speaker__img lazy" data-src="img/src/speaker-bottom.png" src="data:image/gif;base64,R0lGODlhSwBKAIAAAP///wAAACH5BAEAAAEALAAAAABLAEoAAAJRjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvXbG8BADs=" alt="">
 			</picture>
 			<a class="play-btn" href="https://www.youtube.com/watch?v=vs5k_wLFaH4" target="_blank">
-				<!-- <svg width="39" height="44" viewBox="0 0 39 44" fill="red" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M36.6001 19.8708L4.53887 0.71225C2.53921 -0.482669 0 0.958015 0 3.28749V40.8226C0 43.1279 2.49184 44.5717 4.49183 43.4254L36.5531 25.0488C38.543 23.9083 38.569 21.0473 36.6001 19.8708Z"
-						fill="white" />
-				</svg> -->
-				<div class="triangle-wrap">
-					<div class="triangle"></div>
-				</div>
-
-
+				<div class="video__play-btn">
+						<img src="img/src/play.png" alt="" class="play-btn__icon">
+					</div>
+				<div class="video__play-circle">
+						<div class="triangle-wrap">
+							<div class="triangle"></div>
+						</div>
+					</div>
 				<div class="speaker__invoke">
 					<p>Смотреть<br>видеоприглашение</p>
 				</div>
@@ -561,7 +559,7 @@
 
 
 <div class="popup-backdrop"></div>
-<div class="popup-wrap">
+<div class="popup-wrap" id="popup-wrap">
 
 	<div class="popup">
 		<p class="popup__header">Подожди секу!</p>
@@ -569,7 +567,7 @@
 			уйти с сайта. Это ПОПАП окно на выходе,<br>
 			которое тебя раздражает!</p>
 		<p class="popup__get-bonus">Но заполни форму<br>
-			и получи еще 1 бонус</p>
+			и получи еще 1&nbsp;бонус</p>
 		<form class="signup-form" action="" id="popup-form">
 			<label for="popup__input-occupation">Выбери какой бонус ты хочешь:</label>
 			<div class="select-occupation-wrap">
@@ -596,7 +594,7 @@
 		<div class="popup__bonus">
 			<img class="lazy" data-src="img/src/bonus.png" alt="">
 		</div>
-		<div class="popup__close"></div>
+		<div class="popup__close" id="popup__close"></div>
 	</div>
 </div>
 

@@ -12,11 +12,35 @@ window.onload = function() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
+// PopupExit
+
+  const popupWrap = $('#popup-wrap'),
+  popupClose = $('#popup__close');
+
+  popupClose.on('click', function() {
+    popupWrap.fadeOut(300);
+  });
+
+  function ShowExitPopup() {
+    popupWrap.fadeIn(300);
+    $(document).unbind();
+  }
+
+  $(document).on( 'mouseleave' , ShowExitPopup);
+
+// Redirect Timer
+$('form.thanks-form').on('submit', function(e){
+  e.preventDefault();
+  $('.sell__redirect').fadeIn(300).css('display', 'flex');
+  setInterval(redirectCountdowm, 1000);
+});
+
+
 // Timer
 const timerBlock = $('.timer__itis'),
 timerMinutes = $(timerBlock).find('.timer__minutes'),
 timerSeconds = $(timerBlock).find('.timer__seconds'),
-startingMinutes = 1;
+startingMinutes = 3;
 let time = startingMinutes * 60 ;
 
 let timerInterval = setInterval(updateCountdown, 1000);
@@ -55,15 +79,18 @@ function updateCountdown() {
 
 // redirect Timer
 const redirectTimer = $('.redirect__timer'),
-redirectSeconds = 3;
+redirectSeconds = 4;
 let redirectTime = redirectSeconds;
 
 // setInterval(redirectCountdowm, 1000); вызвать с появлением окна
 function redirectCountdowm() {
-  redirectTimer.html(redirectTime);
-  console.log(redirectTime);
   redirectTime--;
   redirectTime = redirectTime < 0 ? 0 : redirectTime;
+  redirectTimer.html(redirectTime);
+  console.log(redirectTime);
+  if (redirectTime == 0) {
+    window.location.replace("https://youtu.be/dQw4w9WgXcQ?t=42");
+  }
 }
 
 
