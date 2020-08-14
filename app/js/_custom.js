@@ -12,21 +12,28 @@ window.onload = function() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
+
 // PopupExit
 
   const popupWrap = $('#popup-wrap'),
   popupClose = $('#popup__close');
-
   popupClose.on('click', function() {
     popupWrap.fadeOut(300);
   });
 
   function ShowExitPopup() {
-    popupWrap.fadeIn(300);
-    $(document).unbind();
+    if (
+    event.clientY < 50 &&
+    event.relatedTarget == null &&
+    event.target.nodeName.toLowerCase() !== 'select' &&
+    event.target.nodeName.toLowerCase() !== 'input') {
+      popupWrap.fadeIn(300);
+      $(document).unbind();
+    }
   }
+  // $(document).on( 'mouseleave' , ShowExitPopup);
 
-  $(document).on( 'mouseleave' , ShowExitPopup);
+
 
 // Redirect Timer
 $('form.thanks-form').on('submit', function(e){
@@ -37,15 +44,18 @@ $('form.thanks-form').on('submit', function(e){
 
 
 // Timer
-const timerBlock = $('.timer__itis'),
-timerMinutes = $(timerBlock).find('.timer__minutes'),
-timerSeconds = $(timerBlock).find('.timer__seconds'),
-startingMinutes = 3;
-let time = startingMinutes * 60 ;
 
-let timerInterval = setInterval(updateCountdown, 1000);
 
-function updateCountdown() {
+if (window.location.pathname=='/thanks.html') {
+  const timerBlock = $('.timer__itis'),
+  timerMinutes = $(timerBlock).find('.timer__minutes'),
+  timerSeconds = $(timerBlock).find('.timer__seconds'),
+  startingMinutes = 3;
+  let time = startingMinutes * 60 ;
+  let timerInterval = setInterval(updateCountdown, 1000);
+  console.log("ранится");
+
+  function updateCountdown() {
   if (localStorage.getItem('time') !== null && localStorage.getItem('time') >= '0')  {
     if(localStorage.getItem('time') == '0') {
       clearInterval(timerInterval);
@@ -75,6 +85,9 @@ function updateCountdown() {
       localStorage.setItem('time', time);
     } 
 }
+}
+ 
+
 
 
 // redirect Timer
@@ -169,7 +182,7 @@ function redirectCountdowm() {
 
   // form__author hover
   let formAuthor = $('.author__info');
-  let desc = $('.author__decs');
+  // let desc = $('.author__decs');  //включить чтобы объект скрывался
   let formAuthorWidth = 1200;
 
   if (window.innerWidth >= formAuthorWidth) {

@@ -18,6 +18,8 @@ input, textarea
 	&:required:valid
 		border-color: green
 
+
+
 html
 	scroll-behavior: smooth;
 	font-size: 1px
@@ -143,6 +145,8 @@ ul
 		background-image: none
 		background-color: #1b1a1a
 
+
+
 .logo
 	display: flex
 	align-items: flex-end
@@ -185,11 +189,6 @@ ul
 		letter-spacing: 0.7rem
 	+media-breakpoint-down(xs)
 		margin-left: 10rem
-
-// .contacts
-// 	+media-breakpoint-down(lg)
-// 		display: flex
-// 		flex-direction: column
 
 
 .phones
@@ -273,9 +272,12 @@ ul
 			border-bottom: none
 
 .socials__btn img
-	width: vw(25)	
+	width: vw(20)	
+	height: vw(19)
+	transform: skewX(10deg)
 	+media-breakpoint-down(lg)
-		width: 25rem		
+		width: 20rem
+		height: 19rem		
 
 .social__text
 	font-family: "Proxima Nova"
@@ -498,6 +500,13 @@ ul
 	100% 
 		box-shadow: 0 0 0 0 rgba(204,169,44, 0)
   
+@keyframes pulse-red 
+	0% 
+		box-shadow: 0 0 0 2px rgba($red, 0.7)
+	70% 
+		box-shadow: 0 0 0 40px rgba($red, 0)
+	100% 
+		box-shadow: 0 0 0 0 rgba(204,169,44, 0) 
 
 
 .author__mockup
@@ -552,7 +561,7 @@ ul
 	font-family: "Bebas Neue"
 	font-weight: 700
 	font-size: vw(23)
-	line-height: vw(12)
+	line-height: vw(24)
 	letter-spacing: vw(1.35)
 	+media-breakpoint-down(lg)
 		font-size: 23rem
@@ -2507,7 +2516,7 @@ picture img
 
 .wave
 	position: absolute
-	bottom: 0
+	bottom: -1px
 	left: 0
 	width: 100vw
 	height: vw(140)
@@ -3220,3 +3229,357 @@ picture img
 	+media-breakpoint-down(lg)
 		font-size: 75rem
 		letter-spacing: .9rem
+
+.onepage
+	color: $black
+
+.onepage .hero-bg
+	background-image: none;
+	background-color: $cream;
+
+.onepage .logo img
+	margin-right: vw(44)
+	+media-breakpoint-down(lg)
+		margin-right: 44rem
+
+.onepage .logo-text
+	color: #2b2b2b
+
+.header_signed
+	display: flex
+	align-items: flex-end
+	margin-top: vw(15)
+	height: vw(41)
+
+.signed__img
+	margin-right: vw(2)
+	width: vw(29)
+	+media-breakpoint-down(lg)
+		margin-right: 2rem	
+		width: 29rem
+
+.signed__numb
+	margin-right: vw(11)	
+	font-family: Bebas Neue
+	font-weight: 700
+	color: $someblack
+	font-size: vw(30)
+	line-height: 1
+	text-transform: uppercase
+	letter-spacing: vw(-1.5)
+	+media-breakpoint-down(lg)
+		margin-right: 11rem	
+		font-size: 30rem
+
+.signed__content
+	color: $someblack
+	font-size: vw(14)
+	line-height: vw(14)
+	+media-breakpoint-down(lg)
+		line-height: 14rem
+		font-size: 14rem
+
+.onepage .phones *		
+	color: inherit
+
+.onepage .phones-item
+	display: flex
+	align-items: center	
+
+.onepage .phone-numb
+
+.onepage .socials__btn
+	margin-right: vw(10)
+	padding: 0
+	background: transparent
+	border-radius: 0
+	transform: skewX(0)
+	+media-breakpoint-down(lg)
+		margin-right: 10rem
+	&:hover, &:active
+		box-shadow: none
+		.social__text
+			border-bottom: 1px dashed red
+	span
+		color: $someblack
+		font-size: vw(15)
+		font-weight: 400
+		line-height: vw(16.26)
+		letter-spacing: vw(1.25)
+		transform: skewX(0)
+	img
+		margin-right: vw(12)
+		transform: skewX(0)
+
+.onepage .social__text
+
+.onepage .main-header
+	margin-bottom: vw(57)
+	+media-breakpoint-down(lg)
+		margin-bottom: 57rem
+
+.onepage	.hero__date img
+	margin-right: 0
+
+.onepage .hero-title		
+	color: $white
+	background-color: #ef3b3e
+
+.onepage .date__bold
+	color: $red
+
+.onepage .date__month, .onepage .date__times span
+	color: $someblack
+
+.onepage .hero-h1 
+	font-family: Bebas Neue
+	font-weight: 300
+	color: $someblack
+	font-size: vw(60)
+	line-height: 1.1
+	letter-spacing: vw(2.13)
+	strong
+		font-family: Bebas Neue
+		font-size: vw(60)
+		font-weight: 700
+		letter-spacing: vw(2.13)
+		text-transform: uppercase
+
+.onepage .h1-number
+	font-family: MyriadPro !important
+
+.onepage .hero__form
+	padding: vw(10) vw(345) vw(0) vw(100)
+	overflow-x: visible
+
+.onepage .form__author
+	// transform: translate(-10%,0)
+
+.onepage .author__info
+	top: 57%
+	left: 34%
+
+.onepage .author-img
+	width: vw(870)
+	transform: translateY(0)
+
+.onepage .author__decs
+	padding: vw(38) vw(33) vw(24) vw(41)
+	width: vw(210)
+	min-height: vw(189)
+	background: url('../img/src/onepage-skills.png') no-repeat center / contain
+	&:before
+		top: vw(20)
+		left: vw(15)
+		width: vw(13)
+		height: vw(22)
+		background-image: url("../img/src/lightning-red.png")
+
+.onepage  .author__icon	
+	background-color: $red
+	animation: pulse-red  2s infinite
+	box-shadow: 0 0 vw(49) rgba(239, 59, 62, 0.3)
+
+.author-name .author__icon	
+	animation: none
+	
+
+.skill
+	color: $blackish
+	font-size: vw(10)
+	line-height: vw(16)
+	letter-spacing: vw(0.6)
+
+.author-name
+	position: absolute
+	bottom: 15%
+	right: 20%
+
+.author-name .author__info
+	position: relative
+	top: 0
+	left: 0
+
+.author-name .author__decs
+	bottom: 87%	
+	left: 50%
+	padding: vw(10) vw(18) vw(12) vw(18)
+	width: vw(145)
+	text-align: center
+	min-height: auto
+	background-image: none
+	background-color: #fff
+	transform: skewX(-5deg) translateX(-50%)
+	clip-path: none
+	&:before
+		display: none
+
+.author-name .author__decs__header
+	margin-bottom: 0
+	color: $someblack
+	font-size: vw(13)
+	line-height: vw(13)
+	font-weight: 400
+	letter-spacing: vw(0.93)
+	ransform: skewX(5deg)
+	span
+		font-weight: 700
+		letter-spacing: vw(0.93)
+
+.slider-btns
+	margin-bottom: vw(28)
+
+.slider-btn
+	padding: vw(23) vw(47) vw(20) vw(47)
+	border: 1px solid #c6c6c6
+	border-radius: vw(5)
+	transform: skewX(-5deg)
+	transition: all .5s	
+	&:not(:last-child)
+		margin-right: vw(13)
+
+.slider-btn.active 
+	color: #f8f6f8
+	background-color: #2b2b2b
+	transition: all .5s
+	.slider-btn__text
+		font-size: vw(16)
+		letter-spacing: vw(0.4)	
+		transition: all .5s	
+
+.slider-btn__text
+	color: #b1b1b1
+	font-size: vw(14)
+	letter-spacing: vw(0.35)
+	font-weight: 400
+	transform: skewX(5deg)
+	transition: all .5s	
+
+.helpful-list
+	margin-bottom: vw(14)
+
+.helpful__item 
+	display: flex
+	align-items: center
+	margin-bottom: vw(14)
+
+.helpful__icon 
+	margin-right: vw(24)	
+	width: vw(43)
+
+.helpful__content 
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+.helpful__title 
+	font-size: vw(16)
+	letter-spacing: vw(0.4)
+	font-weight: 800
+
+.helpful__text 
+	font-size: vw(14)
+	letter-spacing: vw(0.35)
+
+.slider__indicators
+	margin-bottom: vw(57)
+
+.indicators__item 
+	display: inline-block
+	width: vw(7)
+	height: vw(7)
+	background-color: #c6c6c6
+	border-radius: 50%
+
+.indicators__item.active 
+	background-color: #ef3b3e
+
+.call-wrap
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-bottom: vw(42)
+
+.call-title
+	margin-right: vw(13)
+	width: vw(385)
+	font-family: Bebas Neue
+	color: $someblack
+	font-size: vw(30)
+	letter-spacing: vw(1.5)
+	font-weight: 300
+	text-align: right
+	span
+		color: $someblack
+		font-weight: 700
+
+.call-bonus	
+	position: relative	
+	padding: vw(18) vw(26) vw(18) vw(26)
+	background-color: $someblack
+	transform: skewX(-5deg)
+	border-radius: vw(5)
+	&:after
+		content: ''
+		position: absolute
+		bottom: -140%
+		right: -25%
+		width: vw(55)
+		height: vw(127)
+		background: url("../img/src/bonus-arrow.png") no-repeat center / contain
+
+
+.bonus-text
+	font-family: Bebas Neue
+	color: $white
+	font-size: vw(30)
+	font-weight: 400
+	line-height: 1
+	letter-spacing: vw(1.5)
+	transform: skewX(5deg)
+
+.bonus-accent 
+	color: #ef3b3e
+
+.bonus__pdf
+	position: absolute 
+	top: vw(-170)
+	right: vw(-250)
+	padding: vw(42) vw(24) vw(24) vw(83)
+	width: vw(270)
+	// height: vw(180)
+	background: url('../img/src/bonus-bg.png') no-repeat center / contain
+	transform: skewX(5deg)
+	&:before
+		content: ''
+		position: absolute
+		top: 21%
+		left: 19%
+		width: vw(13)
+		height: vw(22)
+		background-image: url('../img/src/lightning-red.png')
+	&:after
+		content: ''
+		position: absolute
+		top: 5%
+		left: -29%
+		width: vw(152)
+		height: vw(164)
+		background-image: url('../img/src/mockup-red.png')
+
+.pdf-name 
+	font-family: Bebas Neue
+	color: $someblack
+	font-size: vw(20)
+	font-weight: 700
+	letter-spacing: vw(1.16)
+	text-align: left
+	span
+		font-weight: 300
+
+.onepage .btn
+	width: auto
+	background-image: linear-gradient(to top, #f01f2a 0%, #ff7167 100%)
+	letter-spacing: 1px
+	font-size: vw(13)
+
