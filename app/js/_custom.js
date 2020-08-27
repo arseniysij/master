@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // onepage slider
-  if (window.location.pathname == '*/onepage.html') {
+  if (window.location.pathname.includes('onepage') {
     $('.slider-carousel').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
