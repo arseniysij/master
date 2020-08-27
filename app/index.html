@@ -70,7 +70,7 @@
 							<div class="author__icon">
 								<img src="img/src/lightning.png" alt="">
 							</div>
-							<div class="author__decs">
+							<div class="author__decs" id="author__decs">
 								<p class="author__decs__header">Александр Дейнека</p>
 								<p class="author__decs__item"><span>Эксперт</span> в упаковке бизнеса и прототирования сайтов;</p>
 								<p class="author__decs__item"><span>Владелец студии разработки</span> авторских сайтов <span
@@ -111,7 +111,7 @@
 						<label for="input-email">На него вышлем бонус</label>
 						<input class="input-email" type="text" id="input-email" placeholder="* Ваш E-mail" required>
 						<label for="input-phone">На него вышлем Вам напоминание о мастер-классе</label>
-						<input class="input-phone" type="text" id="input-phone" placeholder="* Ваш телефон" required>
+						<input class="input-phone" type="tel" id="input-phone" placeholder="* Ваш телефон" required>
 						<button class="input-sbmt-btn btn" form="signup-form" type="submit" value="submit" ><span>Принять участие<br> и
 								получить бонус</span>
 							<img class="input-sbmt-btn--icon" src="img/src/fingerprint.png" alt="">
@@ -505,11 +505,17 @@
 			<p>Студия упаковки бизнеса в интернете Paradigma.website</p>
 			<p>УНП 291503669 | Р/с BY510LMP30133000421110000933</p>
 		</div>
-		<div class="footer__documents">
-			<a href="" target="_blank">Соглашение о персональных данных</a>
-			<a href=" target="_blank"">Договор оферты</a>
-			<a href="" target="_blank">Согласие на использование фото и видеоматериалов</a>
-		</div>
+		<ul class="footer__documents">
+			<li class="documents__item">
+				<a href="" target="_blank">Соглашение о персональных данных</a>
+			</li>
+			<li class="documents__item">
+				<a href=" target="_blank"">Договор оферты</a>
+			</li>
+			<li class="documents__item">
+				<a href="" target="_blank">Согласие на использование фото и видеоматериалов</a>
+			</li>
+		</ul>
 		<div class="phones">
 			<div class="phones-item">
 				<img class="lazy" data-src="img/src/belarus-flag.png" alt="">
