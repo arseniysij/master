@@ -25,7 +25,7 @@
 						<img src="img/src/tick.png" alt="">
 					</div>
 					<span class="signed__numb">311</span>
-					<span class="signed__content">человек уже <bзарегистрировались< /span>
+					<span class="signed__content">человек уже зарегистрировались</span>
 				</div>
 				<div class="contacts">
 					<div class="phones">
@@ -77,7 +77,7 @@
 						<div class="author__icon">
 							<img src="img/src/lightning.png" alt="">
 						</div>
-						<div class="author__decs">
+						<div class="author__decs" id="author__decs">
 							<p class="author__decs__header">Ключевые компетенеции</p>
 							<ul class="author__skills">
 								<li class="skill">Прототипирование сайтов</li>
@@ -104,55 +104,104 @@
 				<div class="hero__content">
 					<div class="content__slider">
 						<div class="slider-btns">
-							<button class="slider-btn">
+							<button id="slider--1" class="slider-btn active">
 								<span class="slider-btn__text">Программа мастер-класса</span>
 							</button>
-							<button class="slider-btn active">
+							<button id="slider--2" class="slider-btn">
 								<span class="slider-btn__text">Кому полезен мастер-класс</span>
 							</button>
 						</div>
-						<ul class="helpful-list">
-							<li class="helpful__item">
-								<div class="helpful__icon">
-									<img src="img/src/wifi-grey.png" alt="">
-								</div>
-								<div class="helpful__content">
-									<p class="helpful__title">Веб-мастерам</p>
-									<p class="helpful__text">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-								</div>
-							</li>
-							<li class="helpful__item">
-								<div class="helpful__icon"><img src="img/src/puzzle-grey.png" alt=""></div>
-								<div class="helpful__content">
-									<p class="helpful__title">Дизайнерам</p>
-									<p class="helpful__text">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-								</div>
-							</li>
-							<li class="helpful__item">
-								<div class="helpful__icon"><img src="img/src/chat-grey.png" alt=""></div>
-								<div class="helpful__content">
-									<p class="helpful__title">Интернет-маркетологам</p>
-									<p class="helpful__text">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-								</div>
-							</li>
-							<li class="helpful__item">
-								<div class="helpful__icon"><img src="img/src/dollar-grey.png" alt=""></div>
-								<div class="helpful__content">
-									<p class="helpful__title">Предпринимателям и владельцам бизнесов</p>
-									<p class="helpful__text">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-								</div>
-							</li>
-							<li class="helpful__item">
-								<div class="helpful__icon"><img src="img/src/question-grey.png" alt=""></div>
-								<div class="helpful__content">
-									<p class="helpful__title">Начинающим специалистам</p>
-									<p class="helpful__text">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-								</div>
-							</li>
-						</ul><!-- /helpful -->
+						<div class="slider-carousel">
+							<ul class="helpful-list">
+								<li class="helpful__item">
+									<div class="helpful__icon">
+										<img src="img/src/wifi-grey.png" alt="">
+									</div>
+									<div class="helpful__content">
+										<p class="helpful__title">Узнаете</p>
+										<p class="helpful__text">тренды 2020 в веб разработке (в разработке продающих сайтов)</p>
+									</div>
+								</li>
+								<li class="helpful__item">
+									<div class="helpful__icon"><img src="img/src/puzzle-grey.png" alt=""></div>
+									<div class="helpful__content">
+										<p class="helpful__title">Получите</p>
+										<p class="helpful__text">пошаговый алгоритм разработки продающего сайта</p>
+									</div>
+								</li>
+								<li class="helpful__item">
+									<div class="helpful__icon"><img src="img/src/chat-grey.png" alt=""></div>
+									<div class="helpful__content">
+										<p class="helpful__title">Поймете</p>
+										<p class="helpful__text">как делать самый важный этап разработки сайта - ПРОТОТИПИРОВАНИЕ
+											и ПРОДАЮЩИЙ КОПИРАЙТИНГ САЙТА</p>
+									</div>
+								</li>
+								<li class="helpful__item">
+									<div class="helpful__icon"><img src="img/src/dollar-grey.png" alt=""></div>
+									<div class="helpful__content">
+										<p class="helpful__title">Научитесь</p>
+										<p class="helpful__text">и поймете для чего и как делать предпроектые исследования ЦА,
+											рынка, ценообразования, конкурентов перед началом разработки сайта</p>
+									</div>
+								</li>
+								<li class="helpful__item">
+									<div class="helpful__icon"><img src="img/src/question-grey.png" alt=""></div>
+									<div class="helpful__content">
+										<p class="helpful__title">Начнете и поймете</p>
+										<p class="helpful__text">как управлять конверсией на сайте</p>
+									</div>
+								</li>
+								<li class="helpful__item">
+									<div class="helpful__icon"><img src="img/src/wifi-grey.png" alt=""></div>
+									<div class="helpful__content">
+										<p class="helpful__title">Внедрите</p>
+										<p class="helpful__text">в свой бизнес или начнете внедрять в свою работу -<br>
+											ТЕХНИКУ УПАКОВКИ БИЗНЕСА, а не разработку лендинга</p>
+									</div>
+								</li>
+							</ul><!-- /helpful -->
+							<ul class="helpful-list">
+								<li class="helpful__item">
+									<div class="helpful__icon">
+										<img src="img/src/wifi-grey.png" alt="">
+									</div>
+									<div class="helpful__content">
+										<p class="helpful__title">Веб-мастерам</p>
+										<p class="helpful__text">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+									</div>
+								</li>
+								<li class="helpful__item">
+									<div class="helpful__icon"><img src="img/src/puzzle-grey.png" alt=""></div>
+									<div class="helpful__content">
+										<p class="helpful__title">Дизайнерам</p>
+										<p class="helpful__text">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+									</div>
+								</li>
+								<li class="helpful__item">
+									<div class="helpful__icon"><img src="img/src/chat-grey.png" alt=""></div>
+									<div class="helpful__content">
+										<p class="helpful__title">Интернет-маркетологам</p>
+										<p class="helpful__text">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+									</div>
+								</li>
+								<li class="helpful__item">
+									<div class="helpful__icon"><img src="img/src/dollar-grey.png" alt=""></div>
+									<div class="helpful__content">
+										<p class="helpful__title">Предпринимателям и владельцам бизнесов</p>
+										<p class="helpful__text">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+									</div>
+								</li>
+								<li class="helpful__item">
+									<div class="helpful__icon"><img src="img/src/question-grey.png" alt=""></div>
+									<div class="helpful__content">
+										<p class="helpful__title">Начинающим специалистам</p>
+										<p class="helpful__text">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+									</div>
+								</li>
+							</ul><!-- /helpful -->
+						</div>
 						<div class="slider__indicators">
-							<span class="indicators__item active"></span>
-							<span class="indicators__item"></span>
 						</div>
 						<div class="call-wrap">
 							<h3 class="call-title"><span>Забронируйте</span> Ваше участие в мастер-классе и <span>получите
@@ -174,8 +223,69 @@
 			</div>
 		</div> <!-- hero end -->
 	</section>
-
-
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__credentials">
+				<p>© 2014 - 2020. Все права защищены.</p>
+				<p>Студия упаковки бизнеса в интернете Paradigma.website</p>
+				<p>УНП 291503669 | Р/с BY510LMP30133000421110000933</p>
+			</div>
+			<ul class="footer__documents">
+				<li class="documents__item">
+					<a href="" target="_blank">Соглашение о персональных данных</a>
+				</li>
+				<li class="documents__item">
+					<a href=" target=" _blank"">Договор оферты</a>
+				</li>
+				<li class="documents__item">
+					<a href="" target="_blank">Согласие на использование фото и видеоматериалов</a>
+				</li>
+			</ul>
+			<div class="phones">
+				<div class="phones-item">
+					<img class="lazy" data-src="img/src/belarus-flag.png" alt="">
+					<a class="phone-numb" href="tel:+375297275881">+375 29 727 58 81</a>
+				</div>
+				<div class="phones-item">
+					<img class="lazy" data-src="img/src/rus-flag.png" alt="">
+					<a class="phone-numb" href="tel:+375297275881">+375 29 727 58 81</a>
+				</div>
+			</div>
+			<div class="socials">
+				<a class="socials__btn" href="//vk.com/paradigma.website" target="_blank">
+					<img class="lazy" data-src="img/src/vk.png" alt="">
+					<span class="social__text">Задать вопрос</span>
+				</a>
+			</div>
+			<div class="footer__links">
+				<ul class="links__list">
+					<li class="social__item">
+						<a class="social-link" href="//www.behance.net/paradigma_website" target="_blank">
+							<img class="lazy" data-src="img/src/behance.png" alt="">
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social-link" href="//www.instagram.com/alex_dein/" target="_blank">
+							<img class="lazy" data-src="img/src/instagramm.png" alt="">
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social-link" href="//youtu.be/HuvF4FnZnzM" target="_blank">
+							<img class="lazy" data-src="img/src/youtube.png" alt="">
+						</a>
+					</li>
+				</ul>
+				<ul class="websites__list">
+					<li class="website-item">
+						<a class="website-link" href="//paradigma.website">www.paradigma.website</a>
+					</li>
+					<li class="website-item">
+						<a class="website-link" href="//lp.paradigma.website">www.lp.paradigma.website</a>
+					</li>
+				</ul>
+			</div>
+		</div> <!-- /.container -->
+	</footer>
 
 	<script src="js/scripts.min.js"></script>
 </body>

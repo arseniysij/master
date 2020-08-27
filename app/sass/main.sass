@@ -87,12 +87,19 @@ input[type="radio"].visually-hidden
 	+media-breakpoint-down(lg)
 		max-width: 90vw	
 
-.thanks	.container
+.thanks .container
+	position: relative
 	// width: 76.82vw
 	max-width: vw(1475)
+	z-index: 2
 	+media-breakpoint-down(lg)
 		width: 90vw	
 		max-width: none
+
+.onepage .container
+	width: vw(1525)	
+	+media-breakpoint-down(lg)
+		width: 90vw	
 
 ul
 	list-style: none
@@ -160,6 +167,10 @@ ul
 		flex-direction: row
 		margin-right: 0
 		align-self: auto
+	img
+		width: vw(157)
+		+media-breakpoint-down(lg)
+			width: 157rem
 
 .logo picture
 	margin-right: vw(44)
@@ -212,6 +223,14 @@ ul
 	&:hover
 		color: $accent
 
+.onepage .phone-numb
+	color: $someblack
+	&:hover
+		color: $red
+
+.footer .phone-numb
+	color: $whitish
+	
 .phones-item
 	+media-breakpoint-down(md)
 		margin-bottom: 10rem
@@ -252,8 +271,6 @@ ul
 	align-items: center
 	margin-left: auto
 	padding: vw(14) vw(24)
-	// width: vw(186)
-	// height: vw(46)
 	background-image: linear-gradient(to top, #171719 0%, #27272b 98%, #27272b 100%)
 	transform: skew(-10deg)
 	align-items: center
@@ -269,6 +286,20 @@ ul
 			box-shadow: 5rem 5rem 15rem $accent
 		a
 			border-bottom: none
+
+.onepage .socials
+	+media-breakpoint-down(lg)
+		padding-top: 0
+		transform: translateX(0)
+	+media-breakpoint-down(xs)
+		margin-bottom: 0
+
+
+.onepage .footer .socials__btn
+	&:hover
+		box-shadow: vw(5) vw(5) vw(15) $red	
+		+media-breakpoint-down(lg)
+			box-shadow: 5rem 5rem 15rem $red		
 
 .socials__btn img
 	width: vw(20)	
@@ -286,7 +317,7 @@ ul
 	line-height: vw(16)
 	text-transform: uppercase
 	letter-spacing: vw(1)
-	border-bottom: vw(1) dashed #0078a5
+	border-bottom: 1px dashed #0078a5
 	transform: skew(10deg)
 	+media-breakpoint-down(lg)
 		font-size: 12rem
@@ -860,7 +891,7 @@ label[for="input-phone"]
 		transition: box-shadow .2s ease-in
 		+media-breakpoint-down(lg)
 			box-shadow: 0 0 30rem 5rem $accent
-	&:active
+	&:active, &:focus
 		outline: none
 
 .input-sbmt-btn
@@ -1951,6 +1982,7 @@ picture img
 
 .footer .container
 	display: flex
+	justify-content: space-between
 	align-items: center
 	+media-breakpoint-down(lg)
 		width: 758rem
@@ -1988,15 +2020,22 @@ picture img
 	+media-breakpoint-down(md)
 		margin-right: 0
 	a
-		display: block
+		display: inline-block
 		font-size: vw(12)
-		line-height: vw(24)
-		text-decoration: underline
+		line-height: vw(16)
+		// text-decoration: underline
+		border-bottom: 1px solid rgba(#fff, .2)
 		+media-breakpoint-down(lg)
 			font-size: 12rem
 			line-height: 24rem
 		&:hover
 			color: $accent
+			border-bottom: 1px solid rgba($accent, .4)
+
+.documents__item
+	margin-bottom: vw(5)	
+	+media-breakpoint-down(lg)
+		margin-bottom: 5rem		
 
 .footer .phones
 	display: block
@@ -2013,8 +2052,8 @@ picture img
 		&:not(:last-child)
 			margin-bottom: vw(11)
 			margin-right: 0
-		+media-breakpoint-down(lg)
-			margin-bottom: 11rem
+			+media-breakpoint-down(lg)
+				margin-bottom: 11rem
 
 .footer__links
 	text-align: center
@@ -2058,8 +2097,9 @@ picture img
 	color: #2e58fb	
 	font-size: vw(14)
 	line-height: vw(18)
-	text-decoration: underline
+	// text-decoration: underline
 	letter-spacing: vw(0.7)
+	border-bottom: 1px solid rgba(#2e58fb, .4)
 	+media-breakpoint-down(lg)
 		font-size: 14rem
 		line-height: 18rem
@@ -2068,6 +2108,8 @@ picture img
 		color: #2e58fb	
 	&:hover
 		color: $white
+		// border-bottom: 1px solid rgba($white, .4)
+		border-bottom-color:  rgba($red, .8)
 
 .popup-backdrop
 	display: none
@@ -2349,6 +2391,7 @@ picture img
 	top: 27%	
 	width: vw(423)
 	height: vw(390)
+	z-index: 0
 	+media-breakpoint-down(lg)
 		width: 423rem
 		height: 390rem
@@ -2361,6 +2404,7 @@ picture img
 	top: 14%
 	width: vw(460)
 	height: vw(618)
+	z-index: 0
 	+media-breakpoint-down(lg)
 		width: 460rem
 		height: 618rem
@@ -3236,10 +3280,19 @@ picture img
 	background-image: none;
 	background-color: $cream;
 
+.onepage .logo
+	+media-breakpoint-down(lg)
+		margin-bottom: 0	
+	+media-breakpoint-down(xs)
+		flex-direction: column
+		justify-self: center
+
 .onepage .logo img
 	margin-right: vw(44)
 	+media-breakpoint-down(lg)
-		margin-right: 44rem
+		margin-right: 20rem
+	+media-breakpoint-down(xs)
+		margin-bottom: 10rem
 
 .onepage .logo-text
 	color: #2b2b2b
@@ -3248,9 +3301,18 @@ picture img
 	display: flex
 	align-items: flex-end
 	margin-top: vw(15)
+	width: vw(210)
 	height: vw(41)
+	+media-breakpoint-down(lg)
+		justify-self: end
+		align-self: end
+		width: 210rem
+		height: 41rem
+	+media-breakpoint-down(xs)
+		justify-self: center
 
 .signed__img
+	flex-shrink: 0
 	margin-right: vw(2)
 	width: vw(29)
 	+media-breakpoint-down(lg)
@@ -3258,6 +3320,7 @@ picture img
 		width: 29rem
 
 .signed__numb
+	flex-shrink: 0
 	margin-right: vw(11)	
 	font-family: Bebas Neue
 	font-weight: 700
@@ -3269,25 +3332,45 @@ picture img
 	+media-breakpoint-down(lg)
 		margin-right: 11rem	
 		font-size: 30rem
+		letter-spacing: -1.5rem
 
 .signed__content
+	// flex-shrink: 0
 	color: $someblack
 	font-size: vw(14)
 	line-height: vw(14)
 	+media-breakpoint-down(lg)
-		line-height: 14rem
 		font-size: 14rem
+		line-height: 14rem
 
-.onepage .phones *		
-	color: inherit
+.onepage .contacts
+	+media-breakpoint-down(lg)
+		grid-column: 1 / 3
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		+media-breakpoint-down(xs)
+			grid-column: 1 / 1
+			flex-direction: column
+
+.onepage .phones
+	+media-breakpoint-down(lg)
+		flex-direction: row
+		margin-bottom: 0
+	+media-breakpoint-down(xs)
+		flex-direction: column
+		margin-bottom: 30rem
 
 .onepage .phones-item
 	display: flex
 	align-items: center	
+	+media-breakpoint-down(lg)
+		margin-bottom: 0rem
 
 .onepage .phone-numb
 
-.onepage .socials__btn
+.onepage .main-header .socials__btn
 	margin-right: vw(10)
 	padding: 0
 	background: transparent
@@ -3299,23 +3382,43 @@ picture img
 		box-shadow: none
 		.social__text
 			border-bottom: 1px dashed red
+			color: $red
 	span
-		color: $someblack
-		font-size: vw(15)
-		font-weight: 400
-		line-height: vw(16.26)
-		letter-spacing: vw(1.25)
-		transform: skewX(0)
+		
 	img
 		margin-right: vw(12)
 		transform: skewX(0)
+		+media-breakpoint-down(lg)
+			margin-right: 12rem
 
-.onepage .social__text
+
+.onepage .main-header .social__text
+	color: $someblack
+	font-size: vw(15)
+	font-weight: 400
+	line-height: vw(16.26)
+	letter-spacing: vw(1.25)
+	transform: skewX(0)
+	+media-breakpoint-down(lg)
+		font-size: 15rem
+		line-height: 16.26rem
+		letter-spacing: 1.25rem
+
+.footer 	.social__text
+	color: $white
 
 .onepage .main-header
 	margin-bottom: vw(57)
 	+media-breakpoint-down(lg)
 		margin-bottom: 57rem
+		display: grid
+		grid-template: 1fr auto / 1fr auto
+		grid-row-gap: 40rem
+	+media-breakpoint-down(xs)
+		grid-template: 1fr auto auto / 1fr
+		// align-items: center
+		// justify-items: center
+		grid-row-gap: 30rem
 
 .onepage	.hero__date img
 	margin-right: 0
@@ -3337,12 +3440,23 @@ picture img
 	font-size: vw(60)
 	line-height: 1.1
 	letter-spacing: vw(2.13)
+	+media-breakpoint-down(lg)
+		font-size: 60rem
+		line-height: 1.1
+		letter-spacing: 2.13rem
+	+media-breakpoint-down(xs)
+		font-size: 40rem
 	strong
 		font-family: Bebas Neue
 		font-size: vw(60)
 		font-weight: 700
 		letter-spacing: vw(2.13)
 		text-transform: uppercase
+		+media-breakpoint-down(lg)
+			font-size: 60rem
+			letter-spacing: 2.13rem
+		+media-breakpoint-down(xs)
+			font-size: 40rem
 
 .onepage .h1-number
 	font-family: MyriadPro !important
@@ -3350,54 +3464,91 @@ picture img
 .onepage .hero__form
 	padding: vw(10) vw(345) vw(0) vw(100)
 	overflow-x: visible
+	+media-breakpoint-down(lg)
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 0
+		padding-left: 15px
+		padding-right: 15px
+		padding-bottom: 100rem
 
 .onepage .form__author
-	// transform: translate(-10%,0)
+	+media-breakpoint-down(lg)
+		margin-bottom: 50rem
+		width: auto
+		border-bottom: 5px solid $red
+		order: 0
 
 .onepage .author__info
-	top: 57%
-	left: 34%
+	top: 70%
+	left: 40%
+	+media-breakpoint-down(xs)
+		top: 90%
+		left: 22%
 
 .onepage .author-img
 	width: vw(870)
 	transform: translateY(0)
+	+media-breakpoint-down(lg)
+		width: auto
 
 .onepage .author__decs
 	padding: vw(38) vw(33) vw(24) vw(41)
 	width: vw(210)
 	min-height: vw(189)
 	background: url('../img/src/onepage-skills.png') no-repeat center / contain
+	+media-breakpoint-down(lg)
+		padding: 38rem 33rem 24rem 41rem
+		width: 210rem
+		min-height: 189rem
 	&:before
 		top: vw(20)
 		left: vw(15)
 		width: vw(13)
 		height: vw(22)
 		background-image: url("../img/src/lightning-red.png")
+		+media-breakpoint-down(lg)
+			top: 20rem
+			left: 15rem
+			width: 13rem
+			height: 22rem
 
 .onepage  .author__icon	
 	background-color: $red
 	animation: pulse-red  2s infinite
 	box-shadow: 0 0 vw(49) rgba(239, 59, 62, 0.3)
+	+media-breakpoint-down(lg)
+		box-shadow: 0 0 49rem rgba(239, 59, 62, 0.3)
+	&:hover
+		animation: none
 
-.author-name .author__icon	
-	animation: none
+
 	
-
 .skill
 	color: $blackish
 	font-size: vw(10)
 	line-height: vw(16)
 	letter-spacing: vw(0.6)
+	+media-breakpoint-down(lg)
+		font-size: 10rem
+		line-height: 16rem
+		letter-spacing: 0.6rem	
 
 .author-name
 	position: absolute
 	bottom: 15%
 	right: 20%
+	+media-breakpoint-down(xs)
+		right: 20%
 
 .author-name .author__info
 	position: relative
 	top: 0
 	left: 0
+
+.author-name .author__icon	
+	animation: none
 
 .author-name .author__decs
 	bottom: 87%	
@@ -3410,6 +3561,9 @@ picture img
 	background-color: #fff
 	transform: skewX(-5deg) translateX(-50%)
 	clip-path: none
+	+media-breakpoint-down(lg)
+		padding: 10rem 18rem 12rem 18rem
+		width: 145rem
 	&:before
 		display: none
 
@@ -3420,22 +3574,46 @@ picture img
 	line-height: vw(13)
 	font-weight: 400
 	letter-spacing: vw(0.93)
-	ransform: skewX(5deg)
+	transform: skewX(5deg)
+	+media-breakpoint-down(lg)
+		font-size: 13rem
+		line-height: 13rem
+		letter-spacing: 0.93rem
 	span
 		font-weight: 700
 		letter-spacing: vw(0.93)
+		+media-breakpoint-down(lg)
+			letter-spacing: 0.93rem
 
 .slider-btns
 	margin-bottom: vw(28)
+	+media-breakpoint-down(lg)
+		margin-bottom: 28rem
+	+media-breakpoint-down(xs)
+		display: flex
+		justify-content: center
 
 .slider-btn
-	padding: vw(23) vw(47) vw(20) vw(47)
+	padding: vw(15) vw(40) vw(15) vw(40)
+	min-height: vw(56)
+	box-sizing: border-box
 	border: 1px solid #c6c6c6
-	border-radius: vw(5)
+	border-radius: vw(7)
 	transform: skewX(-5deg)
 	transition: all .5s	
+	+media-breakpoint-down(lg)
+		padding: 15rem 40rem 15rem 40rem
+		min-height: 56rem
+		border-radius: 7rem
+	+media-breakpoint-down(xs)
+		padding: 15rem 10rem
+		line-height: .9
 	&:not(:last-child)
 		margin-right: vw(13)
+		+media-breakpoint-down(lg)
+			margin-right: 13rem
+	&:focus
+		outline: none
 
 .slider-btn.active 
 	color: #f8f6f8
@@ -3445,6 +3623,9 @@ picture img
 		font-size: vw(16)
 		letter-spacing: vw(0.4)	
 		transition: all .5s	
+		+media-breakpoint-down(lg)
+			font-size: 16rem
+			letter-spacing: 0.4rem
 
 .slider-btn__text
 	color: #b1b1b1
@@ -3453,18 +3634,29 @@ picture img
 	font-weight: 400
 	transform: skewX(5deg)
 	transition: all .5s	
+	+media-breakpoint-down(lg)
+		font-size: 14rem
+		letter-spacing: 0.35rem
 
 .helpful-list
 	margin-bottom: vw(14)
+	+media-breakpoint-down(lg)
+		margin-bottom: 14rem
 
 .helpful__item 
 	display: flex
 	align-items: center
 	margin-bottom: vw(14)
+	+media-breakpoint-down(lg)
+		margin-bottom: 14rem
 
 .helpful__icon 
 	margin-right: vw(24)	
 	width: vw(43)
+	flex-shrink: 0
+	+media-breakpoint-down(lg)
+		margin-right: 24rem
+		width: 43rem
 
 .helpful__content 
 	display: flex
@@ -3475,29 +3667,32 @@ picture img
 	font-size: vw(16)
 	letter-spacing: vw(0.4)
 	font-weight: 800
+	text-align: left
+	+media-breakpoint-down(lg)
+		font-size: 16rem
+		letter-spacing: 0.4rem
 
 .helpful__text 
 	font-size: vw(14)
+	text-align: left
 	letter-spacing: vw(0.35)
+	+media-breakpoint-down(lg)
+		font-size: 14rem
+		letter-spacing: 0.35rem
 
-.slider__indicators
+.slider__indicators 
 	margin-bottom: vw(57)
-
-.indicators__item 
-	display: inline-block
-	width: vw(7)
-	height: vw(7)
-	background-color: #c6c6c6
-	border-radius: 50%
-
-.indicators__item.active 
-	background-color: #ef3b3e
+	+media-breakpoint-down(lg)
+		margin-bottom: 57rem
 
 .call-wrap
 	display: flex
 	justify-content: center
 	align-items: center
 	margin-bottom: vw(42)
+	+media-breakpoint-down(lg)
+		margin-bottom: 42rem
+		flex-direction: column
 
 .call-title
 	margin-right: vw(13)
@@ -3508,6 +3703,15 @@ picture img
 	letter-spacing: vw(1.5)
 	font-weight: 300
 	text-align: right
+	+media-breakpoint-down(lg)
+		margin-right: 0
+		margin-bottom: 80rem
+		width: 385rem
+		font-size: 30rem
+		text-align: center
+		letter-spacing: 1.5rem
+	+media-breakpoint-down(xs)
+		width: auto
 	span
 		color: $someblack
 		font-weight: 700
@@ -3518,6 +3722,13 @@ picture img
 	background-color: $someblack
 	transform: skewX(-5deg)
 	border-radius: vw(5)
+	+media-breakpoint-down(lg)
+		padding: 18rem 26rem 18rem 26rem
+		border-radius: 5rem
+		align-self: flex-start
+	+media-breakpoint-down(xs)
+		margin-bottom: 170rem
+		align-self: center
 	&:after
 		content: ''
 		position: absolute
@@ -3526,7 +3737,10 @@ picture img
 		width: vw(55)
 		height: vw(127)
 		background: url("../img/src/bonus-arrow.png") no-repeat center / contain
-
+		+media-breakpoint-down(lg)
+			width: 55rem
+			height: 127rem
+			display: none
 
 .bonus-text
 	font-family: Bebas Neue
@@ -3536,6 +3750,9 @@ picture img
 	line-height: 1
 	letter-spacing: vw(1.5)
 	transform: skewX(5deg)
+	+media-breakpoint-down(lg)
+		font-size: 30rem
+		letter-spacing: 1.5rem
 
 .bonus-accent 
 	color: #ef3b3e
@@ -3546,9 +3763,24 @@ picture img
 	right: vw(-250)
 	padding: vw(42) vw(24) vw(24) vw(83)
 	width: vw(270)
-	// height: vw(180)
 	background: url('../img/src/bonus-bg.png') no-repeat center / contain
 	transform: skewX(5deg)
+	+media-breakpoint-down(lg)
+		top: -70rem
+		right: -440rem
+		padding: 42rem 24rem 24rem 83rem
+		width: 330rem
+		background: #fff
+		border-radius: 7rem
+	+media-breakpoint-down(xs)
+		top: auto
+		right: auto
+		left: 50%
+		bottom: -140rem
+		padding: 10rem 20rem
+		margin-left: 70rem
+		width: 60vw
+		transform: translateX(-50%)
 	&:before
 		content: ''
 		position: absolute
@@ -3556,7 +3788,12 @@ picture img
 		left: 19%
 		width: vw(13)
 		height: vw(22)
-		background-image: url('../img/src/lightning-red.png')
+		background: url('../img/src/lightning-red.png') no-repeat
+		+media-breakpoint-down(lg)
+			width: 13rem
+			height: 22rem
+		+media-breakpoint-down(xs)
+			display: none
 	&:after
 		content: ''
 		position: absolute
@@ -3564,7 +3801,13 @@ picture img
 		left: -29%
 		width: vw(152)
 		height: vw(164)
-		background-image: url('../img/src/mockup-red.png')
+		background: url('../img/src/mockup-red.png') no-repeat center / contain
+		+media-breakpoint-down(lg)
+			width: 152rem
+			height: 164rem
+		+media-breakpoint-down(xs)
+			top: -15%
+			left: -140rem
 
 .pdf-name 
 	font-family: Bebas Neue
@@ -3573,12 +3816,81 @@ picture img
 	font-weight: 700
 	letter-spacing: vw(1.16)
 	text-align: left
+	+media-breakpoint-down(lg)
+		font-size: 20rem
+		letter-spacing: 1.16rem
 	span
 		font-weight: 300
 
 .onepage .btn
 	width: auto
+	min-height: vw(86)
 	background-image: linear-gradient(to top, #f01f2a 0%, #ff7167 100%)
 	letter-spacing: 1px
 	font-size: vw(13)
+	box-shadow: vw(5) vw(5) vw(50) rgba(243, 33, 42, 0.4), inset 0 vw(-5) 0 rgba(#df151d, 1)
+	transition: all .5s
+	+media-breakpoint-down(lg)
+		min-height: 86rem
+		font-size: 13rem
+		box-shadow: 5px 5px 50px rgba(243, 33, 42, 0.4), inset 0 -5px 0 rgba(#df151d, 1)
+	&:hover
+		box-shadow: vw(5) vw(5) vw(50) rgba(243, 33, 42, 0.4), 0 vw(3) vw(30) rgba(#df151d, .5)
+		transition: all .5s
+		+media-breakpoint-down(lg)
+			box-shadow: 5px 5px 50px rgba(243, 33, 42, 0.4), 0 3px 30px rgba(#df151d, .5)
 
+.onepage .footer
+	color: $white
+	background-color: #202221
+	border-top: none
+
+.slider-carousel
+	width: vw(570)
+	+media-breakpoint-down(lg)
+		width: 570rem
+	+media-breakpoint-down(xs)
+		width: 90vw
+		margin: 0 auto
+
+.slick-list
+	overflow: hidden
+
+.slick-track	
+	display: flex
+	align-items: flex-start
+
+.slick-slide
+	margin-right: 30rem
+	&:focus
+		outline: none	
+
+.slick-dots
+	display: flex
+	justify-content: center
+
+.slick-dots li
+	width: vw(7)
+	height: vw(7)
+	font-size: 0
+	background-color: #c6c6c6
+	border-radius: 50%
+	cursor: pointer
+	+media-breakpoint-down(lg)
+		width: 7rem
+		height: 7rem
+	&:not(:last-child)
+		margin-right: vw(10)
+		+media-breakpoint-down(lg)
+			margin-right: 10rem
+
+.slick-dots .slick-active 
+	background-color: #ef3b3e		
+
+.hero__content
+	width: vw(580)
+	user-select: none
+	+media-breakpoint-down(lg)
+		width: 580rem
+	+media-breakpoint-down(xs)
+		width: auto
