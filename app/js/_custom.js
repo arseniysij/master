@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // onepage slider
-  if (window.location.pathname == '/onepage.html') {
+  if (window.location.pathname == '*/onepage.html') {
     $('.slider-carousel').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -22,24 +22,24 @@ document.addEventListener("DOMContentLoaded", function () {
       dots: true,
       appendDots: $('.slider__indicators'),
     });
-    $('#slider--1').click(function() {
-      $( '.slider-carousel' ).slick('slickGoTo', 0, false);
+    $('#slider--1').click(function () {
+      $('.slider-carousel').slick('slickGoTo', 0, false);
       $('#slider--2').removeClass('active');
       $(this).addClass('active');
     });
-    $('#slider--2').click(function() {
-      $( '.slider-carousel' ).slick('slickGoTo', 1, false);
+    $('#slider--2').click(function () {
+      $('.slider-carousel').slick('slickGoTo', 1, false);
       $('#slider--1').removeClass('active');
       $(this).addClass('active');
     });
 
     let currentSlide;
-    $('.slider-carousel').on('afterChange', function() {
+    $('.slider-carousel').on('afterChange', function () {
       currentSlide = $('.slider-carousel').slick('slickCurrentSlide');
-      if ( currentSlide == 0 ) {
+      if (currentSlide == 0) {
         $('#slider--2').removeClass('active');
         $('#slider--1').addClass('active');
-      } else if ( currentSlide == 1 ) {
+      } else if (currentSlide == 1) {
         $('#slider--1').removeClass('active');
         $('#slider--2').addClass('active');
       }
