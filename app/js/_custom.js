@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // onepage slider
-  if (window.location.pathname.includes('onepage') {
+  if (window.location.pathname.includes('onepage')) {
     $('.slider-carousel').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -44,39 +44,48 @@ document.addEventListener("DOMContentLoaded", function () {
         $('#slider--2').addClass('active');
       }
     });
+
+    // onepage form popup
+    const formWrap = $('#onepage-form__wrap'),
+    onepageFormClose = $('#onepage-form__close'),
+    onepageFormBtn = $('#onepage-form-btn');
+
+    formWrap.hide();
+    onepageFormBtn.on('click', function() {
+      formWrap.fadeIn(300);
+    });
+    onepageFormClose.on('click', function() {
+      formWrap.fadeOut(300);
+    });
+
+
+
   }
 
   // PopupExit
 
   const popupWrap = $('#popup-wrap'),
     popupClose = $('#popup__close');
-  popupClose.on('click', function () {
+    popupClose.on('click', function () {
     popupWrap.fadeOut(300);
   });
 
   function ShowExitPopup() {
     if (
+      // localStorage.getItem('masterPopupBlock') !== 'true' &&
       event.clientY < 50 &&
       event.relatedTarget == null &&
       event.target.nodeName.toLowerCase() !== 'select' &&
       event.target.nodeName.toLowerCase() !== 'input') {
-      popupWrap.fadeIn(300);
-      $(document).unbind();
+        popupWrap.fadeIn(300);
+        $(document).unbind();
+        $('#popup__select-occupation').niceSelect();
+        localStorage.setItem('masterPopupBlock', true);
     }
   }
-  // $(document).on( 'mouseleave' , ShowExitPopup);
+  $(document).on( 'mouseleave' , ShowExitPopup);
 
 
-
-  // Redirect Timer
-  $('form.thanks-form').on('submit', function (e) {
-    e.preventDefault();
-    $('.sell__redirect').fadeIn(300).css('display', 'flex');
-    setInterval(redirectCountdowm, 1000);
-  });
-
-
-  // Timer
 
 
   if (window.location.pathname == '/thanks.html') {
@@ -118,26 +127,31 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('time', time);
       }
     }
-  }
 
-
-
-
-  // redirect Timer
+    // redirect Timer
   const redirectTimer = $('.redirect__timer'),
     redirectSeconds = 4;
   let redirectTime = redirectSeconds;
 
-  // setInterval(redirectCountdowm, 1000); вызвать с появлением окна
+  $('form.thanks-form').on('submit', function (e) {
+    e.preventDefault();
+    $('.sell__redirect').fadeIn(300).css('display', 'flex');
+    setInterval(redirectCountdowm, 1000);
+  });
+
+  //вызвается с появлением окна
   function redirectCountdowm() {
     redirectTime--;
     redirectTime = redirectTime < 0 ? 0 : redirectTime;
     redirectTimer.html(redirectTime);
-    console.log(redirectTime);
+    // console.log(redirectTime);
     if (redirectTime == 0) {
       window.location.replace("https://youtu.be/dQw4w9WgXcQ?t=42");
     }
   }
+
+
+  }  // конец для thanks page
 
 
 
@@ -176,7 +190,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  $('.select-occupation').niceSelect();
+  $('#select-occupation').niceSelect();
+  $('#select-occupation-booking').niceSelect();
 
   //paralax mouse
 
@@ -186,8 +201,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // relativeInput: true
     });
   }
-
-
 
 
   // Change date in hero
@@ -215,16 +228,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // form__author hover
   let formAuthor = $('.author__info');
-  let desc = $('#author__decs');  //включить чтобы объект скрывался
-  let formAuthorWidth = 1200;
+  let desc = $('.author__decs');  //включить чтобы объект скрывался
+  var formAuthorWidth = 1200;
 
   if (window.innerWidth >= formAuthorWidth) {
     formAuthor.on('mouseleave', function () {
       desc.fadeOut(200);
     });
 
-    formAuthor.on('mouseenter', function () {
-      desc.fadeIn(200);
+    formAuthor.on('mouseenter', function (event) {
+      $(this).find('.author__decs').fadeIn(200);
     });
   } else {
     formAuthor.unbind();
@@ -237,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       formAuthor.on('mouseenter', function () {
-        desc.fadeIn(200);
+        $(this).find('.author__decs').fadeIn(200);
       });
     } if (window.innerWidth < formAuthorWidth) {
       formAuthor.unbind();

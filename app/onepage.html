@@ -112,52 +112,54 @@
 							</button>
 						</div>
 						<div class="slider-carousel">
-							<ul class="helpful-list">
+							<ul class="helpful-list helpful-list--programm">
 								<li class="helpful__item">
 									<div class="helpful__icon">
-										<img src="img/src/wifi-grey.png" alt="">
+										<img src="img/src/will-know.png" alt="">
 									</div>
 									<div class="helpful__content">
-										<p class="helpful__title">Узнаете</p>
-										<p class="helpful__text">тренды 2020 в веб разработке (в разработке продающих сайтов)</p>
-									</div>
-								</li>
-								<li class="helpful__item">
-									<div class="helpful__icon"><img src="img/src/puzzle-grey.png" alt=""></div>
-									<div class="helpful__content">
-										<p class="helpful__title">Получите</p>
-										<p class="helpful__text">пошаговый алгоритм разработки продающего сайта</p>
+										<span class="helpful__title">Узнаете</span>
+										<span class="helpful__text">тренды 2020 в веб разработке<br> (в разработке продающих
+											сайтов)</span>
 									</div>
 								</li>
 								<li class="helpful__item">
-									<div class="helpful__icon"><img src="img/src/chat-grey.png" alt=""></div>
+									<div class="helpful__icon"><img src="img/src/will-get.png" alt=""></div>
 									<div class="helpful__content">
-										<p class="helpful__title">Поймете</p>
-										<p class="helpful__text">как делать самый важный этап разработки сайта - ПРОТОТИПИРОВАНИЕ
-											и ПРОДАЮЩИЙ КОПИРАЙТИНГ САЙТА</p>
+										<span class="helpful__title">Получите</span>
+										<span class="helpful__text">пошаговый алгоритм разработки<br> продающего сайта</span>
 									</div>
 								</li>
 								<li class="helpful__item">
-									<div class="helpful__icon"><img src="img/src/dollar-grey.png" alt=""></div>
+									<div class="helpful__icon"><img src="img/src/will-got.png" alt=""></div>
 									<div class="helpful__content">
-										<p class="helpful__title">Научитесь</p>
-										<p class="helpful__text">и поймете для чего и как делать предпроектые исследования ЦА,
-											рынка, ценообразования, конкурентов перед началом разработки сайта</p>
+										<span class="helpful__title">Поймете</span>
+										<span class="helpful__text">как делать самый важный этап разработки сайта -
+											ПРОТОТИПИРОВАНИЕ
+											и ПРОДАЮЩИЙ КОПИРАЙТИНГ САЙТА</span>
 									</div>
 								</li>
 								<li class="helpful__item">
-									<div class="helpful__icon"><img src="img/src/question-grey.png" alt=""></div>
+									<div class="helpful__icon"><img src="img/src/will-learn.png" alt=""></div>
 									<div class="helpful__content">
-										<p class="helpful__title">Начнете и поймете</p>
-										<p class="helpful__text">как управлять конверсией на сайте</p>
+										<span class="helpful__title">Научитесь</span>
+										<span class="helpful__text">и поймете для чего и как делать предпроектые исследования ЦА,
+											рынка, ценообразования, конкурентов перед началом разработки сайта</span>
 									</div>
 								</li>
 								<li class="helpful__item">
-									<div class="helpful__icon"><img src="img/src/wifi-grey.png" alt=""></div>
+									<div class="helpful__icon"><img src="img/src/will-start.png" alt=""></div>
 									<div class="helpful__content">
-										<p class="helpful__title">Внедрите</p>
-										<p class="helpful__text">в свой бизнес или начнете внедрять в свою работу -<br>
-											ТЕХНИКУ УПАКОВКИ БИЗНЕСА, а не разработку лендинга</p>
+										<span class="helpful__title">Начнете и поймете</span>
+										<span class="helpful__text">как управлять конверсией на сайте</span>
+									</div>
+								</li>
+								<li class="helpful__item">
+									<div class="helpful__icon"><img src="img/src/will-use.png" alt=""></div>
+									<div class="helpful__content">
+										<span class="helpful__title">Внедрите</span>
+										<span class="helpful__text">в свой бизнес или начнете внедрять в свою работу -<br>
+											ТЕХНИКУ УПАКОВКИ БИЗНЕСА, а не разработку лендинга</span>
 									</div>
 								</li>
 							</ul><!-- /helpful -->
@@ -214,7 +216,7 @@
 								</div>
 							</div>
 						</div>
-						<button class="input-sbmt-btn btn" form="signup-form" type="submit" value="submit"><span>Принять
+						<button class="input-sbmt-btn btn" id="onepage-form-btn" form="signup-form" type="submit" value="submit"><span>Принять
 								участие и получить бонус</span>
 							<img class="input-sbmt-btn--icon" src="img/src/fingerprint.png" alt="">
 						</button>
@@ -286,6 +288,84 @@
 			</div>
 		</div> <!-- /.container -->
 	</footer>
+	<div class="popup-wrap" id="popup-wrap">
+		<div class="popup">
+			<p class="popup__header">Подожди секу!</p>
+			<p class="popup__this-popup">Какой же я маркетолог, если дам тебе<br>
+				уйти с сайта. Это ПОПАП окно на выходе,<br>
+				которое тебя раздражает!</p>
+			<p class="popup__get-bonus">Но заполни форму<br>
+				и получи еще 1&nbsp;бонус</p>
+			<form class="signup-form" action="thanks-red.html" id="popup-form" target="_blank">
+				<label for="popup__input-occupation">Выбери какой бонус ты хочешь:</label>
+				<div class="select-occupation-wrap">
+					<select class="select-occupation" name="select-occupation" id="popup__select-occupation">
+						<option value="Предприниматель">Любой</option>
+						<option value="Фрилансер">Особенный</option>
+						<option value="Дизайнер">Сюрприз</option>
+					</select>
+				</div>
+
+				<label for="popup__input-email">На него вышлем бонус и ссылку на мастер-класс, вдруг передумаешь</label>
+				<input class="input-email" type="text" id="popup__input-email" placeholder="* Ваш E-mail" required>
+				<label for="popup__input-phone">Продублируем напоминание про мастер-класс, вдруг решишь участвовать</label>
+				<input class="input-phone" type="text" id="popup__input-phone" placeholder="* Ваш телефон" required>
+				<button class="input-sbmt-btn btn" form="popup-form" type="submit" value="submit"><span>Получить бонус на
+						почту</span>
+					<img class="input-sbmt-btn--icon lazy" data-src="img/src/gift.png" alt="">
+				</button>
+			</form>
+			<div class="form-safety">
+				<img class="lazy" data-src="img/src/lock.png" alt="">
+				<span>Мы не передаем Ваши данные 3-м лицам</span>
+			</div>
+			<div class="popup__bonus">
+				<img class="lazy" data-src="img/src/bonus-red.png" alt="">
+			</div>
+			<div class="popup__close onepage__popup-close" id="popup__close"></div>
+		</div>
+	</div>
+	<div class="onepage-form__wrap" id="onepage-form__wrap">
+		<div class="onepage-form">
+			<div class="hero__date">
+				<img src="img/src/onepage-clock.png" alt="">
+				<span class="date__bold">24</span>
+				<span class="date__month">декабря</span>
+				<div class="date__times">
+					<span class="date__time">19:00 киев</span>
+					<span class="date__time">20:00 МСК</span>
+				</div>
+			</div>
+			<p class="onepage-form__subtitle">Забронируйте Ваше участие в<br>
+				мастер-классе и получите</p>
+			<p class="onepage-form__pdf">PDF-файл</p>
+			<p class="onepage-form__title">"ТОП-11 ошибок при разработке сайта, из-за которых сайт
+				не продает"</p>
+			<form class="signup-form onepage__signup-form" action="thanks-red.html" id="signup-form" method="get"
+				target="_blank">
+				<label for="input-occupation">К кому вы себя больше относите?</label>
+				<div class="select-occupation-wrap">
+					<select class="select-occupation" name="select-occupation" id="select-occupation">
+						<option value="Предприниматель">Предприниматель</option>
+						<option value="Фрилансер">Маркетолог</option>
+						<option value="Дизайнер">Дизайнер</option>
+					</select>
+				</div>
+
+				<label for="input-email">На него вышлем бонус</label>
+				<input class="input-email" type="text" id="input-email" placeholder="* Ваш E-mail" required>
+				<label for="input-phone">На него вышлем Вам напоминание о мастер-классе</label>
+				<input class="input-phone" type="tel" id="input-phone" placeholder="* Ваш телефон" required>
+				<button class="input-sbmt-btn btn" form="signup-form" type="submit" value="submit"><span>участвовать</span>
+				</button>
+			</form>
+			<div class="form-safety">
+				<img src="img/src/lock.png" alt="">
+				<span>Мы не передаем Ваши данные 3-м лицам</span>
+			</div>
+			<div class="popup__close" id="onepage-form__close"></div>
+		</div><!-- /.onepage-form -->
+	</div>
 
 	<script src="js/scripts.min.js"></script>
 </body>
