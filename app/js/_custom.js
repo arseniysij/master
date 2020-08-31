@@ -159,7 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
       redirectTime--;
       redirectTime = redirectTime < 0 ? 0 : redirectTime;
       redirectTimer.html(redirectTime);
-      // console.log(redirectTime);
       if (redirectTime == 0) {
         window.location.replace("https://youtu.be/dQw4w9WgXcQ?t=42");
       }
