@@ -4303,6 +4303,7 @@ picture img
 	color: $red
 
 .thanks--red .messengers__link
+	border: 1px dashed rgba($red, .5)
 	&:hover
 		background-color: $red
 		
@@ -4318,5 +4319,28 @@ picture img
 .thanks--red .thanks-btn
 	background-image: linear-gradient(to top, #f01f2a 0%, #ff7167 100%)
 	box-shadow: vw(5) vw(5) vw(50) rgba(243, 33, 42, 0.4), inset 0 vw(-5) 0 rgba(#df151d, 1)
+	+media-breakpoint-down(lg)
+		box-shadow: 5px 5px 50px rgba(243, 33, 42, 0.4), inset 0 -5px 0 rgba(#df151d, 1)
 	&:hover
 		box-shadow: vw(5) vw(5) vw(50) rgba(243, 33, 42, 0.4), 0 vw(3) vw(30) rgba(#df151d, .5)
+		+media-breakpoint-down(lg)
+			box-shadow: 5px 5px 50px rgba(243, 33, 42, 0.4), 0 3px 30px rgba(#df151d, .5)
+
+.thanks--red .footer .socials__btn
+	&:hover
+		box-shadow: vw(5) vw(5) vw(15) $red	
+		+media-breakpoint-down(lg)
+			box-shadow: 5rem 5rem 15rem $red		
+
+.thanks--red .phone-numb
+	&:hover
+		color: $red
+
+.thanks--red .footer__documents a
+	&:hover
+		color: $red
+		border-bottom: 1px solid rgba($red, .4)
+
+.thanks--red .video__play-circle
+	&:hover
+		animation: pulse-red  1s infinite

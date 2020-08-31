@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function ShowExitPopup() {
     if (
-      // localStorage.getItem('masterPopupBlock') !== 'true' &&
+      localStorage.getItem('masterPopupBlock') !== 'true' &&
       event.clientY < 50 &&
       event.relatedTarget == null &&
       event.target.nodeName.toLowerCase() !== 'select' &&
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         popupWrap.fadeIn(300);
         $(document).unbind();
         $('#popup__select-occupation').niceSelect();
-        localStorage.setItem('masterPopupBlock', true);
+        localStorage.setItem('masterPopupBlock', 'true');
     }
   }
   $(document).on( 'mouseleave' , ShowExitPopup);
