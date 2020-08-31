@@ -104,14 +104,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  if (window.location.pathname == '/thanks.html') {
+  if (window.location.pathname.includes('thanks')) {
     const timerBlock = $('.timer__itis'),
       timerMinutes = $(timerBlock).find('.timer__minutes'),
       timerSeconds = $(timerBlock).find('.timer__seconds'),
       startingMinutes = 3;
     let time = startingMinutes * 60;
     let timerInterval = setInterval(updateCountdown, 1000);
-    console.log("ранится");
 
     function updateCountdown() {
       if (localStorage.getItem('time') !== null && localStorage.getItem('time') >= '0') {
@@ -166,9 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-
   }  // конец для thanks page
-
 
 
   var lazyLoadInstance = new LazyLoad({
