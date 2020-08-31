@@ -47,18 +47,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // onepage form popup
     const formWrap = $('#onepage-form__wrap'),
-    onepageFormClose = $('#onepage-form__close'),
-    onepageFormBtn = $('#onepage-form-btn');
+      onepageFormClose = $('#onepage-form__close'),
+      onepageFormBtn = $('#onepage-form-btn');
 
     formWrap.hide();
-    onepageFormBtn.on('click', function() {
+    onepageFormBtn.on('click', function () {
       formWrap.fadeIn(300);
     });
-    onepageFormClose.on('click', function() {
+    onepageFormClose.on('click', function () {
       formWrap.fadeOut(300);
     });
 
-
+    function onepageShowExitPopup() {
+      if (
+        localStorage.getItem('masterPopupBlock') !== 'true' &&
+        $(formWrap).is(":hidden") &&
+        event.clientY < 50 &&
+        event.relatedTarget == null &&
+        event.target.nodeName.toLowerCase() !== 'select' &&
+        event.target.nodeName.toLowerCase() !== 'input') {
+        console.log('Сработает');
+        popupWrap.fadeIn(300);
+        $(document).unbind();
+        $('#popup__select-occupation').niceSelect();
+        localStorage.setItem('masterPopupBlock', 'true');
+      }
+    }
+    $(document).on('mouseleave', onepageShowExitPopup);
 
   }
 
@@ -66,24 +81,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const popupWrap = $('#popup-wrap'),
     popupClose = $('#popup__close');
-    popupClose.on('click', function () {
+  popupClose.on('click', function () {
     popupWrap.fadeOut(300);
   });
-
-  function ShowExitPopup() {
-    if (
-      localStorage.getItem('masterPopupBlock') !== 'true' &&
-      event.clientY < 50 &&
-      event.relatedTarget == null &&
-      event.target.nodeName.toLowerCase() !== 'select' &&
-      event.target.nodeName.toLowerCase() !== 'input') {
+  if (window.location.pathname == '/') {
+    function ShowExitPopup() {
+      if (
+        localStorage.getItem('masterPopupBlock') !== 'true' &&
+        event.clientY < 50 &&
+        event.relatedTarget == null &&
+        event.target.nodeName.toLowerCase() !== 'select' &&
+        event.target.nodeName.toLowerCase() !== 'input') {
         popupWrap.fadeIn(300);
         $(document).unbind();
         $('#popup__select-occupation').niceSelect();
         localStorage.setItem('masterPopupBlock', 'true');
+      }
     }
+    $(document).on('mouseleave', ShowExitPopup);
   }
-  $(document).on( 'mouseleave' , ShowExitPopup);
 
 
 
@@ -129,26 +145,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // redirect Timer
-  const redirectTimer = $('.redirect__timer'),
-    redirectSeconds = 4;
-  let redirectTime = redirectSeconds;
+    const redirectTimer = $('.redirect__timer'),
+      redirectSeconds = 4;
+    let redirectTime = redirectSeconds;
 
-  $('form.thanks-form').on('submit', function (e) {
-    e.preventDefault();
-    $('.sell__redirect').fadeIn(300).css('display', 'flex');
-    setInterval(redirectCountdowm, 1000);
-  });
+    $('form.thanks-form').on('submit', function (e) {
+      e.preventDefault();
+      $('.sell__redirect').fadeIn(300).css('display', 'flex');
+      setInterval(redirectCountdowm, 1000);
+    });
 
-  //вызвается с появлением окна
-  function redirectCountdowm() {
-    redirectTime--;
-    redirectTime = redirectTime < 0 ? 0 : redirectTime;
-    redirectTimer.html(redirectTime);
-    // console.log(redirectTime);
-    if (redirectTime == 0) {
-      window.location.replace("https://youtu.be/dQw4w9WgXcQ?t=42");
+    //вызвается с появлением окна
+    function redirectCountdowm() {
+      redirectTime--;
+      redirectTime = redirectTime < 0 ? 0 : redirectTime;
+      redirectTimer.html(redirectTime);
+      // console.log(redirectTime);
+      if (redirectTime == 0) {
+        window.location.replace("https://youtu.be/dQw4w9WgXcQ?t=42");
+      }
     }
-  }
 
 
   }  // конец для thanks page
